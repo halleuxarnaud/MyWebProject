@@ -6,6 +6,10 @@ void main() async {
   runApp(const MyApp());
 }
 
+//* Faire une annimation pour animationFooter venu du bas
+
+//* Finir formulaire de contact avec ajout du package de contact
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -13,10 +17,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'MyWebProject',
-      theme: ThemeData(scaffoldBackgroundColor: kDefaultcolor),
-      home: const HomePage(),
-    );
+        debugShowCheckedModeBanner: false,
+        title: 'MyWebProject',
+        home: HomePage());
   }
 }
