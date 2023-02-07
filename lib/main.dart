@@ -8,6 +8,7 @@ void main() async {
 
 //* Faire une annimation pour animationFooter venu du bas
 //* Faire un capcha pour les envoye d'email pour eviter le spaming 
+//* Ajouter les vérification de champ ex emailsi il y as bien un arobase
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
