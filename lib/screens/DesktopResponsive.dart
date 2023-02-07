@@ -5,6 +5,7 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:web_smooth_scroll/web_smooth_scroll.dart';
 
 import '../components/color.dart';
+import '../widgets/sendmailcontroller.dart';
 import '../widgets/AnimatedFooter.dart';
 
 class DesktopResponsive extends StatefulWidget {
@@ -49,9 +50,9 @@ class _DesktopResponsiveState extends State<DesktopResponsive> {
           controller: _scrollController,
           child: Column(
             children: <Widget>[
-              _buildTop(size),
-              _buildProduct(size),
-              _buildContact(size),
+              //_buildTop(size),
+              //_buildProduct(size),
+              ContactSendMailer(size),
               _buildBottom(size),
             ],
           )),
@@ -109,53 +110,6 @@ class _DesktopResponsiveState extends State<DesktopResponsive> {
         ),
       ],
     );
-  }
-
-  Container _buildContact(Size size) {
-    return Container(
-        height: size.height,
-        width: size.width,
-        color: kDefaultcolor,
-        child: Padding(
-          padding: const EdgeInsets.only(left: 400, right: 400, top: 150),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const AutoSizeText(
-                'Contact',
-                presetFontSizes: [60, 50, 40, 30],
-                maxLines: 1,
-                style: TextStyle(
-                  fontFamily: 'SpaceMono',
-                  color: PrimaryColor,
-                  fontWeight: FontWeight.w400,
-                  fontSize: 60,
-                ),
-              ),
-              const SizedBox(
-                height: 60,
-              ),
-              Row(
-                children: <Widget>[
-                  Column(
-                    children: <Widget>[
-                      const Text(
-                        'FullName',
-                        style: TextStyle(
-                            color: SecondColor,
-                            fontWeight: FontWeight.w700,
-                            fontFamily: 'SpaceMono'),
-                      ),
-                    ],
-                  ),
-                  Column(
-                    children: <Widget>[],
-                  ),
-                ],
-              )
-            ],
-          ),
-        ));
   }
 
   Container _buildBottom(Size size) {

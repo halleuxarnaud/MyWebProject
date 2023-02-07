@@ -38,6 +38,7 @@ dependencies:
   web_smooth_scroll: ^1.1.0
   animated_text_kit: ^4.2.2
   auto_size_text: ^3.0.0
+  http: ^0.13.5
 
 dev_dependencies:
   flutter_test:

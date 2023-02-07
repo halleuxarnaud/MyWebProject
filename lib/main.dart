@@ -7,8 +7,7 @@ void main() async {
 }
 
 //* Faire une annimation pour animationFooter venu du bas
-
-//* Finir formulaire de contact avec ajout du package de contact
+//* Faire un capcha pour les envoye d'email pour eviter le spaming 
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
