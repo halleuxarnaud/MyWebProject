@@ -1,12 +1,9 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:flutter_application_1/src/DesktopLayout/contactform.dart';
 import 'package:web_smooth_scroll/web_smooth_scroll.dart';
 
-import '../components/color.dart';
-import '../widgets/sendmailcontroller.dart';
-import '../widgets/AnimatedFooter.dart';
+import '../../components/color.dart';
+import 'animatedfooter.dart';
 
 class DesktopResponsive extends StatefulWidget {
   const DesktopResponsive({super.key});
@@ -52,7 +49,7 @@ class _DesktopResponsiveState extends State<DesktopResponsive> {
             children: <Widget>[
               //_buildTop(size),
               //_buildProduct(size),
-              ContactSendMailer(size),
+              ContactForm(size),
               _buildBottom(size),
             ],
           )),
