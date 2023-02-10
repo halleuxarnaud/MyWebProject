@@ -19,23 +19,21 @@ class _AboutMeState extends State<AboutMe> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return animationDisplay(size);
-  }
-
-  animationDisplay(Size size) {
-    if (widget._currentOffset >= size.height * 0.40) {
+    if (widget._currentOffset <= (size.height * 2) * 0.60) {
+      showMoreInformation = false;
+    } else {
       showMoreInformation = true;
     }
-    if (widget._currentOffset <= size.height * 0.40) {
-      showMoreInformation = false;
-    }
+    print(widget._currentOffset);
+    print(widget.size);
+    print(showMoreInformation);
     return Container(
         height: widget.size.height,
         width: widget.size.width,
         color: kDefaultcolor,
         padding: const EdgeInsets.only(
           left: 400,
-          right: 220,
+          right: 400,
           top: 50,
         ),
         child: showMoreInformation
@@ -55,8 +53,24 @@ class _AboutMeState extends State<AboutMe> {
                       Color(0XFF739cca),
                     ],
                   ),
-                  Text(
-                      "Identifiable branding + an engaging user experience is key to increasing con"),
+                  SizedBox(
+                    height: 30,
+                  ),
+                  AnimatedContainer(
+                    duration: const Duration(milliseconds: 1500),
+                    height: widget._currentOffset >= (size.height * 2.1) * 0.60
+                        ? 150
+                        : 0,
+                    curve: Curves.easeOut,
+                    child: Text(
+                      "Je suis Arnaud Halleux, un développeur full stack autodidacte de 25 ans spécialisé dans le développement web, mobile et logiciel. Avec mon expertise en technologies telles que Flutter, Firebase, je peux créer des applications web et mobiles performantes et élégantes. En tant que développeur autodidacte, je suis capable de résoudre rapidement les problèmes complexes. Je suis en train de coder mon portfolio avec Flutter pour montrer mes compétences en développement mobile. Je suis fier de mes compétences et prêt à aider les entreprises à atteindre leurs objectifs de développement de logiciels.",
+                      style: TextStyle(
+                          fontFamily: 'SpaceMono',
+                          color: secondColor,
+                          fontWeight: FontWeight.w400,
+                          fontSize: 20),
+                    ),
+                  ),
                 ],
               )
             : Column(

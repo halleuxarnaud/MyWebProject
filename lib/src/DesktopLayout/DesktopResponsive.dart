@@ -64,25 +64,20 @@ class _DesktopResponsiveState extends State<DesktopResponsive> {
       },
       child: SingleChildScrollView(
           controller: _scrollController,
-          child: Column(
-            children: <Widget>[
-              ShowLogo(position0, size, _opacity, _currentscrollOffset),
-              _Animationlogo(size),
-              buildAbout(size),
-              _buildProduct(size),
-              ContactForm(size),
-              AnimatedFooter(size, _maxScrollOffset, _currentscrollOffset)
+          child: Stack(
+            children: [
+              Column(
+                children: <Widget>[
+                  ShowLogo(position0, size, _opacity, _currentscrollOffset),
+                  _Animationlogo(size),
+                  AboutMe(size, _currentscrollOffset),
+                  _buildProduct(size),
+                  ContactForm(size),
+                  AnimatedFooter(size, _maxScrollOffset, _currentscrollOffset)
+                ],
+              ),
             ],
           )),
-    );
-  }
-
-  Container buildAbout(Size size) {
-    return Container(
-      height: size.height,
-      width: size.width,
-      color: kDefaultcolor,
-      child: AboutMe(size, _currentscrollOffset),
     );
   }
 
