@@ -63,7 +63,7 @@ class _AboutMeState extends State<AboutMe> {
                         : 0,
                     curve: Curves.easeOut,
                     child: Text(
-                      "Je suis Arnaud Halleux, un développeur full stack autodidacte de 25 ans spécialisé dans le développement web, mobile et logiciel. Avec mon expertise en technologies telles que Flutter, Firebase, je peux créer des applications web et mobiles performantes et élégantes. En tant que développeur autodidacte, je suis capable de résoudre rapidement les problèmes complexes. D'aillieur mon portfolio est entièrement developpé avec Flutter",
+                      "I am Arnaud Halleux, a 25 years old self-taught full stack developer specialized in web, mobile and software development. With my expertise in technologies such as Flutter, Firebase, I can create powerful and elegant web and mobile applications. As a self-taught developer, I am able to solve complex problems quickly. My portfolio is entirely developed with Flutter",
                       style: TextStyle(
                           fontFamily: 'SpaceMono',
                           color: secondColor,

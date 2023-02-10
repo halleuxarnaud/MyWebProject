@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/src/DesktopLayout/testchatgpt.dart';
-import 'package:flutter_application_1/src/DesktopLayout/widgets/aboutme.dart';
-import 'package:flutter_application_1/src/DesktopLayout/widgets/contactform.dart';
-import 'package:flutter_application_1/src/DesktopLayout/widgets/showlogo.dart';
-import 'package:simple_gradient_text/simple_gradient_text.dart';
-import 'package:web_smooth_scroll/web_smooth_scroll.dart';
+import 'package:flutter_application_1/src/widgets/aboutme.dart';
+import 'package:flutter_application_1/src/widgets/contactform.dart';
+import 'package:flutter_application_1/src/widgets/displayparallax.dart';
+import 'package:flutter_application_1/src/widgets/showlogo.dart';
 
 import '../../components/color.dart';
-import 'widgets/animatedfooter.dart';
+import '../widgets/animatedfooter.dart';
 
 class DesktopResponsive extends StatefulWidget {
   const DesktopResponsive({super.key});
@@ -66,6 +64,7 @@ class _DesktopResponsiveState extends State<DesktopResponsive> {
           controller: _scrollController,
           child: Stack(
             children: [
+              DisplayParallax(_currentscrollOffset, _maxScrollOffset),
               Column(
                 children: <Widget>[
                   ShowLogo(position0, size, _opacity, _currentscrollOffset),
