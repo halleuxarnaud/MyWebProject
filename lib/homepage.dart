@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/src/DesktopLayout/DesktopResponsive.dart';
-import 'package:flutter_application_1/src/DesktopLayout/MobilResponsive.dart';
-import 'package:flutter_application_1/src/DesktopLayout/TabletteResponsive.dart';
+import 'package:flutter_application_1/src/MobilLayout/MobilResponsive.dart';
+import 'package:flutter_application_1/src/TabletteLayout/TabletteResponsive.dart';
 
-import 'reponsivelayout.dart';
-import 'MinimumWebResp.dart';
+import 'src/DesktopLayout/reponsivelayout.dart';
+import 'src/MinWindowsLayout/MinimumWebResp.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});

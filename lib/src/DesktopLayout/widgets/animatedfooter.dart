@@ -19,8 +19,11 @@ class _AnimatedFooterState extends State<AnimatedFooter> {
   }
 
   animatedFooterWidget() {
-    if (widget._currentOffset == widget._maxScrollOffset) {
-      return Row(
+    return AnimatedContainer(
+      duration: const Duration(milliseconds: 700),
+      height: widget._currentOffset == widget._maxScrollOffset ? 60 : 0,
+      curve: Curves.easeOut,
+      child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           const SizedBox(
@@ -60,9 +63,7 @@ class _AnimatedFooterState extends State<AnimatedFooter> {
             height: 1,
           )
         ],
-      );
-    } else {
-      return const Text(' ');
-    }
+      ),
+    );
   }
 }

@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/src/DesktopLayout/contactform.dart';
+import 'package:flutter_application_1/src/DesktopLayout/testchatgpt.dart';
+import 'package:flutter_application_1/src/DesktopLayout/widgets/aboutme.dart';
+import 'package:flutter_application_1/src/DesktopLayout/widgets/contactform.dart';
+import 'package:flutter_application_1/src/DesktopLayout/widgets/showlogo.dart';
+import 'package:simple_gradient_text/simple_gradient_text.dart';
 import 'package:web_smooth_scroll/web_smooth_scroll.dart';
 
 import '../../components/color.dart';
-import 'animatedfooter.dart';
+import 'widgets/animatedfooter.dart';
 
 class DesktopResponsive extends StatefulWidget {
   const DesktopResponsive({super.key});
@@ -37,42 +41,48 @@ class _DesktopResponsiveState extends State<DesktopResponsive> {
   }
 
   @override
-  Widget build(BuildContext context) {
+  SingleChildScrollView build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return WebSmoothScroll(
-      controller: _scrollController,
-      animationDuration: 300,
-      child: SingleChildScrollView(
-          //physics: const NeverScrollableScrollPhysics(),
-          controller: _scrollController,
-          child: Column(
-            children: <Widget>[
-              //_buildTop(size),
-              //_buildProduct(size),
-              ContactForm(size),
-              _buildBottom(size),
-            ],
-          )),
+    return SingleChildScrollView(
+        //physics: const NeverScrollableScrollPhysics(),
+        controller: _scrollController,
+        child: Column(
+          children: <Widget>[
+            ShowLogo(size),
+            _Animationlogo(size),
+            buildAbout(size),
+            _buildProduct(size),
+            ContactForm(size),
+            _buildBottom(size),
+          ],
+        ));
+  }
+
+  Container buildAbout(Size size) {
+    return Container(
+      height: size.height,
+      width: size.width,
+      color: kDefaultcolor,
+      child: AboutMe(size, _currentscrollOffset),
     );
   }
 
-  Column _buildTop(Size size) {
-    return Column(
-      children: [
-        Container(
-          height: size.height,
-          width: size.width,
-          color: kDefaultcolor,
-          child: const Center(
-              child: Text(
-            'Logo (Add dispersion on logo)',
-            style: TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-                fontSize: 100),
-          )),
+  Container _Animationlogo(Size size) {
+    return Container(
+      height: size.height,
+      width: size.width,
+      color: kDefaultcolor,
+      padding: const EdgeInsets.only(
+        left: 220,
+        right: 220,
+        top: 50,
+      ),
+      child: Center(
+        child: Text(
+          'Logo Animation',
+          style: TextStyle(fontSize: 40, color: secondColor),
         ),
-      ],
+      ),
     );
   }
 
@@ -114,22 +124,27 @@ class _DesktopResponsiveState extends State<DesktopResponsive> {
       height: size.height,
       width: size.width,
       color: kDefaultcolor,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      child: Stack(
+        alignment: Alignment.center,
         children: [
           const SizedBox(
             height: 1,
           ),
-          const Text(
-            'Logo Crochet Parallax asembler',
-            style: TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-                fontSize: 100),
+          const Center(
+            child: Text(
+              'Logo Crochet Parallax asembler',
+              style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 100),
+            ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: AnimatedFooter(_maxScrollOffset, _currentscrollOffset),
+          Positioned(
+            bottom: 0,
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: AnimatedFooter(_maxScrollOffset, _currentscrollOffset),
+            ),
           ),
         ],
       ),
