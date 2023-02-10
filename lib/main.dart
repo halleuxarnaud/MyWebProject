@@ -6,7 +6,7 @@ void main() async {
   runApp(const MyApp());
 }
 
-//* Faire une annimation pour animationFooter venu du bas
+//* Fix le bug d'animation quand on scroll ca cut l'autre annimation
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

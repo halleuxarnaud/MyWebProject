@@ -18,6 +18,8 @@ class DesktopResponsive extends StatefulWidget {
 
 class _DesktopResponsiveState extends State<DesktopResponsive> {
   late ScrollController _scrollController;
+  double _opacity = 1.0;
+  bool position0 = true;
 
   @override
   void initState() {
@@ -33,29 +35,46 @@ class _DesktopResponsiveState extends State<DesktopResponsive> {
 
   void _onscroll() {
     setState(() {
+      _opacity = 1 - _scrollController.offset / 100;
       _currentscrollOffset = _scrollController.offset;
       _maxScrollOffset = _scrollController.position.maxScrollExtent;
-      print(_currentscrollOffset);
-      print(_maxScrollOffset);
+      if (_currentscrollOffset == 0) {
+        position0 = true;
+      } else {
+        position0 = false;
+      }
     });
   }
 
   @override
-  SingleChildScrollView build(BuildContext context) {
+  NotificationListener<ScrollNotification> build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return SingleChildScrollView(
-        //physics: const NeverScrollableScrollPhysics(),
-        controller: _scrollController,
-        child: Column(
-          children: <Widget>[
-            ShowLogo(size),
-            _Animationlogo(size),
-            buildAbout(size),
-            _buildProduct(size),
-            ContactForm(size),
-            _buildBottom(size),
-          ],
-        ));
+    return NotificationListener<ScrollNotification>(
+      onNotification: (scrollNotification) {
+        if (scrollNotification is ScrollUpdateNotification) {
+          setState(() {
+            _opacity = 1 - _scrollController.offset / 1000;
+            if (_opacity <= 0.1) {
+              _opacity = 0;
+            }
+            print(_opacity);
+          });
+        }
+        return false;
+      },
+      child: SingleChildScrollView(
+          controller: _scrollController,
+          child: Column(
+            children: <Widget>[
+              ShowLogo(position0, size, _opacity, _currentscrollOffset),
+              _Animationlogo(size),
+              buildAbout(size),
+              _buildProduct(size),
+              ContactForm(size),
+              AnimatedFooter(size, _maxScrollOffset, _currentscrollOffset)
+            ],
+          )),
+    );
   }
 
   Container buildAbout(Size size) {
@@ -116,38 +135,6 @@ class _DesktopResponsiveState extends State<DesktopResponsive> {
           )),
         ),
       ],
-    );
-  }
-
-  Container _buildBottom(Size size) {
-    return Container(
-      height: size.height,
-      width: size.width,
-      color: kDefaultcolor,
-      child: Stack(
-        alignment: Alignment.center,
-        children: [
-          const SizedBox(
-            height: 1,
-          ),
-          const Center(
-            child: Text(
-              'Logo Crochet Parallax asembler',
-              style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 100),
-            ),
-          ),
-          Positioned(
-            bottom: 0,
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: AnimatedFooter(_maxScrollOffset, _currentscrollOffset),
-            ),
-          ),
-        ],
-      ),
     );
   }
 }

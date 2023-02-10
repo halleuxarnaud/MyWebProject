@@ -26,7 +26,6 @@ class _ContactFormState extends State<ContactForm> {
 
   sendEmail() async {
     if (isValidate == false) {
-      print('You are a robot');
       setState(() {
         showError = !showError;
       });

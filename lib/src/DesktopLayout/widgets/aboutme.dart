@@ -23,9 +23,6 @@ class _AboutMeState extends State<AboutMe> {
   }
 
   animationDisplay(Size size) {
-    print('TestState');
-    print(widget._currentOffset);
-    print(size.height);
     if (widget._currentOffset >= size.height * 0.40) {
       showMoreInformation = true;
     }
