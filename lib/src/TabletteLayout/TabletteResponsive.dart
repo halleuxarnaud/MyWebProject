@@ -23,7 +23,7 @@ class _TabletteResponsiveState extends State<TabletteResponsive> {
             child: Text(
           'Tablette Responsive Soon',
           style: TextStyle(
-            color: secondColor,
+            color: colorFonts,
             fontFamily: 'SpaceMono',
             fontWeight: FontWeight.w400,
             fontSize: 30,

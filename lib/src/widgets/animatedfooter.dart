@@ -29,11 +29,8 @@ class _AnimatedFooterState extends State<AnimatedFooter> {
           ),
           const Center(
             child: Text(
-              'Logo Crochet Parallax asembler',
-              style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 100),
+              'Logo Animation',
+              style: TextStyle(fontSize: 40, color: colorFonts),
             ),
           ),
           Positioned(

@@ -7,6 +7,7 @@ void main() async {
 }
 
 //* Fix le bug d'animation quand on scroll ca cut l'autre annimation
+//* Ajouter les nouvelle donner budget + TimeLine a la génération de mail
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

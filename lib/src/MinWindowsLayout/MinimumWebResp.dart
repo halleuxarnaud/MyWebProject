@@ -25,7 +25,7 @@ class _MinimumWebRespState extends State<MinimumWebResp> {
             child: Text(
           'MinWebResponsive Soon',
           style: TextStyle(
-            color: secondColor,
+            color: colorFonts,
             fontFamily: 'SpaceMono',
             fontWeight: FontWeight.w400,
             fontSize: 30,

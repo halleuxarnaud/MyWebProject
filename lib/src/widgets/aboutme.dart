@@ -28,48 +28,51 @@ class _AboutMeState extends State<AboutMe> {
     print(widget.size);
     print(showMoreInformation);
     return Container(
-        height: widget.size.height,
+        height: widget.size.height - 300,
         width: widget.size.width,
         color: kDefaultcolor,
-        padding: const EdgeInsets.only(
-          left: 400,
-          right: 400,
-          top: 50,
-        ),
+        padding: EdgeInsets.fromLTRB(
+            widget.size.width * 0.2, 0, widget.size.width * 0.2, 0),
         child: showMoreInformation
             ? Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  GradientText(
-                    'Flutter Déveloper',
-                    style: TextStyle(
-                      fontFamily: 'SpaceMono',
-                      fontSize: 60,
-                      fontWeight: FontWeight.w400,
-                    ),
-                    colors: const [
-                      Color(0XFF9465F6),
-                      Color(0XFF739cca),
-                    ],
-                  ),
-                  SizedBox(
-                    height: 30,
-                  ),
-                  AnimatedContainer(
-                    duration: const Duration(milliseconds: 1500),
-                    height: widget._currentOffset >= (size.height * 2.1) * 0.60
-                        ? 150
-                        : 0,
-                    curve: Curves.easeOut,
-                    child: Text(
-                      "I am Arnaud Halleux, a 25 years old self-taught full stack developer specialized in web, mobile and software development. With my expertise in technologies such as Flutter, Firebase, I can create powerful and elegant web and mobile applications. As a self-taught developer, I am able to solve complex problems quickly. My portfolio is entirely developed with Flutter",
-                      style: TextStyle(
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      GradientText(
+                        'Flutter Déveloper',
+                        style: TextStyle(
                           fontFamily: 'SpaceMono',
-                          color: secondColor,
+                          fontSize: 60,
                           fontWeight: FontWeight.w400,
-                          fontSize: 20),
-                    ),
+                        ),
+                        colors: const [
+                          Color(0XFF9465F6),
+                          Color(0XFF739cca),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 30,
+                      ),
+                      AnimatedContainer(
+                        duration: const Duration(milliseconds: 1500),
+                        height:
+                            widget._currentOffset >= (size.height * 2.1) * 0.60
+                                ? 150
+                                : 0,
+                        curve: Curves.easeOut,
+                        child: Text(
+                          "I am Arnaud Halleux, a 25 years old self-taught full stack developer specialized in web, mobile and software development. With my expertise in technologies such as Flutter, Firebase, I can create powerful and elegant web and mobile applications. As a self-taught developer, I am able to solve complex problems quickly. My portfolio is entirely developed with Flutter",
+                          style: TextStyle(
+                              fontFamily: 'SpaceMono',
+                              color: colorFonts,
+                              fontWeight: FontWeight.w400,
+                              fontSize: 20),
+                        ),
+                      ),
+                    ],
                   ),
                 ],
               )

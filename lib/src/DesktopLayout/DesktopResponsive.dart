@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/src/widgets/aboutme.dart';
 import 'package:flutter_application_1/src/widgets/contactform.dart';
 import 'package:flutter_application_1/src/widgets/displayparallax.dart';
+import 'package:flutter_application_1/src/widgets/product.dart';
 import 'package:flutter_application_1/src/widgets/showlogo.dart';
 
 import '../../components/color.dart';
@@ -70,7 +71,7 @@ class _DesktopResponsiveState extends State<DesktopResponsive> {
                   ShowLogo(position0, size, _opacity, _currentscrollOffset),
                   _Animationlogo(size),
                   AboutMe(size, _currentscrollOffset),
-                  _buildProduct(size),
+                  Products(size),
                   ContactForm(size),
                   AnimatedFooter(size, _maxScrollOffset, _currentscrollOffset)
                 ],
@@ -93,42 +94,9 @@ class _DesktopResponsiveState extends State<DesktopResponsive> {
       child: Center(
         child: Text(
           'Logo Animation',
-          style: TextStyle(fontSize: 40, color: secondColor),
+          style: TextStyle(fontSize: 40, color: colorFonts),
         ),
       ),
-    );
-  }
-
-  Column _buildProduct(Size size) {
-    return Column(
-      children: <Widget>[
-        Container(
-          height: size.height,
-          width: size.width,
-          color: kDefaultcolor,
-          child: const Center(
-              child: Text(
-            'Products page 1',
-            style: TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-                fontSize: 100),
-          )),
-        ),
-        Container(
-          height: size.height,
-          width: size.width,
-          color: kDefaultcolor,
-          child: const Center(
-              child: Text(
-            'Products page 2',
-            style: TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-                fontSize: 100),
-          )),
-        ),
-      ],
     );
   }
 }

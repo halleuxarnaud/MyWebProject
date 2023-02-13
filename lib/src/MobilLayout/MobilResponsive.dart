@@ -28,7 +28,7 @@ class _MobilResponsiveState extends State<MobilResponsive> {
               Text(
                 'Mobil Responsive Soon',
                 style: TextStyle(
-                  color: secondColor,
+                  color: colorFonts,
                   fontFamily: 'SpaceMono',
                   fontWeight: FontWeight.w400,
                   fontSize: 30,
@@ -37,7 +37,7 @@ class _MobilResponsiveState extends State<MobilResponsive> {
               Text(
                 'Sorry but you can view my portfolio on a classic screen (Computer)',
                 style: TextStyle(
-                  color: secondColor,
+                  color: colorFonts,
                   fontFamily: 'SpaceMono',
                   fontWeight: FontWeight.w400,
                   fontSize: 10,
