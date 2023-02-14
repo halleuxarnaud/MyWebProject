@@ -101,7 +101,7 @@ class _ContactFormState extends State<ContactForm> {
       color: kDefaultcolor,
       child: Padding(
         padding: EdgeInsets.fromLTRB(
-            widget.size.width * 0.2, 0, widget.size.width * 0.2, 0),
+            widget.size.width * 0.25, 0, widget.size.width * 0.25, 0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

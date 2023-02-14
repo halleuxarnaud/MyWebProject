@@ -1,6 +1,5 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_application_1/components/color.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 
@@ -24,15 +23,12 @@ class _AboutMeState extends State<AboutMe> {
     } else {
       showMoreInformation = true;
     }
-    print(widget._currentOffset);
-    print(widget.size);
-    print(showMoreInformation);
     return Container(
         height: widget.size.height - 300,
         width: widget.size.width,
         color: kDefaultcolor,
         padding: EdgeInsets.fromLTRB(
-            widget.size.width * 0.2, 0, widget.size.width * 0.2, 0),
+            widget.size.width * 0.25, 0, widget.size.width * 0.25, 0),
         child: showMoreInformation
             ? Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -43,7 +39,7 @@ class _AboutMeState extends State<AboutMe> {
                     children: [
                       GradientText(
                         'Flutter Déveloper',
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontFamily: 'SpaceMono',
                           fontSize: 60,
                           fontWeight: FontWeight.w400,
@@ -53,17 +49,17 @@ class _AboutMeState extends State<AboutMe> {
                           Color(0XFF739cca),
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 30,
                       ),
                       AnimatedContainer(
                         duration: const Duration(milliseconds: 1500),
                         height:
-                            widget._currentOffset >= (size.height * 2.1) * 0.60
-                                ? 150
+                            widget._currentOffset >= (size.height * 2.1) * 0.67
+                                ? 350
                                 : 0,
                         curve: Curves.easeOut,
-                        child: Text(
+                        child: const Text(
                           "I am Arnaud Halleux, a 25 years old self-taught full stack developer specialized in web, mobile and software development. With my expertise in technologies such as Flutter, Firebase, I can create powerful and elegant web and mobile applications. As a self-taught developer, I am able to solve complex problems quickly. My portfolio is entirely developed with Flutter",
                           style: TextStyle(
                               fontFamily: 'SpaceMono',
@@ -81,8 +77,8 @@ class _AboutMeState extends State<AboutMe> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   GradientText(
-                    'Flutter Déveloper',
-                    style: TextStyle(
+                    'Flutter Developer',
+                    style: const TextStyle(
                       fontFamily: 'SpaceMono',
                       fontSize: 60,
                       fontWeight: FontWeight.w400,
