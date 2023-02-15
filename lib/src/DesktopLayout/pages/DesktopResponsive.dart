@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/src/widgets/aboutme.dart';
-import 'package:flutter_application_1/src/widgets/contactform.dart';
-import 'package:flutter_application_1/src/widgets/displayparallax.dart';
-import 'package:flutter_application_1/src/widgets/product.dart';
-import 'package:flutter_application_1/src/widgets/showlogo.dart';
-import '../../components/color.dart';
+import 'package:flutter_application_1/src/DesktopLayout/widgets/aboutme.dart';
+import 'package:flutter_application_1/src/DesktopLayout/widgets/contactform.dart';
+import 'package:flutter_application_1/src/DesktopLayout/widgets/displayparallax.dart';
+import 'package:flutter_application_1/src/DesktopLayout/widgets/product.dart';
+import 'package:flutter_application_1/src/DesktopLayout/widgets/showlogo.dart';
+import '../../../components/color.dart';
 import '../widgets/animatedfooter.dart';
 
 class DesktopResponsive extends StatefulWidget {
@@ -18,6 +18,9 @@ class _DesktopResponsiveState extends State<DesktopResponsive> {
   late ScrollController _scrollController;
   double _opacity = 1.0;
   bool position0 = true;
+  double _position = 0.0;
+  double _currentscrollOffset = 0.0;
+  double _maxScrollOffset = 0.0;
 
   @override
   void initState() {
@@ -28,14 +31,12 @@ class _DesktopResponsiveState extends State<DesktopResponsive> {
     super.initState();
   }
 
-  double _currentscrollOffset = 0.0;
-  double _maxScrollOffset = 0.0;
-
   void _onscroll() {
     setState(() {
       _opacity = 1 - _scrollController.offset / 100;
       _currentscrollOffset = _scrollController.offset;
       _maxScrollOffset = _scrollController.position.maxScrollExtent;
+      _position = _currentscrollOffset;
       if (_currentscrollOffset == 0) {
         position0 = true;
       } else {
@@ -55,7 +56,9 @@ class _DesktopResponsiveState extends State<DesktopResponsive> {
             if (_opacity <= 0.1) {
               _opacity = 0;
             }
-            print(_opacity);
+            // print('Opacity: $_opacity');
+            // print('Current offset: $_currentscrollOffset');
+            // print('Max offset $_maxScrollOffset');
           });
         }
         return false;
@@ -64,38 +67,33 @@ class _DesktopResponsiveState extends State<DesktopResponsive> {
           controller: _scrollController,
           child: Stack(
             children: [
-              DisplayParallax(_currentscrollOffset, _maxScrollOffset),
               Column(
                 children: <Widget>[
                   ShowLogo(position0, size, _opacity, _currentscrollOffset),
-                  _Animationlogo(size),
+                  Container(
+                    color: kDefaultcolor,
+                    height: size.height + 300,
+                    width: size.width,
+                  ),
                   AboutMe(size, _currentscrollOffset),
                   Products(size),
                   ContactForm(size),
+                  Container(
+                    color: kDefaultcolor,
+                    height: size.height + 300,
+                    width: size.width,
+                  ),
                   AnimatedFooter(size, _maxScrollOffset, _currentscrollOffset),
                 ],
               ),
+              Positioned(
+                top: _position + size.height / 2.5,
+                width: size.width,
+                child: DisplayParallax(
+                    _currentscrollOffset, _maxScrollOffset, size,),
+              ),
             ],
           )),
-    );
-  }
-
-  Container _Animationlogo(Size size) {
-    return Container(
-      height: size.height,
-      width: size.width,
-      color: kDefaultcolor,
-      padding: const EdgeInsets.only(
-        left: 220,
-        right: 220,
-        top: 50,
-      ),
-      child: Center(
-        child: Text(
-          'Logo Animation',
-          style: TextStyle(fontSize: 40, color: colorFonts),
-        ),
-      ),
     );
   }
 }

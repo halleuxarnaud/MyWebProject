@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/src/DesktopLayout/DesktopResponsive.dart';
-import 'package:flutter_application_1/src/DesktopLayout/mouseTrackAnimation.dart';
+import 'package:flutter_application_1/src/DesktopLayout/pages/DesktopResponsive.dart';
+import 'package:flutter_application_1/src/DesktopLayout/widgets/mouseTrackAnimation.dart';
 import 'package:flutter_application_1/src/MobilLayout/MobilResponsive.dart';
 import 'package:flutter_application_1/src/TabletteLayout/TabletteResponsive.dart';
 

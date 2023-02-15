@@ -40,9 +40,12 @@ class _ShowLogoState extends State<ShowLogo> {
                 Center(
                   child: AnimatedOpacity(
                       opacity: opacity,
-                      duration: Duration(seconds: 7),
+                      duration: Duration(seconds: 3),
                       child: Image.asset(
-                        'assets/image/logo.png',
+                        'assets/image/HiverLogo.png',
+                        color: Colors.white,
+                        height: 300,
+                        width: 300,
                       )),
                 ),
               ],
@@ -58,7 +61,10 @@ class _ShowLogoState extends State<ShowLogo> {
                   child: Opacity(
                     opacity: widget._opacityAdaptive,
                     child: Image.asset(
-                      'assets/image/logo.png',
+                      'assets/image/HiverLogo.png',
+                      color: Colors.white,
+                      height: 300,
+                      width: 300,
                     ),
                   ),
                 ),

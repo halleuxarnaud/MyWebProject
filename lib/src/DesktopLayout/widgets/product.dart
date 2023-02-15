@@ -1,12 +1,8 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_application_1/components/color.dart';
 import 'package:flutter_application_1/src/DesktopLayout/data.dart';
-import 'package:flutter_application_1/src/DesktopLayout/mouseTrackAnimation.dart';
-import 'package:flutter_application_1/src/widgets/parallaximage.dart';
-import 'package:mouse_parallax/mouse_parallax.dart';
+import 'package:flutter_application_1/src/DesktopLayout/widgets/mouseTrackAnimation.dart';
+import 'package:flutter_application_1/src/DesktopLayout/widgets/parallaximage.dart';
 
 class Products extends StatefulWidget {
   final Size size;
@@ -21,13 +17,13 @@ class _ProductsState extends State<Products> {
   late bool isHovered2 = false;
   late bool isHovered3 = false;
 
-  void updateIsHovered(bool Value, int Card) {
-    if (Card == 1) {
-      isHovered1 = Value;
-    } else if (Card == 2) {
-      isHovered2 = Value;
-    } else if (Card == 3) {
-      isHovered3 = Value;
+  void updateIsHovered(bool value, int card) {
+    if (card == 1) {
+      isHovered1 = value;
+    } else if (card == 2) {
+      isHovered2 = value;
+    } else if (card == 3) {
+      isHovered3 = value;
     }
   }
 
@@ -120,7 +116,7 @@ class _ProductsState extends State<Products> {
                     BoxShadow(
                       color: const Color(0xFF41238a).withOpacity(0.5),
                       spreadRadius: 15,
-                      blurRadius: 20,
+                      blurRadius: 60,
                       offset: const Offset(0, 3),
                     ),
                   ]

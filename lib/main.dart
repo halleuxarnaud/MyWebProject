@@ -9,11 +9,13 @@ void main() async {
 //* Fix le bug d'animation quand on scroll ca cut l'autre annimation
 //* Ajouter les nouvelle donner budget + TimeLine a la génération de mail
 //* Ajouter une animation sur Sur le voilent quand on Hovered le container le violet est trop rapide
+//* Add Snow effect on clck bonhom de neige https://github.com/windwp/flutter-snow-effect
+//* Ajouter la barre au chevron en bottom quand la scroolcontroller est au max
+//* Corriger l'erreur de defilement de overflow
+
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

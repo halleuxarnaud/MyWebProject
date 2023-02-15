@@ -24,15 +24,6 @@ class _AnimatedFooterState extends State<AnimatedFooter> {
       child: Stack(
         alignment: Alignment.center,
         children: [
-          const SizedBox(
-            height: 1,
-          ),
-          const Center(
-            child: Text(
-              'Logo Animation',
-              style: TextStyle(fontSize: 40, color: colorFonts),
-            ),
-          ),
           Positioned(
               bottom: 0,
               child: AnimatedContainer(

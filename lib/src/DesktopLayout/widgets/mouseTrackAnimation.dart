@@ -11,7 +11,7 @@ class AnimatedCursorState {
   static const Size kDefaultSize = Size(15, 15);
   static const BoxDecoration kDefaultDecoration = BoxDecoration(
     borderRadius: BorderRadius.all(Radius.circular(90)),
-    color: Color.fromRGBO(148, 101, 246, 0.4),
+    color: Color.fromRGBO(148, 101, 246, 0.3),
   );
 
   final BoxDecoration decoration;
@@ -22,7 +22,7 @@ class AnimatedCursorState {
 class AnimatedCursorProvider extends ChangeNotifier {
   AnimatedCursorProvider();
 
-  AnimatedCursorState state = AnimatedCursorState();
+  AnimatedCursorState state = const AnimatedCursorState();
 
   void changeCursor(GlobalKey key, {BoxDecoration? decoration}) {
     final renderBox = key.currentContext?.findRenderObject() as RenderBox?;
@@ -39,7 +39,7 @@ class AnimatedCursorProvider extends ChangeNotifier {
   }
 
   void resetCursor() {
-    state = AnimatedCursorState();
+    state = const AnimatedCursorState();
     notifyListeners();
   }
 
@@ -83,10 +83,10 @@ class AnimatedCursor extends StatelessWidget {
                   top: state.offset.dy - state.size.height / 2,
                   width: state.size.width,
                   height: state.size.height,
-                  duration: Duration(milliseconds: 30),
+                  duration: const Duration(milliseconds: 100),
                   child: IgnorePointer(
                     child: AnimatedContainer(
-                      duration: Duration(milliseconds: 300),
+                      duration: const Duration(milliseconds: 600),
                       curve: Curves.easeOutExpo,
                       width: state.size.width,
                       height: state.size.height,
