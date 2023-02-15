@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/src/DesktopLayout/DesktopResponsive.dart';
+import 'package:flutter_application_1/src/DesktopLayout/mouseTrackAnimation.dart';
 import 'package:flutter_application_1/src/MobilLayout/MobilResponsive.dart';
 import 'package:flutter_application_1/src/TabletteLayout/TabletteResponsive.dart';
 
@@ -13,10 +14,11 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: ResponsiveLayout(
-      mobileResp: const MobilResponsive(),
-      minWebResp: const MinimumWebResp(),
-      tabletteResp: const TabletteResponsive(),
-      desktopResp: const DesktopResponsive(),
-    ));
+            mobileResp: const MobilResponsive(),
+            minWebResp: const MinimumWebResp(),
+            tabletteResp: const TabletteResponsive(),
+            desktopResp: AnimatedCursor(
+              child: DesktopResponsive(),
+            )));
   }
 }

@@ -4,7 +4,6 @@ import 'package:flutter_application_1/src/widgets/contactform.dart';
 import 'package:flutter_application_1/src/widgets/displayparallax.dart';
 import 'package:flutter_application_1/src/widgets/product.dart';
 import 'package:flutter_application_1/src/widgets/showlogo.dart';
-
 import '../../components/color.dart';
 import '../widgets/animatedfooter.dart';
 
@@ -73,7 +72,7 @@ class _DesktopResponsiveState extends State<DesktopResponsive> {
                   AboutMe(size, _currentscrollOffset),
                   Products(size),
                   ContactForm(size),
-                  AnimatedFooter(size, _maxScrollOffset, _currentscrollOffset)
+                  AnimatedFooter(size, _maxScrollOffset, _currentscrollOffset),
                 ],
               ),
             ],

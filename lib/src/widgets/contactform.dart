@@ -2,6 +2,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/components/color.dart';
+import 'package:flutter_application_1/src/DesktopLayout/mouseTrackAnimation.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
@@ -138,21 +139,27 @@ class _ContactFormState extends State<ContactForm> {
                                 const SizedBox(
                                   height: 10,
                                 ),
-                                TextFormField(
-                                  controller: namecontroller,
-                                  style:
-                                      const TextStyle(fontFamily: 'SpaceMono'),
-                                  decoration: InputDecoration(
-                                      border: OutlineInputBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(10.0),
-                                      ),
-                                      filled: true,
-                                      hintStyle: const TextStyle(
-                                          color: colorFontField,
-                                          fontFamily: 'SpaceMono'),
-                                      hintText: "Halleux Arnaud",
-                                      fillColor: backgroundColorField),
+                                AnimatedCursorMouseRegion(
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(15),
+                                    color: Colors.white.withOpacity(0),
+                                  ),
+                                  child: TextFormField(
+                                    controller: namecontroller,
+                                    style: const TextStyle(
+                                        fontFamily: 'SpaceMono'),
+                                    decoration: InputDecoration(
+                                        border: OutlineInputBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(10.0),
+                                        ),
+                                        filled: true,
+                                        hintStyle: const TextStyle(
+                                            color: colorFontField,
+                                            fontFamily: 'SpaceMono'),
+                                        hintText: "Halleux Arnaud",
+                                        fillColor: backgroundColorField),
+                                  ),
                                 ),
                               ],
                             ),
@@ -174,22 +181,28 @@ class _ContactFormState extends State<ContactForm> {
                                 const SizedBox(
                                   height: 10,
                                 ),
-                                TextFormField(
-                                  keyboardType: TextInputType.emailAddress,
-                                  controller: emailcontroller,
-                                  style:
-                                      const TextStyle(fontFamily: 'SpaceMono'),
-                                  decoration: InputDecoration(
-                                      errorText: errorText ? null : 'Erreur',
-                                      border: OutlineInputBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(10.0)),
-                                      filled: true,
-                                      hintStyle: const TextStyle(
-                                          color: colorFontField,
-                                          fontFamily: 'SpaceMono'),
-                                      hintText: "HelloWorld@gmail.com",
-                                      fillColor: backgroundColorField),
+                                AnimatedCursorMouseRegion(
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(15),
+                                    color: Colors.white.withOpacity(0),
+                                  ),
+                                  child: TextFormField(
+                                    keyboardType: TextInputType.emailAddress,
+                                    controller: emailcontroller,
+                                    style: const TextStyle(
+                                        fontFamily: 'SpaceMono'),
+                                    decoration: InputDecoration(
+                                        errorText: errorText ? null : 'Erreur',
+                                        border: OutlineInputBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(10.0)),
+                                        filled: true,
+                                        hintStyle: const TextStyle(
+                                            color: colorFontField,
+                                            fontFamily: 'SpaceMono'),
+                                        hintText: "HelloWorld@gmail.com",
+                                        fillColor: backgroundColorField),
+                                  ),
                                 ),
                               ],
                             ),
@@ -215,50 +228,56 @@ class _ContactFormState extends State<ContactForm> {
                                 const SizedBox(
                                   height: 10,
                                 ),
-                                DropdownButtonFormField2(
-                                  searchController: timelinecontroller,
-                                  decoration: InputDecoration(
-                                    isDense: true,
-                                    contentPadding: EdgeInsets.zero,
-                                    border: OutlineInputBorder(
-                                      borderRadius: BorderRadius.circular(10),
-                                    ),
-                                  ),
-                                  isExpanded: true,
-                                  hint: const Text(
-                                    'Select one...',
-                                    style: TextStyle(
-                                        color: colorFontField,
-                                        fontFamily: 'SpaceMono'),
-                                  ),
-                                  icon: const Icon(
-                                    Icons.arrow_drop_down,
-                                    color: colorFontField,
-                                  ),
-                                  iconSize: 30,
-                                  buttonHeight: 56,
-                                  dropdownDecoration: BoxDecoration(
-                                    color: backgroundColorField,
+                                AnimatedCursorMouseRegion(
+                                  decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(15),
+                                    color: Colors.white.withOpacity(0),
                                   ),
-                                  buttonDecoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(10),
-                                    color: backgroundColorField,
+                                  child: DropdownButtonFormField2(
+                                    searchController: timelinecontroller,
+                                    decoration: InputDecoration(
+                                      isDense: true,
+                                      contentPadding: EdgeInsets.zero,
+                                      border: OutlineInputBorder(
+                                        borderRadius: BorderRadius.circular(10),
+                                      ),
+                                    ),
+                                    isExpanded: true,
+                                    hint: const Text(
+                                      'Select one...',
+                                      style: TextStyle(
+                                          color: colorFontField,
+                                          fontFamily: 'SpaceMono'),
+                                    ),
+                                    icon: const Icon(
+                                      Icons.arrow_drop_down,
+                                      color: colorFontField,
+                                    ),
+                                    iconSize: 30,
+                                    buttonHeight: 56,
+                                    dropdownDecoration: BoxDecoration(
+                                      color: backgroundColorField,
+                                      borderRadius: BorderRadius.circular(15),
+                                    ),
+                                    buttonDecoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                      color: backgroundColorField,
+                                    ),
+                                    items: timeline
+                                        .map((item) => DropdownMenuItem<String>(
+                                              value: item,
+                                              child: Text(
+                                                item,
+                                                style: const TextStyle(
+                                                    color: colorFontField,
+                                                    fontFamily: 'SpaceMono'),
+                                              ),
+                                            ))
+                                        .toList(),
+                                    onChanged: (value) {
+                                      //Do something when changing the item if you want.
+                                    },
                                   ),
-                                  items: timeline
-                                      .map((item) => DropdownMenuItem<String>(
-                                            value: item,
-                                            child: Text(
-                                              item,
-                                              style: const TextStyle(
-                                                  color: colorFontField,
-                                                  fontFamily: 'SpaceMono'),
-                                            ),
-                                          ))
-                                      .toList(),
-                                  onChanged: (value) {
-                                    //Do something when changing the item if you want.
-                                  },
                                 ),
                                 const SizedBox(height: 30),
                               ],
@@ -281,50 +300,56 @@ class _ContactFormState extends State<ContactForm> {
                                 const SizedBox(
                                   height: 10,
                                 ),
-                                DropdownButtonFormField2(
-                                  searchController: budgetcontroller,
-                                  decoration: InputDecoration(
-                                    isDense: true,
-                                    contentPadding: EdgeInsets.zero,
-                                    border: OutlineInputBorder(
-                                      borderRadius: BorderRadius.circular(10),
-                                    ),
-                                  ),
-                                  isExpanded: true,
-                                  hint: const Text(
-                                    'Select one...',
-                                    style: TextStyle(
-                                        color: colorFontField,
-                                        fontFamily: 'SpaceMono'),
-                                  ),
-                                  icon: const Icon(
-                                    Icons.arrow_drop_down,
-                                    color: colorFontField,
-                                  ),
-                                  iconSize: 30,
-                                  buttonHeight: 56,
-                                  dropdownDecoration: BoxDecoration(
-                                    color: backgroundColorField,
+                                AnimatedCursorMouseRegion(
+                                  decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(15),
+                                    color: Colors.white.withOpacity(0),
                                   ),
-                                  buttonDecoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(10),
-                                    color: backgroundColorField,
+                                  child: DropdownButtonFormField2(
+                                    searchController: budgetcontroller,
+                                    decoration: InputDecoration(
+                                      isDense: true,
+                                      contentPadding: EdgeInsets.zero,
+                                      border: OutlineInputBorder(
+                                        borderRadius: BorderRadius.circular(10),
+                                      ),
+                                    ),
+                                    isExpanded: true,
+                                    hint: const Text(
+                                      'Select one...',
+                                      style: TextStyle(
+                                          color: colorFontField,
+                                          fontFamily: 'SpaceMono'),
+                                    ),
+                                    icon: const Icon(
+                                      Icons.arrow_drop_down,
+                                      color: colorFontField,
+                                    ),
+                                    iconSize: 30,
+                                    buttonHeight: 56,
+                                    dropdownDecoration: BoxDecoration(
+                                      color: backgroundColorField,
+                                      borderRadius: BorderRadius.circular(15),
+                                    ),
+                                    buttonDecoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                      color: backgroundColorField,
+                                    ),
+                                    items: budget
+                                        .map((item) => DropdownMenuItem<String>(
+                                              value: item,
+                                              child: Text(
+                                                item,
+                                                style: const TextStyle(
+                                                    color: colorFontField,
+                                                    fontFamily: 'SpaceMono'),
+                                              ),
+                                            ))
+                                        .toList(),
+                                    onChanged: (value) {
+                                      //Do something when changing the item if you want.
+                                    },
                                   ),
-                                  items: budget
-                                      .map((item) => DropdownMenuItem<String>(
-                                            value: item,
-                                            child: Text(
-                                              item,
-                                              style: const TextStyle(
-                                                  color: colorFontField,
-                                                  fontFamily: 'SpaceMono'),
-                                            ),
-                                          ))
-                                      .toList(),
-                                  onChanged: (value) {
-                                    //Do something when changing the item if you want.
-                                  },
                                 ),
                                 const SizedBox(height: 30),
                               ],
@@ -348,20 +373,26 @@ class _ContactFormState extends State<ContactForm> {
                           const SizedBox(
                             height: 10,
                           ),
-                          TextFormField(
-                            controller: messagecontroller,
-                            maxLines: 5,
-                            style: const TextStyle(fontFamily: 'SpaceMono'),
-                            decoration: InputDecoration(
-                                border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(10.0),
-                                ),
-                                filled: true,
-                                hintStyle: const TextStyle(
-                                    color: colorFontField,
-                                    fontFamily: 'SpaceMono'),
-                                hintText: "...",
-                                fillColor: backgroundColorField),
+                          AnimatedCursorMouseRegion(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(15),
+                              color: Colors.white.withOpacity(0),
+                            ),
+                            child: TextFormField(
+                              controller: messagecontroller,
+                              maxLines: 5,
+                              style: const TextStyle(fontFamily: 'SpaceMono'),
+                              decoration: InputDecoration(
+                                  border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(10.0),
+                                  ),
+                                  filled: true,
+                                  hintStyle: const TextStyle(
+                                      color: colorFontField,
+                                      fontFamily: 'SpaceMono'),
+                                  hintText: "...",
+                                  fillColor: backgroundColorField),
+                            ),
                           ),
                           const SizedBox(
                             height: 30,

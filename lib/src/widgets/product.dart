@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_application_1/components/color.dart';
+import 'package:flutter_application_1/src/DesktopLayout/mouseTrackAnimation.dart';
+import 'package:mouse_parallax/mouse_parallax.dart';
+import 'package:provider/provider.dart';
 
 class Products extends StatefulWidget {
   final Size size;
@@ -103,98 +106,104 @@ class _ProductsState extends State<Products> {
           );
         });
       },
-      child: AnimatedContainer(
-        height: 550,
-        width: widget.size.width,
-        duration: const Duration(milliseconds: 200),
+      child: AnimatedCursorMouseRegion(
         decoration: BoxDecoration(
-          border: Border.all(width: 2, color: colorFonts),
-          borderRadius: const BorderRadius.all(Radius.circular(15)),
-          boxShadow: isHovered
-              ? [
-                  BoxShadow(
-                    color: const Color(0xFF41238a).withOpacity(0.5),
-                    spreadRadius: 15,
-                    blurRadius: 20,
-                    offset: const Offset(0, 3),
-                  ),
-                ]
-              : [],
+          borderRadius: BorderRadius.circular(15),
+          color: const Color(0xFF41238a).withOpacity(0.1),
         ),
-        child: Container(
-          decoration: const BoxDecoration(
-            color: kDefaultcolor,
-            borderRadius: BorderRadius.all(Radius.circular(15)),
+        child: AnimatedContainer(
+          height: 550,
+          width: widget.size.width,
+          duration: const Duration(milliseconds: 200),
+          decoration: BoxDecoration(
+            border: Border.all(width: 2, color: colorFonts),
+            borderRadius: const BorderRadius.all(Radius.circular(15)),
+            boxShadow: isHovered
+                ? [
+                    BoxShadow(
+                      color: const Color(0xFF41238a).withOpacity(0.5),
+                      spreadRadius: 15,
+                      blurRadius: 20,
+                      offset: const Offset(0, 3),
+                    ),
+                  ]
+                : [],
           ),
-          child: Padding(
-            padding: const EdgeInsets.only(left: 20.0, top: 25, bottom: 25),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      minTitle,
-                      style: TextStyle(
-                          color: primaryColor,
-                          fontFamily: 'SpaceMono',
-                          fontSize: 20,
-                          fontWeight: FontWeight.w600,
-                          letterSpacing: 3),
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    Container(
-                      color: const Color(0XFF41238a),
-                      child: Text(
-                        title,
+          child: Container(
+            decoration: BoxDecoration(
+              color: kDefaultcolor,
+              borderRadius: BorderRadius.all(Radius.circular(15)),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.only(left: 20.0, top: 25, bottom: 25),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        minTitle,
                         style: TextStyle(
-                            color: Color(0XFF47e98d),
-                            fontFamily: 'SpaceMono',
-                            fontSize: 40,
-                            fontWeight: FontWeight.w700),
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 30,
-                    ),
-                    Container(
-                      width: 500,
-                      child: Text(
-                        description,
-                        style: TextStyle(
-                            color: colorFonts,
+                            color: primaryColor,
                             fontFamily: 'SpaceMono',
                             fontSize: 20,
-                            fontWeight: FontWeight.w400),
+                            fontWeight: FontWeight.w600,
+                            letterSpacing: 3),
                       ),
-                    )
-                  ],
-                ),
-                OutlinedButton(
-                    style: OutlinedButton.styleFrom(
-                        foregroundColor: Colors.red,
-                        backgroundColor: kDefaultcolor,
-                        side: const BorderSide(width: 2, color: Colors.white),
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(8))),
-                    child: const Padding(
-                      padding: EdgeInsets.all(15.0),
-                      child: Text(
-                        'See more',
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.w400,
-                            fontFamily: 'SpaceMono',
-                            fontSize: 19),
+                      const SizedBox(
+                        height: 10,
                       ),
-                    ),
-                    onPressed: () {}),
-              ],
+                      Container(
+                        color: const Color(0XFF41238a),
+                        child: Text(
+                          title,
+                          style: TextStyle(
+                              color: Color(0XFF47e98d),
+                              fontFamily: 'SpaceMono',
+                              fontSize: 40,
+                              fontWeight: FontWeight.w700),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 30,
+                      ),
+                      Container(
+                        width: 500,
+                        child: Text(
+                          description,
+                          style: TextStyle(
+                              color: colorFonts,
+                              fontFamily: 'SpaceMono',
+                              fontSize: 20,
+                              fontWeight: FontWeight.w400),
+                        ),
+                      )
+                    ],
+                  ),
+                  OutlinedButton(
+                      style: OutlinedButton.styleFrom(
+                          foregroundColor: Colors.red,
+                          backgroundColor: kDefaultcolor,
+                          side: const BorderSide(width: 2, color: Colors.white),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8))),
+                      child: const Padding(
+                        padding: EdgeInsets.all(15.0),
+                        child: Text(
+                          'See more',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w400,
+                              fontFamily: 'SpaceMono',
+                              fontSize: 19),
+                        ),
+                      ),
+                      onPressed: () {}),
+                ],
+              ),
             ),
           ),
         ),
