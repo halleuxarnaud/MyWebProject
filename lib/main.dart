@@ -8,6 +8,7 @@ void main() async {
 
 //* Fix le bug d'animation quand on scroll ca cut l'autre annimation
 //* Ajouter les nouvelle donner budget + TimeLine a la génération de mail
+//* Ajouter une animation sur Sur le voilent quand on Hovered le container le violet est trop rapide
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

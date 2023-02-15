@@ -83,7 +83,7 @@ class AnimatedCursor extends StatelessWidget {
                   top: state.offset.dy - state.size.height / 2,
                   width: state.size.width,
                   height: state.size.height,
-                  duration: Duration(milliseconds: 50),
+                  duration: Duration(milliseconds: 30),
                   child: IgnorePointer(
                     child: AnimatedContainer(
                       duration: Duration(milliseconds: 300),
