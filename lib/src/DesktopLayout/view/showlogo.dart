@@ -1,15 +1,15 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/components/color.dart';
+import 'package:mywebproject/components/color.dart';
 
 class ShowLogo extends StatefulWidget {
-  final bool position0;
+  final bool positionShowAnimation;
   final Size size;
   final double _opacityAdaptive;
-  final double _scrollControllerOffset;
-  ShowLogo(this.position0, this.size, this._opacityAdaptive,
-      this._scrollControllerOffset);
+  const ShowLogo(
+    this.positionShowAnimation,
+    this.size,
+    this._opacityAdaptive,
+  );
 
   @override
   _ShowLogoState createState() => _ShowLogoState();
@@ -20,7 +20,7 @@ class _ShowLogoState extends State<ShowLogo> {
 
   @override
   void initState() {
-    Future.delayed(Duration(seconds: 0), () {
+    Future.delayed(const Duration(seconds: 0), () {
       setState(() {
         opacity = 1;
       });
@@ -30,17 +30,17 @@ class _ShowLogoState extends State<ShowLogo> {
 
   @override
   Widget build(BuildContext context) {
-    return widget.position0
+    return widget.positionShowAnimation
         ? Container(
             height: widget.size.height,
             width: widget.size.width,
-            color: kDefaultcolor,
+            color: MyWebProjectUI.kDefaultcolor,
             child: Stack(
               children: [
                 Center(
                   child: AnimatedOpacity(
                       opacity: opacity,
-                      duration: Duration(seconds: 3),
+                      duration: const Duration(seconds: 3),
                       child: Image.asset(
                         'assets/image/HiverLogo.png',
                         color: Colors.white,
@@ -54,7 +54,7 @@ class _ShowLogoState extends State<ShowLogo> {
         : Container(
             height: widget.size.height,
             width: widget.size.width,
-            color: kDefaultcolor,
+            color: MyWebProjectUI.kDefaultcolor,
             child: Stack(
               children: [
                 Center(

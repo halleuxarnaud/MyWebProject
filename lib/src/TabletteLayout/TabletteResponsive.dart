@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/components/color.dart';
+import 'package:mywebproject/components/color.dart';
 
 class TabletteResponsive extends StatefulWidget {
   const TabletteResponsive({super.key});
@@ -17,13 +17,13 @@ class _TabletteResponsiveState extends State<TabletteResponsive> {
         Container(
           height: size.height,
           width: size.width,
-          color: kDefaultcolor,
+          color: MyWebProjectUI.kDefaultcolor,
         ),
         Center(
             child: Text(
           'Tablette Responsive Soon',
           style: TextStyle(
-            color: colorFonts,
+            color: MyWebProjectUI.secondaryColor,
             fontFamily: 'SpaceMono',
             fontWeight: FontWeight.w400,
             fontSize: 30,

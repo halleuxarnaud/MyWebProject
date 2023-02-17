@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:flutter_application_1/components/color.dart';
+import 'package:mywebproject/components/color.dart';
 
 class MinimumWebResp extends StatefulWidget {
   const MinimumWebResp({super.key});
@@ -19,13 +19,13 @@ class _MinimumWebRespState extends State<MinimumWebResp> {
         Container(
           height: size.height,
           width: size.width,
-          color: kDefaultcolor,
+          color: MyWebProjectUI.kDefaultcolor,
         ),
         Center(
             child: Text(
           'MinWebResponsive Soon',
           style: TextStyle(
-            color: colorFonts,
+            color: MyWebProjectUI.secondaryColor,
             fontFamily: 'SpaceMono',
             fontWeight: FontWeight.w400,
             fontSize: 30,

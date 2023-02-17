@@ -38,18 +38,21 @@ class _DisplayParallaxState extends State<DisplayParallax> {
     if (widget._currentscrollOffset >= widget.size.height / 10) {
       visible = true;
       positionTop = widget._currentscrollOffset;
+      if (positionTop >= 1480) {
+        positionTop = widget.size.width - 440;
+      }
     }
-    if (widget._currentscrollOffset >= widget.size.height * 1.5 ||
-        widget._maxScrollOffset / 2 < widget._currentscrollOffset) {
-      positionTop = widget.size.width;
-    }
-    if (widget._currentscrollOffset > widget._maxScrollOffset / 1.35) {
-      positionBottom = widget._maxScrollOffset - widget._currentscrollOffset;
+    if (widget._currentscrollOffset > widget._maxScrollOffset / 1.30) {
+      positionBottom =
+          (widget._maxScrollOffset - 254) - widget._currentscrollOffset;
+      if (positionBottom <= 0) {
+        positionBottom = 0;
+      }
     }
 
     print('PositionBottom $positionBottom');
     print('PositionTop $positionTop');
-    print(widget._maxScrollOffset);
+    print(widget._currentscrollOffset);
   }
 
   @override

@@ -1,6 +1,7 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/components/color.dart';
+import 'package:mywebproject/components/color.dart';
+import 'package:mywebproject/components/data.dart';
+import 'package:mywebproject/components/style.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 
 class AboutMe extends StatefulWidget {
@@ -26,7 +27,7 @@ class _AboutMeState extends State<AboutMe> {
     return Container(
         height: widget.size.height - 300,
         width: widget.size.width,
-        color: kDefaultcolor,
+        color: MyWebProjectUI.kDefaultcolor,
         padding: EdgeInsets.fromLTRB(
             widget.size.width * 0.25, 0, widget.size.width * 0.25, 0),
         child: showMoreInformation
@@ -38,12 +39,8 @@ class _AboutMeState extends State<AboutMe> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       GradientText(
-                        'Flutter Déveloper',
-                        style: const TextStyle(
-                          fontFamily: 'SpaceMono',
-                          fontSize: 60,
-                          fontWeight: FontWeight.w400,
-                        ),
+                        MyWebProjectData.titleAboutMe,
+                        style: MyWebProjectStyle.titleAboutMeStyle,
                         colors: const [
                           Color(0XFF9465F6),
                           Color(0XFF739cca),
@@ -60,12 +57,8 @@ class _AboutMeState extends State<AboutMe> {
                                 : 0,
                         curve: Curves.easeOut,
                         child: const Text(
-                          "I am Arnaud Halleux, a 25 years old self-taught full stack developer specialized in web, mobile and software development. With my expertise in technologies such as Flutter, Firebase, I can create powerful and elegant web and mobile applications. As a self-taught developer, I am able to solve complex problems quickly. My portfolio is entirely developed with Flutter",
-                          style: TextStyle(
-                              fontFamily: 'SpaceMono',
-                              color: colorFonts,
-                              fontWeight: FontWeight.w400,
-                              fontSize: 20),
+                          MyWebProjectData.descAboutMe,
+                          style: MyWebProjectStyle.descAboutMeStyle,
                         ),
                       ),
                     ],
@@ -77,12 +70,8 @@ class _AboutMeState extends State<AboutMe> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   GradientText(
-                    'Flutter Developer',
-                    style: const TextStyle(
-                      fontFamily: 'SpaceMono',
-                      fontSize: 60,
-                      fontWeight: FontWeight.w400,
-                    ),
+                    MyWebProjectData.titleAboutMe,
+                    style: MyWebProjectStyle.titleAboutMeStyle,
                     colors: const [
                       Color(0XFF9465F6),
                       Color(0XFF739cca),

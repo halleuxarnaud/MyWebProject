@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:flutter_application_1/components/color.dart';
+import 'package:mywebproject/components/color.dart';
 
 class AnimatedFooter extends StatefulWidget {
   final Size size;
@@ -20,7 +20,7 @@ class _AnimatedFooterState extends State<AnimatedFooter> {
     return Container(
       height: widget.size.height,
       width: widget.size.width,
-      color: kDefaultcolor,
+      color: MyWebProjectUI.kDefaultcolor,
       child: Stack(
         alignment: Alignment.center,
         children: [
@@ -43,7 +43,7 @@ class _AnimatedFooterState extends State<AnimatedFooter> {
                           '© 2023 MyWebProject',
                           style: TextStyle(
                             fontFamily: 'SpaceMono',
-                            color: footerColor,
+                            color: MyWebProjectUI.footerColor,
                             fontWeight: FontWeight.w400,
                             fontSize: 14,
                           ),
@@ -60,7 +60,7 @@ class _AnimatedFooterState extends State<AnimatedFooter> {
                           'HelloWorld',
                           style: TextStyle(
                             fontFamily: 'SpaceMono',
-                            color: footerColor,
+                            color: MyWebProjectUI.footerColor,
                             fontWeight: FontWeight.w400,
                             fontSize: 14,
                           ),

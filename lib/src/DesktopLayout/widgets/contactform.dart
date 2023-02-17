@@ -1,8 +1,8 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/components/color.dart';
-import 'package:flutter_application_1/src/DesktopLayout/widgets/mouseTrackAnimation.dart';
+import 'package:mywebproject/components/color.dart';
+import 'package:mywebproject/src/DesktopLayout/widgets/mouseTrackAnimation.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
@@ -98,7 +98,7 @@ class _ContactFormState extends State<ContactForm> {
     return Container(
       height: widget.size.height,
       width: widget.size.width,
-      color: kDefaultcolor,
+      color: MyWebProjectUI.kDefaultcolor,
       child: Padding(
         padding: EdgeInsets.fromLTRB(
             widget.size.width * 0.25, 0, widget.size.width * 0.25, 0),
@@ -110,7 +110,7 @@ class _ContactFormState extends State<ContactForm> {
               maxLines: 1,
               style: TextStyle(
                 fontFamily: 'SpaceMono',
-                color: colorFonts,
+                color: MyWebProjectUI.secondaryColor,
                 fontWeight: FontWeight.w400,
                 fontSize: 60,
               ),
@@ -131,7 +131,7 @@ class _ContactFormState extends State<ContactForm> {
                                 const Text(
                                   'Full Name',
                                   style: TextStyle(
-                                      color: colorFonts,
+                                      color: MyWebProjectUI.secondaryColor,
                                       fontWeight: FontWeight.w700,
                                       fontFamily: 'SpaceMono'),
                                 ),
@@ -154,10 +154,12 @@ class _ContactFormState extends State<ContactForm> {
                                         ),
                                         filled: true,
                                         hintStyle: const TextStyle(
-                                            color: colorFontField,
+                                            color:
+                                                MyWebProjectUI.colorFontField,
                                             fontFamily: 'SpaceMono'),
                                         hintText: "Halleux Arnaud",
-                                        fillColor: backgroundColorField),
+                                        fillColor:
+                                            MyWebProjectUI.colorFontField),
                                   ),
                                 ),
                               ],
@@ -173,7 +175,7 @@ class _ContactFormState extends State<ContactForm> {
                                 const Text(
                                   'Email Address',
                                   style: TextStyle(
-                                      color: colorFonts,
+                                      color: MyWebProjectUI.secondaryColor,
                                       fontWeight: FontWeight.w700,
                                       fontFamily: 'SpaceMono'),
                                 ),
@@ -197,10 +199,12 @@ class _ContactFormState extends State<ContactForm> {
                                                 BorderRadius.circular(10.0)),
                                         filled: true,
                                         hintStyle: const TextStyle(
-                                            color: colorFontField,
+                                            color:
+                                                MyWebProjectUI.colorFontField,
                                             fontFamily: 'SpaceMono'),
                                         hintText: "HelloWorld@gmail.com",
-                                        fillColor: backgroundColorField),
+                                        fillColor:
+                                            MyWebProjectUI.colorFontField),
                                   ),
                                 ),
                               ],
@@ -220,7 +224,7 @@ class _ContactFormState extends State<ContactForm> {
                                 const Text(
                                   'Timeline',
                                   style: TextStyle(
-                                      color: colorFonts,
+                                      color: MyWebProjectUI.secondaryColor,
                                       fontWeight: FontWeight.w700,
                                       fontFamily: 'SpaceMono'),
                                 ),
@@ -245,22 +249,22 @@ class _ContactFormState extends State<ContactForm> {
                                     hint: const Text(
                                       'Select one...',
                                       style: TextStyle(
-                                          color: colorFontField,
+                                          color: MyWebProjectUI.colorFontField,
                                           fontFamily: 'SpaceMono'),
                                     ),
                                     icon: const Icon(
                                       Icons.arrow_drop_down,
-                                      color: colorFontField,
+                                      color: MyWebProjectUI.colorFontField,
                                     ),
                                     iconSize: 30,
                                     buttonHeight: 56,
                                     dropdownDecoration: BoxDecoration(
-                                      color: backgroundColorField,
+                                      color: MyWebProjectUI.colorFontField,
                                       borderRadius: BorderRadius.circular(15),
                                     ),
                                     buttonDecoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(10),
-                                      color: backgroundColorField,
+                                      color: MyWebProjectUI.colorFontField,
                                     ),
                                     items: timeline
                                         .map((item) => DropdownMenuItem<String>(
@@ -268,7 +272,8 @@ class _ContactFormState extends State<ContactForm> {
                                               child: Text(
                                                 item,
                                                 style: const TextStyle(
-                                                    color: colorFontField,
+                                                    color: MyWebProjectUI
+                                                        .colorFontField,
                                                     fontFamily: 'SpaceMono'),
                                               ),
                                             ))
@@ -292,7 +297,7 @@ class _ContactFormState extends State<ContactForm> {
                                 const Text(
                                   'Budget',
                                   style: TextStyle(
-                                      color: colorFonts,
+                                      color: MyWebProjectUI.secondaryColor,
                                       fontWeight: FontWeight.w700,
                                       fontFamily: 'SpaceMono'),
                                 ),
@@ -317,22 +322,22 @@ class _ContactFormState extends State<ContactForm> {
                                     hint: const Text(
                                       'Select one...',
                                       style: TextStyle(
-                                          color: colorFontField,
+                                          color: MyWebProjectUI.colorFontField,
                                           fontFamily: 'SpaceMono'),
                                     ),
                                     icon: const Icon(
                                       Icons.arrow_drop_down,
-                                      color: colorFontField,
+                                      color: MyWebProjectUI.colorFontField,
                                     ),
                                     iconSize: 30,
                                     buttonHeight: 56,
                                     dropdownDecoration: BoxDecoration(
-                                      color: backgroundColorField,
+                                      color: MyWebProjectUI.colorFontField,
                                       borderRadius: BorderRadius.circular(15),
                                     ),
                                     buttonDecoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(10),
-                                      color: backgroundColorField,
+                                      color: MyWebProjectUI.colorFontField,
                                     ),
                                     items: budget
                                         .map((item) => DropdownMenuItem<String>(
@@ -340,7 +345,8 @@ class _ContactFormState extends State<ContactForm> {
                                               child: Text(
                                                 item,
                                                 style: const TextStyle(
-                                                    color: colorFontField,
+                                                    color: MyWebProjectUI
+                                                        .colorFontField,
                                                     fontFamily: 'SpaceMono'),
                                               ),
                                             ))
@@ -365,7 +371,7 @@ class _ContactFormState extends State<ContactForm> {
                           const Text(
                             'Message',
                             style: TextStyle(
-                                color: colorFonts,
+                                color: MyWebProjectUI.secondaryColor,
                                 fontWeight: FontWeight.w700,
                                 fontFamily: 'SpaceMono'),
                           ),
@@ -387,10 +393,10 @@ class _ContactFormState extends State<ContactForm> {
                                   ),
                                   filled: true,
                                   hintStyle: const TextStyle(
-                                      color: colorFontField,
+                                      color: MyWebProjectUI.colorFontField,
                                       fontFamily: 'SpaceMono'),
                                   hintText: "...",
-                                  fillColor: backgroundColorField),
+                                  fillColor: MyWebProjectUI.colorFontField),
                             ),
                           ),
                           const SizedBox(
@@ -404,7 +410,8 @@ class _ContactFormState extends State<ContactForm> {
                                   OutlinedButton(
                                       style: OutlinedButton.styleFrom(
                                           foregroundColor: Colors.white,
-                                          backgroundColor: kDefaultcolor,
+                                          backgroundColor:
+                                              MyWebProjectUI.kDefaultcolor,
                                           side: BorderSide(
                                               width: 2,
                                               color: isValidate
@@ -452,7 +459,8 @@ class _ContactFormState extends State<ContactForm> {
                               OutlinedButton(
                                   style: OutlinedButton.styleFrom(
                                       foregroundColor: Colors.white,
-                                      backgroundColor: kDefaultcolor,
+                                      backgroundColor:
+                                          MyWebProjectUI.kDefaultcolor,
                                       side: const BorderSide(
                                           width: 2, color: Colors.white),
                                       shape: RoundedRectangleBorder(

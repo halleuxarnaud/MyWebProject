@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:flutter_application_1/components/color.dart';
+import 'package:mywebproject/components/color.dart';
 
 class MobilResponsive extends StatefulWidget {
   const MobilResponsive({super.key});
@@ -19,7 +19,7 @@ class _MobilResponsiveState extends State<MobilResponsive> {
         Container(
           height: size.height,
           width: size.width,
-          color: kDefaultcolor,
+          color: MyWebProjectUI.kDefaultcolor,
         ),
         Center(
           child: Column(
@@ -28,7 +28,7 @@ class _MobilResponsiveState extends State<MobilResponsive> {
               Text(
                 'Mobil Responsive Soon',
                 style: TextStyle(
-                  color: colorFonts,
+                  color: MyWebProjectUI.secondaryColor,
                   fontFamily: 'SpaceMono',
                   fontWeight: FontWeight.w400,
                   fontSize: 30,
@@ -37,7 +37,7 @@ class _MobilResponsiveState extends State<MobilResponsive> {
               Text(
                 'Sorry but you can view my portfolio on a classic screen (Computer)',
                 style: TextStyle(
-                  color: colorFonts,
+                  color: MyWebProjectUI.secondaryColor,
                   fontFamily: 'SpaceMono',
                   fontWeight: FontWeight.w400,
                   fontSize: 10,

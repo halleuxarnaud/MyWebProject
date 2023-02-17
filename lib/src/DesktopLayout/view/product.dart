@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/components/color.dart';
-import 'package:flutter_application_1/src/DesktopLayout/data.dart';
-import 'package:flutter_application_1/src/DesktopLayout/widgets/mouseTrackAnimation.dart';
-import 'package:flutter_application_1/src/DesktopLayout/widgets/parallaximage.dart';
+import 'package:mywebproject/components/color.dart';
+import 'package:mywebproject/components/data.dart';
+import 'package:mywebproject/src/DesktopLayout/widgets/mouseTrackAnimation.dart';
+import 'package:mywebproject/src/DesktopLayout/widgets/parallaximage.dart';
 
 class Products extends StatefulWidget {
   final Size size;
@@ -13,17 +13,20 @@ class Products extends StatefulWidget {
 }
 
 class _ProductsState extends State<Products> {
-  late bool isHovered1 = false;
-  late bool isHovered2 = false;
-  late bool isHovered3 = false;
+  late bool isHoveredApp = false;
+  late bool isHoveredWeb = false;
+  late bool isHoveredSoft = false;
+  static const int card1 = 1;
+  static const int card2 = 2;
+  static const int card3 = 3;
 
   void updateIsHovered(bool value, int card) {
     if (card == 1) {
-      isHovered1 = value;
+      isHoveredApp = value;
     } else if (card == 2) {
-      isHovered2 = value;
+      isHoveredWeb = value;
     } else if (card == 3) {
-      isHovered3 = value;
+      isHoveredSoft = value;
     }
   }
 
@@ -31,7 +34,7 @@ class _ProductsState extends State<Products> {
   Widget build(BuildContext context) {
     return Container(
       width: widget.size.width,
-      color: kDefaultcolor,
+      color: MyWebProjectUI.kDefaultcolor,
       child: Padding(
         padding: EdgeInsets.fromLTRB(
             widget.size.width * 0.25, 0, widget.size.width * 0.25, 0),
@@ -39,11 +42,11 @@ class _ProductsState extends State<Products> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Text(
-              'Projects',
+              MyWebProjectData.titleProject,
               maxLines: 1,
               style: TextStyle(
                 fontFamily: 'SpaceMono',
-                color: colorFonts,
+                color: MyWebProjectUI.colorFontField,
                 fontWeight: FontWeight.w400,
                 fontSize: 60,
               ),
@@ -51,18 +54,42 @@ class _ProductsState extends State<Products> {
             const SizedBox(
               height: 110,
             ),
-            showCardProject(minTitle1, title1, description1, isHovered1, card1,
-                srcimage11, srcimage12, srcimage13, srcimagenull1),
+            showCardProject(
+                MyWebProjectData.minTitleCardApp,
+                MyWebProjectData.titleCardApp,
+                MyWebProjectData.descrApp,
+                isHoveredApp,
+                card1,
+                MyWebProjectData.phonePicture1,
+                MyWebProjectData.phonePicture2,
+                MyWebProjectData.phonePicture3,
+                MyWebProjectData.noMovementPicturePhone),
             const SizedBox(
               height: 200,
             ),
-            showCardProject(minTitle2, title2, description2, isHovered2, card2,
-                srcimage21, srcimage22, srcimage23, srcimagenull2),
+            showCardProject(
+                MyWebProjectData.minTitleCardWeb,
+                MyWebProjectData.titleCardWeb,
+                MyWebProjectData.descWeb,
+                isHoveredWeb,
+                card2,
+                MyWebProjectData.windowPicture1,
+                MyWebProjectData.windowPicture2,
+                MyWebProjectData.windowPicture3,
+                MyWebProjectData.noMovementPictureWindow),
             const SizedBox(
               height: 200,
             ),
-            showCardProject(minTitle3, title3, description3, isHovered3, card3,
-                srcimage31, srcimage32, srcimage33, srcimagenull3),
+            showCardProject(
+                MyWebProjectData.minTitleCardSoft,
+                MyWebProjectData.titleCardSoft,
+                MyWebProjectData.descSoft,
+                isHoveredSoft,
+                card3,
+                MyWebProjectData.softPicture1,
+                MyWebProjectData.softPicture2,
+                MyWebProjectData.softPicture3,
+                MyWebProjectData.noMovementPictureSoft),
             const SizedBox(
               height: 250,
             ),
@@ -73,15 +100,15 @@ class _ProductsState extends State<Products> {
   }
 
   MouseRegion showCardProject(
-      String minTitle,
-      String title,
+      String minTitleCard,
+      String titleCard,
       String description,
       bool isHovered,
       int cardCounter,
-      String src1,
-      String src2,
-      String src3,
-      String srcnull) {
+      String picture1,
+      String picture2,
+      String picture3,
+      String noMovement) {
     return MouseRegion(
       onEnter: (event) {
         setState(() {
@@ -102,14 +129,17 @@ class _ProductsState extends State<Products> {
       child: AnimatedCursorMouseRegion(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15),
-          color: Color.fromRGBO(65, 35, 138, 0.1),
+          color: const Color.fromRGBO(65, 35, 138, 0.1),
         ),
         child: AnimatedContainer(
           height: 550,
           width: widget.size.width,
           duration: const Duration(milliseconds: 200),
           decoration: BoxDecoration(
-            border: Border.all(width: 2, color: colorFonts),
+            border: Border.all(
+              width: 2,
+              color: MyWebProjectUI.colorFontField,
+            ),
             borderRadius: const BorderRadius.all(Radius.circular(15)),
             boxShadow: isHovered
                 ? [
@@ -127,9 +157,10 @@ class _ProductsState extends State<Products> {
               Padding(
                 padding: const EdgeInsets.only(left: 20.0, top: 25, bottom: 25),
                 child: isHovered
-                    ? ParallaxEffectWidget(src1, src2, src3, widget.size)
+                    ? ParallaxEffectWidget(
+                        picture1, picture2, picture3, widget.size)
                     : ParallaxEffectWidget(
-                        srcnull, srcnull, srcnull, widget.size),
+                        noMovement, noMovement, noMovement, widget.size),
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 20.0, top: 25, bottom: 25),
@@ -142,9 +173,9 @@ class _ProductsState extends State<Products> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          minTitle,
-                          style: TextStyle(
-                              color: primaryColor,
+                          minTitleCard,
+                          style: const TextStyle(
+                              color: MyWebProjectUI.primaryColor,
                               fontFamily: 'SpaceMono',
                               fontSize: 20,
                               fontWeight: FontWeight.w600,
@@ -154,11 +185,11 @@ class _ProductsState extends State<Products> {
                           height: 10,
                         ),
                         Container(
-                          color: const Color(0XFF41238a),
+                          color: MyWebProjectUI.containerTitleCardColor,
                           child: Text(
-                            title,
-                            style: TextStyle(
-                                color: Color(0XFF47e98d),
+                            titleCard,
+                            style: const TextStyle(
+                                color: MyWebProjectUI.titleColorCard,
                                 fontFamily: 'SpaceMono',
                                 fontSize: 40,
                                 fontWeight: FontWeight.w700),
@@ -167,12 +198,12 @@ class _ProductsState extends State<Products> {
                         const SizedBox(
                           height: 30,
                         ),
-                        Container(
+                        SizedBox(
                           width: 500,
                           child: Text(
                             description,
-                            style: TextStyle(
-                                color: colorFonts,
+                            style: const TextStyle(
+                                color: MyWebProjectUI.colorFontField,
                                 fontFamily: 'SpaceMono',
                                 fontSize: 20,
                                 fontWeight: FontWeight.w400),
@@ -183,7 +214,7 @@ class _ProductsState extends State<Products> {
                     OutlinedButton(
                         style: OutlinedButton.styleFrom(
                             foregroundColor: Colors.red,
-                            backgroundColor: kDefaultcolor,
+                            backgroundColor: MyWebProjectUI.kDefaultcolor,
                             side:
                                 const BorderSide(width: 2, color: Colors.white),
                             shape: RoundedRectangleBorder(
@@ -191,7 +222,7 @@ class _ProductsState extends State<Products> {
                         child: const Padding(
                           padding: EdgeInsets.all(15.0),
                           child: Text(
-                            'See more',
+                            MyWebProjectData.buttonText,
                             style: TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.w400,
