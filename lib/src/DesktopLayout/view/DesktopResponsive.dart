@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:mywebproject/src/DesktopLayout/view/aboutme.dart';
 import 'package:mywebproject/src/DesktopLayout/view/product.dart';
 import 'package:mywebproject/src/DesktopLayout/view/showlogo.dart';
-import 'package:mywebproject/src/DesktopLayout/widgets/contactform.dart';
+import 'package:mywebproject/src/DesktopLayout/view/contactform.dart';
 import 'package:mywebproject/src/DesktopLayout/widgets/displayparallax.dart';
 import 'package:mywebproject/src/DesktopLayout/widgets/spacer.dart';
 
 import '../../../components/color.dart';
-import '../widgets/animatedfooter.dart';
+import 'animatedfooter.dart';
 
 class DesktopResponsive extends StatefulWidget {
   const DesktopResponsive({super.key});

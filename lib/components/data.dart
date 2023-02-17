@@ -55,22 +55,30 @@ abstract class MyWebProjectData {
       "assets/image/NoMovementSoftware.png";
 
   static const String buttonText = "See More";
+
+  //Config Contact Form
+  static const List<String> timeline = [
+    'ASAP',
+    '1 Month',
+    '3 Months',
+    '6 Months',
+    '1 Year',
+    'FullTime'
+  ];
+  static const List<String> budget = [
+    '1,000€  -  4,999€',
+    '5,000€  -  9,999€',
+    '10,000€  -  49,999€',
+    '+50,000€',
+    'To be negotiated',
+  ];
+
+  static const serviceId = "service_zb5ygwv";
+  static const templateId = "template_r4le21j";
+  static const userId = "JrlCmMtVKZ-uqoMqK";
+
+//Config Footer Data
+  static const String footer1 = "© 2023 MyWebProject";
+
+  static const String footer2 = "HelloWorld";
 }
-
-//*ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
-
-final List<String> timeline = [
-  'ASAP',
-  '1 Month',
-  '3 Months',
-  '6 Months',
-  '1 Year',
-  'FullTime'
-];
-final List<String> budget = [
-  '1,000€  -  4,999€',
-  '5,000€  -  9,999€',
-  '10,000€  -  49,999€',
-  '+50,000€',
-  'To be negotiated',
-];

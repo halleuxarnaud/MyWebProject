@@ -1,7 +1,7 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
 import 'package:mywebproject/components/color.dart';
+import 'package:mywebproject/components/data.dart';
 import 'package:mywebproject/src/DesktopLayout/widgets/mouseTrackAnimation.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
@@ -29,22 +29,6 @@ class _ContactFormState extends State<ContactForm> {
   bool isValidate = false;
   bool showError = true;
 
-  final List<String> timeline = [
-    'ASAP',
-    '1 Month',
-    '3 Months',
-    '6 Months',
-    '1 Year',
-    'FullTime'
-  ];
-  final List<String> budget = [
-    '1,000€  -  4,999€',
-    '5,000€  -  9,999€',
-    '10,000€  -  49,999€',
-    '+50,000€',
-    'To be negotiated',
-  ];
-
   sendEmail() async {
     if (isValidate == false) {
       setState(() {
@@ -52,10 +36,6 @@ class _ContactFormState extends State<ContactForm> {
       });
       return;
     } else {
-      const serviceId = "service_zb5ygwv";
-      const templateId = "template_r4le21j";
-      const userId = "JrlCmMtVKZ-uqoMqK";
-
       final url = Uri.parse("https://api.emailjs.com/api/v1.0/email/send");
 
       final response = await http.post(
@@ -63,9 +43,9 @@ class _ContactFormState extends State<ContactForm> {
         headers: {'Content-Type': 'application/json'},
         body: json.encode(
           {
-            "service_id": serviceId,
-            "template_id": templateId,
-            "user_id": userId,
+            "service_id": MyWebProjectData.serviceId,
+            "template_id": MyWebProjectData.templateId,
+            "user_id": MyWebProjectData.userId,
             "template_params": {
               "name": namecontroller.text,
               "subject": 'test',
@@ -148,24 +128,24 @@ class _ContactFormState extends State<ContactForm> {
                                     style: const TextStyle(
                                         fontFamily: 'SpaceMono'),
                                     decoration: InputDecoration(
-                                        border: OutlineInputBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(10.0),
-                                        ),
-                                        filled: true,
-                                        hintStyle: const TextStyle(
-                                            color:
-                                                MyWebProjectUI.colorFontField,
-                                            fontFamily: 'SpaceMono'),
-                                        hintText: "Halleux Arnaud",
-                                        fillColor:
-                                            MyWebProjectUI.colorFontField),
+                                      border: OutlineInputBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(10.0),
+                                      ),
+                                      filled: true,
+                                      hintStyle: const TextStyle(
+                                          color: MyWebProjectUI.colorFontField,
+                                          fontFamily: 'SpaceMono'),
+                                      hintText: "Halleux Arnaud",
+                                      fillColor:
+                                          MyWebProjectUI.backgroundColorField,
+                                    ),
                                   ),
                                 ),
                               ],
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 20,
                           ),
                           Expanded(
@@ -193,18 +173,18 @@ class _ContactFormState extends State<ContactForm> {
                                     style: const TextStyle(
                                         fontFamily: 'SpaceMono'),
                                     decoration: InputDecoration(
-                                        errorText: errorText ? null : 'Erreur',
-                                        border: OutlineInputBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(10.0)),
-                                        filled: true,
-                                        hintStyle: const TextStyle(
-                                            color:
-                                                MyWebProjectUI.colorFontField,
-                                            fontFamily: 'SpaceMono'),
-                                        hintText: "HelloWorld@gmail.com",
-                                        fillColor:
-                                            MyWebProjectUI.colorFontField),
+                                      errorText: errorText ? null : 'Erreur',
+                                      border: OutlineInputBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(10.0)),
+                                      filled: true,
+                                      hintStyle: const TextStyle(
+                                          color: MyWebProjectUI.colorFontField,
+                                          fontFamily: 'SpaceMono'),
+                                      hintText: "HelloWorld@gmail.com",
+                                      fillColor:
+                                          MyWebProjectUI.backgroundColorField,
+                                    ),
                                   ),
                                 ),
                               ],
@@ -212,7 +192,7 @@ class _ContactFormState extends State<ContactForm> {
                           )
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 30,
                       ),
                       Row(
@@ -259,14 +239,16 @@ class _ContactFormState extends State<ContactForm> {
                                     iconSize: 30,
                                     buttonHeight: 56,
                                     dropdownDecoration: BoxDecoration(
-                                      color: MyWebProjectUI.colorFontField,
+                                      color:
+                                          MyWebProjectUI.backgroundColorField,
                                       borderRadius: BorderRadius.circular(15),
                                     ),
                                     buttonDecoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(10),
-                                      color: MyWebProjectUI.colorFontField,
+                                      color:
+                                          MyWebProjectUI.backgroundColorField,
                                     ),
-                                    items: timeline
+                                    items: MyWebProjectData.timeline
                                         .map((item) => DropdownMenuItem<String>(
                                               value: item,
                                               child: Text(
@@ -287,7 +269,7 @@ class _ContactFormState extends State<ContactForm> {
                               ],
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 20,
                           ),
                           Expanded(
@@ -332,14 +314,16 @@ class _ContactFormState extends State<ContactForm> {
                                     iconSize: 30,
                                     buttonHeight: 56,
                                     dropdownDecoration: BoxDecoration(
-                                      color: MyWebProjectUI.colorFontField,
+                                      color:
+                                          MyWebProjectUI.backgroundColorField,
                                       borderRadius: BorderRadius.circular(15),
                                     ),
                                     buttonDecoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(10),
-                                      color: MyWebProjectUI.colorFontField,
+                                      color:
+                                          MyWebProjectUI.backgroundColorField,
                                     ),
-                                    items: budget
+                                    items: MyWebProjectData.budget
                                         .map((item) => DropdownMenuItem<String>(
                                               value: item,
                                               child: Text(
@@ -388,15 +372,16 @@ class _ContactFormState extends State<ContactForm> {
                               maxLines: 5,
                               style: const TextStyle(fontFamily: 'SpaceMono'),
                               decoration: InputDecoration(
-                                  border: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(10.0),
-                                  ),
-                                  filled: true,
-                                  hintStyle: const TextStyle(
-                                      color: MyWebProjectUI.colorFontField,
-                                      fontFamily: 'SpaceMono'),
-                                  hintText: "...",
-                                  fillColor: MyWebProjectUI.colorFontField),
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(10.0),
+                                ),
+                                filled: true,
+                                hintStyle: const TextStyle(
+                                    color: MyWebProjectUI.colorFontField,
+                                    fontFamily: 'SpaceMono'),
+                                hintText: "...",
+                                fillColor: MyWebProjectUI.backgroundColorField,
+                              ),
                             ),
                           ),
                           const SizedBox(

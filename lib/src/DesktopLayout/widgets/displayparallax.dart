@@ -21,7 +21,7 @@ class _DisplayParallaxState extends State<DisplayParallax> {
 
   @override
   void initState() {
-    Future.delayed(Duration(microseconds: 1), () {
+    Future.delayed(const Duration(microseconds: 1), () {
       setState(() {
         opacity = 0.4;
       });
@@ -49,10 +49,6 @@ class _DisplayParallaxState extends State<DisplayParallax> {
         positionBottom = 0;
       }
     }
-
-    print('PositionBottom $positionBottom');
-    print('PositionTop $positionTop');
-    print(widget._currentscrollOffset);
   }
 
   @override
@@ -67,7 +63,7 @@ class _DisplayParallaxState extends State<DisplayParallax> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   AnimatedOpacity(
-                    duration: Duration(seconds: 3),
+                    duration: const Duration(seconds: 3),
                     opacity: opacity,
                     child: Image.asset(
                       'assets/image/chevronG.png',
@@ -76,7 +72,7 @@ class _DisplayParallaxState extends State<DisplayParallax> {
                   SizedBox(
                       width: switchposition ? positionTop : positionBottom),
                   AnimatedOpacity(
-                      duration: Duration(seconds: 3),
+                      duration: const Duration(seconds: 3),
                       opacity: opacity,
                       child: Image.asset('assets/image/chevronD.png')),
                 ],

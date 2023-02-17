@@ -5,8 +5,8 @@ import 'package:mywebproject/src/DesktopLayout/widgets/mouseTrackAnimation.dart'
 import 'package:mywebproject/src/DesktopLayout/widgets/parallaximage.dart';
 
 class Products extends StatefulWidget {
-  final Size size;
-  const Products(this.size, {Key? key});
+  final Size screenSize;
+  const Products(this.screenSize, {Key? key});
 
   @override
   State<Products> createState() => _ProductsState();
@@ -33,11 +33,11 @@ class _ProductsState extends State<Products> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: widget.size.width,
+      width: widget.screenSize.width,
       color: MyWebProjectUI.kDefaultcolor,
       child: Padding(
         padding: EdgeInsets.fromLTRB(
-            widget.size.width * 0.25, 0, widget.size.width * 0.25, 0),
+            widget.screenSize.width * 0.25, 0, widget.screenSize.width * 0.25, 0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -133,7 +133,7 @@ class _ProductsState extends State<Products> {
         ),
         child: AnimatedContainer(
           height: 550,
-          width: widget.size.width,
+          width: widget.screenSize.width,
           duration: const Duration(milliseconds: 200),
           decoration: BoxDecoration(
             border: Border.all(
@@ -158,9 +158,13 @@ class _ProductsState extends State<Products> {
                 padding: const EdgeInsets.only(left: 20.0, top: 25, bottom: 25),
                 child: isHovered
                     ? ParallaxEffectWidget(
-                        picture1, picture2, picture3, widget.size)
+                        widget.screenSize,
+                        picture1,
+                        picture2,
+                        picture3,
+                      )
                     : ParallaxEffectWidget(
-                        noMovement, noMovement, noMovement, widget.size),
+                        widget.screenSize, noMovement, noMovement, noMovement),
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 20.0, top: 25, bottom: 25),

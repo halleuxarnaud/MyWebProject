@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:mywebproject/components/color.dart';
+import 'package:mywebproject/components/data.dart';
 
 class AnimatedFooter extends StatefulWidget {
   final Size size;
@@ -40,7 +39,7 @@ class _AnimatedFooterState extends State<AnimatedFooter> {
                     Row(
                       children: const [
                         Text(
-                          '© 2023 MyWebProject',
+                          MyWebProjectData.footer1,
                           style: TextStyle(
                             fontFamily: 'SpaceMono',
                             color: MyWebProjectUI.footerColor,
@@ -57,7 +56,7 @@ class _AnimatedFooterState extends State<AnimatedFooter> {
                           ),
                         ),
                         Text(
-                          'HelloWorld',
+                          MyWebProjectData.footer2,
                           style: TextStyle(
                             fontFamily: 'SpaceMono',
                             color: MyWebProjectUI.footerColor,

@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:mouse_parallax/mouse_parallax.dart';
 
 class ParallaxEffectWidget extends StatefulWidget {
-  final Size size;
-  final String srcimage11;
-  final String srcimage12;
+  final Size screenSize;
+  final String picture1;
+  final String picture2;
   final String srcimage13;
 
   const ParallaxEffectWidget(
-      this.srcimage11, this.srcimage12, this.srcimage13, this.size,
+      this.screenSize, this.picture1, this.picture2, this.srcimage13,
       {Key? key});
 
   @override
@@ -27,12 +27,12 @@ class _ParallaxEffectWidgetState extends State<ParallaxEffectWidget> {
           offset: const Offset(300, -30),
           child: OverflowBox(
             child: Container(
-              height: widget.size.height / 2.5,
-              width: widget.size.width / 4,
+              height: widget.screenSize.height / 2.5,
+              width: widget.screenSize.width / 4,
               decoration: BoxDecoration(
                 image: DecorationImage(
                   fit: BoxFit.contain,
-                  image: AssetImage(widget.srcimage11),
+                  image: AssetImage(widget.picture1),
                 ),
               ),
             ),
@@ -44,12 +44,12 @@ class _ParallaxEffectWidgetState extends State<ParallaxEffectWidget> {
           offset: const Offset(200, -0),
           child: OverflowBox(
             child: Container(
-              height: widget.size.height / 2.5,
-              width: widget.size.width / 4,
+              height: widget.screenSize.height / 2.5,
+              width: widget.screenSize.width / 4,
               decoration: BoxDecoration(
                 image: DecorationImage(
                   fit: BoxFit.contain,
-                  image: AssetImage(widget.srcimage12),
+                  image: AssetImage(widget.picture2),
                 ),
               ),
             ),
@@ -61,8 +61,8 @@ class _ParallaxEffectWidgetState extends State<ParallaxEffectWidget> {
           offset: const Offset(100, 30),
           child: OverflowBox(
             child: Container(
-              height: widget.size.height / 2.5,
-              width: widget.size.width / 4,
+              height: widget.screenSize.height / 2.5,
+              width: widget.screenSize.width / 4,
               decoration: BoxDecoration(
                 image: DecorationImage(
                   fit: BoxFit.contain,
