@@ -79,15 +79,15 @@ class _DesktopResponsiveState extends State<DesktopResponsive> {
                       screenSize, _maxScrollOffset, _currentscrollOffset),
                 ],
               ),
-              Positioned(
-                top: _position + screenSize.height / 2.5,
-                width: screenSize.width,
-                child: DisplayParallax(
-                  _currentscrollOffset,
-                  _maxScrollOffset,
-                  screenSize,
-                ),
-              ),
+              // Positioned(
+              //   top: _position + screenSize.height / 2.5,
+              //   width: screenSize.width,
+              //   child: DisplayParallax(
+              //     _currentscrollOffset,
+              //     _maxScrollOffset,
+              //     screenSize,
+              //   ),
+              // ),
             ],
           )),
     );
