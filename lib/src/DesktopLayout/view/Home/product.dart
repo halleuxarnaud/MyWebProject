@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:mywebproject/components/color.dart';
 import 'package:mywebproject/components/data.dart';
+import 'package:mywebproject/src/DesktopLayout/view/Project/appProject.dart';
+import 'package:mywebproject/src/DesktopLayout/view/Project/softProject.dart';
+import 'package:mywebproject/src/DesktopLayout/view/Project/webProject.dart';
 import 'package:mywebproject/src/DesktopLayout/widgets/mouseTrackAnimation.dart';
 import 'package:mywebproject/src/DesktopLayout/widgets/parallaximage.dart';
 
@@ -36,8 +39,8 @@ class _ProductsState extends State<Products> {
       width: widget.screenSize.width,
       color: MyWebProjectUI.kDefaultcolor,
       child: Padding(
-        padding: EdgeInsets.fromLTRB(
-            widget.screenSize.width * 0.25, 0, widget.screenSize.width * 0.25, 0),
+        padding: EdgeInsets.fromLTRB(widget.screenSize.width * 0.25, 0,
+            widget.screenSize.width * 0.25, 0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -100,15 +103,16 @@ class _ProductsState extends State<Products> {
   }
 
   MouseRegion showCardProject(
-      String minTitleCard,
-      String titleCard,
-      String description,
-      bool isHovered,
-      int cardCounter,
-      String picture1,
-      String picture2,
-      String picture3,
-      String noMovement) {
+    String minTitleCard,
+    String titleCard,
+    String description,
+    bool isHovered,
+    int cardCounter,
+    String picture1,
+    String picture2,
+    String picture3,
+    String noMovement,
+  ) {
     return MouseRegion(
       onEnter: (event) {
         setState(() {
@@ -234,7 +238,29 @@ class _ProductsState extends State<Products> {
                                 fontSize: 19),
                           ),
                         ),
-                        onPressed: () {}),
+                        onPressed: () {
+                          if (cardCounter == 1) {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const AppProject()),
+                            );
+                          }
+                          if (cardCounter == 2) {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const WebProject()),
+                            );
+                          }
+                          if (cardCounter == 3) {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const SoftProject()),
+                            );
+                          }
+                        }),
                   ],
                 ),
               ),

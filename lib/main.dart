@@ -10,6 +10,7 @@ import 'package:mywebproject/src/TabletteLayout/TabletteResponsive.dart';
 //! Et une music quand on clique sur le bonhome de neige "https://www.shazam.com/fr/track/518042609/twinkling-lights?referrer=browserextension"
 //! Ajouter la barre au chevron en bottom quand la scroolcontroller est au max
 //! Zjouter un Neumorphism au button creator https://www.youtube.com/watch?v=6kwcLgdiDLM&t=148s
+//! Changer les images pour soft
 //* Ajouter les nouvelle donner budget + TimeLine a la génération de mail
 //* Corriger l'animation parallax generale
 
