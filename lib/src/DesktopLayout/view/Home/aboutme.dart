@@ -4,6 +4,7 @@ import 'package:mywebproject/components/color.dart';
 import 'package:mywebproject/components/data.dart';
 import 'package:mywebproject/components/style.dart';
 import 'package:mywebproject/src/DesktopLayout/view/Creator/creatorpage.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 
 class AboutMe extends StatefulWidget {
@@ -47,57 +48,70 @@ class _AboutMeState extends State<AboutMe> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Row(
-                        children: [
-                          GradientText(
-                            MyWebProjectData.titleAboutMe,
-                            style: MyWebProjectStyle.titleAboutMeStyle,
-                            colors: const [
-                              Color(0XFF9465F6),
-                              Color(0XFF739cca),
-                            ],
-                          ),
-                          const SizedBox(
-                            width: 20,
-                          ),
-                          showButtonCreator
-                              ? AnimatedContainer(
-                                  duration: const Duration(seconds: 2),
-                                  width: widget._currentOffset >=
-                                          (size.height * 2.1) * 0.85
-                                      ? 160
-                                      : 0,
-                                  curve: Curves.easeOut,
-                                  child: AnimatedButton(
-                                    animatedOn: AnimatedOn.onHover,
-                                    height: 55,
-                                    width: 200,
-                                    text: 'Creator',
-                                    gradient: const LinearGradient(colors: [
-                                      MyWebProjectUI.firstColorTitleGradient,
-                                      MyWebProjectUI.secondColorTitleGradient
-                                    ]),
-                                    selectedGradientColor: const LinearGradient(
-                                        colors: [Colors.red, Colors.orange]),
-                                    isReverse: true,
-                                    selectedTextColor: Colors.white,
-                                    transitionType:
-                                        TransitionType.LEFT_CENTER_ROUNDER,
-                                    borderColor: Colors.white,
-                                    borderRadius: 15,
-                                    borderWidth: 1,
-                                    onPress: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                const CreatorPage()),
-                                      );
-                                    },
-                                  ),
-                                )
-                              : const SizedBox()
-                        ],
+                      FittedBox(
+                        fit: BoxFit.contain,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            GradientText(
+                              MyWebProjectData.titleAboutMe,
+                              style: MyWebProjectStyle.titleAboutMeStyle,
+                              colors: const [
+                                Color(0XFF9465F6),
+                                Color(0XFF739cca),
+                              ],
+                            ),
+                            const SizedBox(
+                              width: 20,
+                            ),
+                            showButtonCreator
+                                ? AnimatedContainer(
+                                    duration: const Duration(seconds: 2),
+                                    width: widget._currentOffset >=
+                                            (size.height * 2.1) * 0.85
+                                        ? 160
+                                        : 0,
+                                    curve: Curves.easeOut,
+                                    child: AnimatedButton(
+                                      animatedOn: AnimatedOn.onHover,
+                                      height: 55,
+                                      width: 200,
+                                      text: 'Creator',
+                                      textStyle: TextStyle(
+                                          color: MyWebProjectUI.secondaryColor,
+                                          fontFamily: 'SpaceMono',
+                                          fontWeight: FontWeight.bold,
+                                          letterSpacing: 3,
+                                          fontSize: 20),
+                                      gradient: const LinearGradient(colors: [
+                                        MyWebProjectUI.firstColorTitleGradient,
+                                        MyWebProjectUI.secondColorTitleGradient
+                                      ]),
+                                      selectedGradientColor:
+                                          const LinearGradient(colors: [
+                                        Colors.red,
+                                        Colors.orange
+                                      ]),
+                                      isReverse: true,
+                                      selectedTextColor: Colors.white,
+                                      transitionType:
+                                          TransitionType.LEFT_CENTER_ROUNDER,
+                                      borderColor: Colors.white,
+                                      borderRadius: 15,
+                                      borderWidth: 1,
+                                      onPress: () {
+                                        Navigator.push(
+                                          context,
+                                          PageTransition(
+                                              type: PageTransitionType.fade,
+                                              child: CreatorPage()),
+                                        );
+                                      },
+                                    ),
+                                  )
+                                : const SizedBox()
+                          ],
+                        ),
                       ),
                       const SizedBox(
                         height: 30,

@@ -6,6 +6,7 @@ import 'package:mywebproject/src/DesktopLayout/view/Project/softProject.dart';
 import 'package:mywebproject/src/DesktopLayout/view/Project/webProject.dart';
 import 'package:mywebproject/src/DesktopLayout/widgets/mouseTrackAnimation.dart';
 import 'package:mywebproject/src/DesktopLayout/widgets/parallaximage.dart';
+import 'package:page_transition/page_transition.dart';
 
 class Products extends StatefulWidget {
   final Size screenSize;
@@ -242,22 +243,25 @@ class _ProductsState extends State<Products> {
                           if (cardCounter == 1) {
                             Navigator.push(
                               context,
-                              MaterialPageRoute(
-                                  builder: (context) => const AppProject()),
+                              PageTransition(
+                                  type: PageTransitionType.fade,
+                                  child: AppProject()),
                             );
                           }
                           if (cardCounter == 2) {
                             Navigator.push(
                               context,
-                              MaterialPageRoute(
-                                  builder: (context) => const WebProject()),
+                              PageTransition(
+                                  type: PageTransitionType.fade,
+                                  child: WebProject()),
                             );
                           }
                           if (cardCounter == 3) {
                             Navigator.push(
                               context,
-                              MaterialPageRoute(
-                                  builder: (context) => const SoftProject()),
+                              PageTransition(
+                                  type: PageTransitionType.fade,
+                                  child: SoftProject()),
                             );
                           }
                         }),

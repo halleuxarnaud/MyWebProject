@@ -44,6 +44,7 @@ dependencies:
   audioplayers: ^3.0.1
   firebase_core: ^2.6.1
   flutter_animated_button: ^2.0.3
+  page_transition: ^2.0.9
 
 dev_dependencies:
   flutter_test:
