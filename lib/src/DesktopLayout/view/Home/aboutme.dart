@@ -24,12 +24,12 @@ class _AboutMeState extends State<AboutMe> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    if (widget._currentOffset <= (size.height * 2) * 0.80) {
+    if (widget._currentOffset <= (size.height * 2) * 0.60) {
       showMoreInformation = false;
     } else {
       showMoreInformation = true;
     }
-    if (widget._currentOffset <= (size.height * 2) * 0.85) {
+    if (widget._currentOffset <= (size.height * 2) * 0.60) {
       showButtonCreator = false;
     } else {
       showButtonCreator = true;
@@ -68,7 +68,7 @@ class _AboutMeState extends State<AboutMe> {
                                 ? AnimatedContainer(
                                     duration: const Duration(seconds: 2),
                                     width: widget._currentOffset >=
-                                            (size.height * 2.1) * 0.85
+                                            (size.height * 2.1) * 0.70
                                         ? 160
                                         : 0,
                                     curve: Curves.easeOut,
@@ -119,7 +119,7 @@ class _AboutMeState extends State<AboutMe> {
                       AnimatedContainer(
                         duration: const Duration(milliseconds: 1500),
                         height:
-                            widget._currentOffset >= (size.height * 2.1) * 0.80
+                            widget._currentOffset >= (size.height * 2.1) * 0.70
                                 ? 350
                                 : 0,
                         curve: Curves.easeOut,
