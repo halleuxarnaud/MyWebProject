@@ -1,3 +1,4 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:mywebproject/components/color.dart';
 
@@ -16,7 +17,9 @@ class ShowLogo extends StatefulWidget {
 }
 
 class _ShowLogoState extends State<ShowLogo> {
+  AudioPlayer audioPlayer = AudioPlayer();
   double opacity = 0;
+  String filePath = 'assets/video/song.mp3';
 
   @override
   void initState() {
@@ -41,11 +44,14 @@ class _ShowLogoState extends State<ShowLogo> {
                   child: AnimatedOpacity(
                       opacity: opacity,
                       duration: const Duration(seconds: 3),
-                      child: Image.asset(
-                        'assets/image/HiverLogo.png',
-                        color: Colors.white,
-                        height: 300,
-                        width: 300,
+                      child: InkWell(
+                        onTap: () {},
+                        child: Image.asset(
+                          'assets/image/HiverLogo.png',
+                          color: Colors.white,
+                          height: 300,
+                          width: 300,
+                        ),
                       )),
                 ),
               ],

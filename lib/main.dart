@@ -10,7 +10,6 @@ import 'package:mywebproject/src/TabletteLayout/TabletteResponsive.dart';
 //! Et une music quand on clique sur le bonhome de neige "https://www.shazam.com/fr/track/518042609/twinkling-lights?referrer=browserextension"
 //! Ajouter la barre au chevron en bottom quand la scroolcontroller est au max
 //! Corriger l'erreur de defilement du parallax(Erreur de position au milieur de la page)
-//*Ajouter une page de chargemenet au start du site
 //* Ajouter les nouvelle donner budget + TimeLine a la génération de mail
 //* Corriger l'animation parallax generale
 
@@ -22,7 +21,7 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'MyWebProject',
       home: HomePage(),

@@ -2,3 +2,4 @@ build
 .dart_tool
 .flutter-plugins-dependencies
 .DS_Store
+web/index.html
