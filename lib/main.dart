@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mywebproject/src/DesktopLayout/view/DesktopResponsive.dart';
+import 'package:mywebproject/src/DesktopLayout/view/Home/DesktopResponsive.dart';
 import 'package:mywebproject/src/DesktopLayout/widgets/mouseTrackAnimation.dart';
 import 'package:mywebproject/src/MinWindowsLayout/MinimumWebResp.dart';
 import 'package:mywebproject/src/MobilLayout/MobilResponsive.dart';
@@ -9,7 +9,7 @@ import 'package:mywebproject/src/TabletteLayout/TabletteResponsive.dart';
 //! Ajouter de la neige https://www.youtube.com/shorts/V8mYIy4EwRY
 //! Et une music quand on clique sur le bonhome de neige "https://www.shazam.com/fr/track/518042609/twinkling-lights?referrer=browserextension"
 //! Ajouter la barre au chevron en bottom quand la scroolcontroller est au max
-//! Corriger l'erreur de defilement du parallax(Erreur de position au milieur de la page)
+//! Zjouter un Neumorphism au button creator https://www.youtube.com/watch?v=6kwcLgdiDLM&t=148s
 //* Ajouter les nouvelle donner budget + TimeLine a la génération de mail
 //* Corriger l'animation parallax generale
 

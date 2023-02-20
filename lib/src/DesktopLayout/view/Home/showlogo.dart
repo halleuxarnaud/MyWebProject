@@ -42,18 +42,27 @@ class _ShowLogoState extends State<ShowLogo> {
               children: [
                 Center(
                   child: AnimatedOpacity(
+                    opacity: opacity,
+                    duration: const Duration(seconds: 3),
+                    child: AnimatedOpacity(
                       opacity: opacity,
                       duration: const Duration(seconds: 3),
-                      child: InkWell(
-                        onTap: () {},
-                        child: Image.asset(
-                          'assets/image/HiverLogo.png',
-                          color: Colors.white,
-                          height: 300,
-                          width: 300,
-                        ),
-                      )),
+                      child: Image.asset(
+                        'assets/image/logo.png',
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
                 ),
+                // child: InkWell(
+                //   onTap: () {},
+                //   child: Image.asset(
+                //     'assets/image/HiverLogo.png',
+                //     color: Colors.white,
+                //     height: 300,
+                //     width: 300,
+                //   ),
+                // )),
               ],
             ),
           )
@@ -67,10 +76,8 @@ class _ShowLogoState extends State<ShowLogo> {
                   child: Opacity(
                     opacity: widget._opacityAdaptive,
                     child: Image.asset(
-                      'assets/image/HiverLogo.png',
+                      'assets/image/logo.png',
                       color: Colors.white,
-                      height: 300,
-                      width: 300,
                     ),
                   ),
                 ),
