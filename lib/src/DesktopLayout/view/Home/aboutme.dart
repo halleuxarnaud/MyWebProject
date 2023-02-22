@@ -100,12 +100,8 @@ class _AboutMeState extends State<AboutMe> {
                                       borderRadius: 15,
                                       borderWidth: 1,
                                       onPress: () {
-                                        Navigator.push(
-                                          context,
-                                          PageTransition(
-                                              type: PageTransitionType.fade,
-                                              child: CreatorPage()),
-                                        );
+                                        Navigator.pushNamed(
+                                            context, '/creator');
                                       },
                                     ),
                                   )

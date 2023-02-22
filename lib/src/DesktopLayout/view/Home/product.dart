@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:mywebproject/components/color.dart';
 import 'package:mywebproject/components/data.dart';
-import 'package:mywebproject/src/DesktopLayout/view/Project/appProject.dart';
-import 'package:mywebproject/src/DesktopLayout/view/Project/softProject.dart';
-import 'package:mywebproject/src/DesktopLayout/view/Project/webProject.dart';
+import 'package:mywebproject/src/DesktopLayout/view/Project/AppProject/appProject.dart';
+import 'package:mywebproject/src/DesktopLayout/view/Project/SoftProject/softProject.dart';
+import 'package:mywebproject/src/DesktopLayout/view/Project/WebProject/webProject.dart';
 import 'package:mywebproject/src/DesktopLayout/widgets/mouseTrackAnimation.dart';
 import 'package:mywebproject/src/DesktopLayout/widgets/parallaximage.dart';
 import 'package:page_transition/page_transition.dart';

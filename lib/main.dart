@@ -6,6 +6,8 @@ import 'package:mywebproject/src/MinWindowsLayout/MinimumWebResp.dart';
 import 'package:mywebproject/src/MobilLayout/MobilResponsive.dart';
 import 'package:mywebproject/src/TabletteLayout/TabletteResponsive.dart';
 
+import 'src/DesktopLayout/view/Creator/creatorpage.dart';
+
 //! Add Snow effect on clck bonhom de neige https://github.com/windwp/flutter-snow-effect
 //! Ajouter de la neige https://www.youtube.com/shorts/V8mYIy4EwRY
 //! Et une music quand on clique sur le bonhome de neige "https://www.shazam.com/fr/track/518042609/twinkling-lights?referrer=browserextension"
@@ -26,7 +28,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'MyWebProject',
-      home: HomePage(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => HomePage(),
+        '/creator': (context) => CreatorPage(),
+      },
     );
   }
 }
