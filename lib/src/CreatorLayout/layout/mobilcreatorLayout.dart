@@ -1,27 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:mywebproject/components/color.dart';
 
-class MobilResponsive extends StatefulWidget {
-  const MobilResponsive({super.key});
+class CreatorPageMobile extends StatelessWidget {
+  const CreatorPageMobile({super.key});
 
-  @override
-  State<MobilResponsive> createState() => _MobilResponsiveState();
-}
-
-class _MobilResponsiveState extends State<MobilResponsive> {
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
+    Size screenSize = MediaQuery.of(context).size;
     return Stack(
       children: [
         Container(
-          height: size.height,
-          width: size.width,
+          height: screenSize.height,
+          width: screenSize.width,
           color: MyWebProjectUI.kDefaultcolor,
         ),
-        const Center(
+        Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

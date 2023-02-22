@@ -1,24 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:mywebproject/components/color.dart';
 
-class MobilResponsive extends StatefulWidget {
-  const MobilResponsive({super.key});
+class NotDefinedLayout extends StatelessWidget {
+  const NotDefinedLayout({super.key});
 
-  @override
-  State<MobilResponsive> createState() => _MobilResponsiveState();
-}
-
-class _MobilResponsiveState extends State<MobilResponsive> {
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
+    Size screenSize = MediaQuery.of(context).size;
     return Stack(
       children: [
         Container(
-          height: size.height,
-          width: size.width,
+          height: screenSize.height,
+          width: screenSize.width,
           color: MyWebProjectUI.kDefaultcolor,
         ),
         const Center(
@@ -26,7 +19,7 @@ class _MobilResponsiveState extends State<MobilResponsive> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'Mobil Responsive Soon',
+                'Soon Repository',
                 style: TextStyle(
                   color: MyWebProjectUI.secondaryColor,
                   fontFamily: 'SpaceMono',
@@ -35,7 +28,7 @@ class _MobilResponsiveState extends State<MobilResponsive> {
                 ),
               ),
               Text(
-                'Sorry but you can view my portfolio on a classic screen (Computer)',
+                'Sorry but you can view my portfolio on a classic screen (Computer) or in fullscreen',
                 style: TextStyle(
                   color: MyWebProjectUI.secondaryColor,
                   fontFamily: 'SpaceMono',

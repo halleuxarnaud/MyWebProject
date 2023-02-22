@@ -45,6 +45,7 @@ dependencies:
   firebase_core: ^2.6.1
   flutter_animated_button: ^2.0.3
   page_transition: ^2.0.9
+  flutter_svg: ^2.0.2
 
 dev_dependencies:
   flutter_test:
@@ -88,6 +89,7 @@ flutter:
    - assets/image/slash.png
    - assets/image/chevronD.png
    - assets/image/chevronG.png
+   - assets/image/reliefBack.svg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -105,3 +107,9 @@ flutter:
     - family: SpaceMono
       fonts:
        - asset: fonts/SpaceMono-Regular.ttf
+    - family: Helvetica
+      fonts:
+       - asset: fonts/HelveticaNowText-Black.ttf
+    - family: SweetSans
+      fonts:
+       - asset: fonts/SweetSansProMedium.otf
