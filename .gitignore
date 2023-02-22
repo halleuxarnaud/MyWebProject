@@ -2,4 +2,6 @@ build
 .dart_tool
 .flutter-plugins-dependencies
 .DS_Store
+.firebase
+.github
 web/index.html
