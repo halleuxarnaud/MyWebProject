@@ -28,10 +28,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'MyWebProject',
-      initialRoute: '/',
+      initialRoute: '/home',
       routes: {
-        '/': (context) => HomePage(),
-        '/creator': (context) => CreatorPage(),
+        '/home': (context) => const HomePage(),
+        '/creator': (context) => const CreatorPage(),
       },
     );
   }
