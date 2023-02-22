@@ -16,7 +16,9 @@ jobs:
         # Build Website
         - name: Build Website
           run: |
-            flutter build web
+            flutter clean
+            flutter pub get
+            flutter build web 
           working-directory: ./
 
         # Deploy Firebase Hosting
