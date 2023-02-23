@@ -46,6 +46,7 @@ dependencies:
   flutter_animated_button: ^2.0.3
   page_transition: ^2.0.9
   flutter_svg: ^2.0.2
+  qr_flutter: ^4.0.0
 
 dev_dependencies:
   flutter_test:
@@ -90,6 +91,12 @@ flutter:
    - assets/image/chevronD.png
    - assets/image/chevronG.png
    - assets/image/reliefBack.svg
+   - assets/image/briefcase.svg
+   - assets/image/api.svg
+   - assets/image/graduation-cap.svg
+   - assets/image/users.svg
+   - assets/image/full.png
+   - assets/image/Umpty.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
