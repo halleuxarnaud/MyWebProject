@@ -19,7 +19,7 @@ class NotDefinedLayout extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'Soon Repository',
+                'Responsive Soon',
                 style: TextStyle(
                   color: MyWebProjectUI.secondaryColor,
                   fontFamily: 'SpaceMono',
@@ -28,7 +28,7 @@ class NotDefinedLayout extends StatelessWidget {
                 ),
               ),
               Text(
-                'Sorry but you can view my portfolio on a classic screen (Computer) or in fullscreen',
+                'Sorry but you can view my curriculum vitae on a classic screen (Computer) or in fullscreen',
                 style: TextStyle(
                   color: MyWebProjectUI.secondaryColor,
                   fontFamily: 'SpaceMono',

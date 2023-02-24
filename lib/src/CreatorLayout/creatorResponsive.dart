@@ -37,7 +37,7 @@ class ResponsiveCreatorLayout extends StatelessWidget {
           return mobileResp;
         } else if (constraints.maxWidth < 780) {
           return minWebResp;
-        } else if (constraints.maxWidth < 1300) {
+        } else if (constraints.maxWidth < 950) {
           return tabletteResp;
         } else {
           return desktopResp;

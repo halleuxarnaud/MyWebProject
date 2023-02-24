@@ -92,7 +92,7 @@ class CompetenceViuw extends StatelessWidget {
                       SizedBox(
                           height: 15,
                           width: 15,
-                          child: Image.asset('assets/image/Umpty.png')),
+                          child: Image.asset('assets/image/full.png')),
                       const SizedBox(
                         width: 5,
                       ),

@@ -14,29 +14,32 @@ class CreatorPageMobile extends StatelessWidget {
           width: screenSize.width,
           color: MyWebProjectUI.kDefaultcolor,
         ),
-        Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                'Mobil Responsive Soon',
-                style: TextStyle(
-                  color: MyWebProjectUI.secondaryColor,
-                  fontFamily: 'SpaceMono',
-                  fontWeight: FontWeight.w400,
-                  fontSize: 30,
+        Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'Mobil Responsive Soon',
+                  style: TextStyle(
+                    color: MyWebProjectUI.secondaryColor,
+                    fontFamily: 'SpaceMono',
+                    fontWeight: FontWeight.w400,
+                    fontSize: 20,
+                  ),
                 ),
-              ),
-              Text(
-                'Sorry but you can view my portfolio on a classic screen (Computer)',
-                style: TextStyle(
-                  color: MyWebProjectUI.secondaryColor,
-                  fontFamily: 'SpaceMono',
-                  fontWeight: FontWeight.w400,
-                  fontSize: 10,
+                Text(
+                  'Sorry but you can view my curriculum vitae on a classic screen (Computer)',
+                  style: TextStyle(
+                    color: MyWebProjectUI.secondaryColor,
+                    fontFamily: 'SpaceMono',
+                    fontWeight: FontWeight.w400,
+                    fontSize: 10,
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         )
       ],

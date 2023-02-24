@@ -41,7 +41,6 @@ dependencies:
   dropdown_button2: ^1.9.2
   mouse_parallax: ^1.1.0
   provider: ^6.0.5
-  audioplayers: ^3.0.1
   firebase_core: ^2.6.1
   flutter_animated_button: ^2.0.3
   page_transition: ^2.0.9
@@ -97,6 +96,12 @@ flutter:
    - assets/image/users.svg
    - assets/image/full.png
    - assets/image/Umpty.png
+   - assets/image/crayon.png
+   - assets/image/help.png
+   - assets/image/search.png
+   - assets/image/user.png
+   - assets/image/knowledge.png
+   - assets/image/exit.svg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

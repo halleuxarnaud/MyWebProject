@@ -6,7 +6,6 @@ import 'package:mywebproject/src/MinWindowsLayout/MinimumWebResp.dart';
 import 'package:mywebproject/src/MobilLayout/MobilResponsive.dart';
 import 'package:mywebproject/src/TabletteLayout/TabletteResponsive.dart';
 
-
 //todo Hiver saison
 //! Add Snow effect on clck bonhom de neige https://github.com/windwp/flutter-snow-effect
 //! Ajouter de la neige https://www.youtube.com/shorts/V8mYIy4EwRY
@@ -19,6 +18,8 @@ import 'package:mywebproject/src/TabletteLayout/TabletteResponsive.dart';
 //* changer le logo de position ou corriger l'erreur de modification de size 'Flutter developpeur'
 //* Ajouter les nouvelle donner budget + TimeLine a la génération de mail
 //* Corriger l'animation parallax generale
+//* Ajouter le bouton pour enregister en pdf le CV
+//*Ajouter le bouton retour sur la page creator
 
 void main() async {
   runApp(const MyApp());

@@ -1,4 +1,3 @@
-import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:mywebproject/components/color.dart';
 
@@ -17,9 +16,8 @@ class ShowLogo extends StatefulWidget {
 }
 
 class _ShowLogoState extends State<ShowLogo> {
-  AudioPlayer audioPlayer = AudioPlayer();
   double opacity = 0;
-  String filePath = 'assets/video/song.mp3';
+  //String filePath = 'assets/video/song.mp3';
 
   @override
   void initState() {
