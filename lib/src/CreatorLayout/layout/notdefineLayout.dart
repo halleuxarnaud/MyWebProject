@@ -14,7 +14,7 @@ class NotDefinedLayout extends StatelessWidget {
           width: screenSize.width,
           color: MyWebProjectUI.kDefaultcolor,
         ),
-        const Center(
+        Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

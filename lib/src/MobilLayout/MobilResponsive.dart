@@ -21,7 +21,7 @@ class _MobilResponsiveState extends State<MobilResponsive> {
           width: size.width,
           color: MyWebProjectUI.kDefaultcolor,
         ),
-        const Center(
+        Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

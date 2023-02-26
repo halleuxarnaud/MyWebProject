@@ -6,6 +6,7 @@ import 'package:mywebproject/src/CreatorLayout/widgets/buildexperience.dart';
 import 'package:mywebproject/src/CreatorLayout/widgets/buttonSavePdf.dart';
 import 'package:mywebproject/src/CreatorLayout/widgets/buttonbackpdf.dart';
 import 'package:mywebproject/src/CreatorLayout/widgets/comp%C3%A9tenceviuw.dart';
+import 'package:mywebproject/src/CreatorLayout/widgets/contactviuw.dart';
 import 'package:mywebproject/src/CreatorLayout/widgets/formationviuw.dart';
 import 'package:mywebproject/src/CreatorLayout/widgets/softskillviuw.dart';
 import 'package:qr_flutter/qr_flutter.dart';
@@ -62,7 +63,7 @@ class CreatorPageDesktop extends StatelessWidget {
                           ),
                         ),
                         Container(
-                          height: 1150,
+                          height: 1450,
                           width: 900,
                           color: Colors.white.withOpacity(0.8),
                           padding: const EdgeInsets.all(40),
@@ -84,17 +85,21 @@ class CreatorPageDesktop extends StatelessWidget {
                                       height: 340,
                                       child: const Center(child: Text('Photo')),
                                     ),
-                                    const Padding(
+                                    Padding(
                                       padding: EdgeInsets.all(20.0),
                                       child: Column(
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         children: [
-                                          FormationViuw(),
+                                          CompetenceViuw(),
                                           SizedBox(
                                             height: 50,
                                           ),
-                                          CompetenceViuw(),
+                                          ContactViuw(),
+                                          SizedBox(
+                                            height: 50,
+                                          ),
+                                          FormationViuw(),
                                           SizedBox(
                                             height: 50,
                                           ),
@@ -187,7 +192,7 @@ class CreatorPageDesktop extends StatelessWidget {
                                               255, 108, 108, 108),
                                         ),
                                       ),
-                                      const Column(
+                                      Column(
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         children: [

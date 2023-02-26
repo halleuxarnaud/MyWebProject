@@ -102,6 +102,8 @@ flutter:
    - assets/image/user.png
    - assets/image/knowledge.png
    - assets/image/exit.svg
+   - assets/image/linkedin.png
+   - assets/image/github.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

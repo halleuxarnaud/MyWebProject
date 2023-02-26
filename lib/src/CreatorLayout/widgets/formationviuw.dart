@@ -48,7 +48,7 @@ class FormationViuw extends StatelessWidget {
         const SizedBox(
           height: 20,
         ),
-        const Column(
+        Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
@@ -67,7 +67,7 @@ class FormationViuw extends StatelessWidget {
         const SizedBox(
           height: 30,
         ),
-        const Column(
+        Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
@@ -79,6 +79,25 @@ class FormationViuw extends StatelessWidget {
             ),
             Text(
               'Autodidacte | 2020 - 2022',
+              style: TextStyle(fontFamily: 'SweetSans', fontSize: 13),
+            ),
+          ],
+        ),
+        const SizedBox(
+          height: 30,
+        ),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'MENUISERIE SECONDAIRE',
+              style: TextStyle(fontFamily: 'Helvetica', fontSize: 11),
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            Text(
+              'École de menuiserie | 2010 - 2018',
               style: TextStyle(fontFamily: 'SweetSans', fontSize: 13),
             ),
           ],
