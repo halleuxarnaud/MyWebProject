@@ -40,8 +40,7 @@ class _AboutMeState extends State<AboutMe> {
             height: widget.size.height - 200,
             width: widget.size.width,
             color: MyWebProjectUI.kDefaultcolor,
-            padding: EdgeInsets.fromLTRB(
-                widget.size.width * 0.25, 0, widget.size.width * 0.25, 0),
+            padding: EdgeInsets.fromLTRB(15, 0, 15, 0),
             child: showMoreInformation
                 ? Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -73,7 +72,7 @@ class _AboutMeState extends State<AboutMe> {
                             curve: Curves.easeOut,
                             child: Text(
                               MyWebProjectData.descAboutMe,
-                              style: MyWebProjectStyle.descAboutMeStyle,
+                              style: MyWebProjectStyle.descAboutMeStyleApp,
                             ),
                             // showButtonCreator
                             //     ? AnimatedContainer(

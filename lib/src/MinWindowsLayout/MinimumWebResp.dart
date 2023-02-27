@@ -23,7 +23,7 @@ class _MinimumWebRespState extends State<MinimumWebResp> {
         ),
         Center(
             child: Text(
-          'MinWebResponsive Soon',
+          'MinWeb Responsive Soon',
           style: TextStyle(
             color: MyWebProjectUI.secondaryColor,
             fontFamily: 'SpaceMono',

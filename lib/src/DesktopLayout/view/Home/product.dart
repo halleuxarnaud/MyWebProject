@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:mywebproject/components/color.dart';
 import 'package:mywebproject/components/data.dart';
@@ -36,6 +38,7 @@ class _ProductsState extends State<Products> {
 
   @override
   Widget build(BuildContext context) {
+    Size maxSize = MediaQuery.of(context).size;
     return Container(
       width: widget.screenSize.width,
       color: MyWebProjectUI.kDefaultcolor,
@@ -67,7 +70,8 @@ class _ProductsState extends State<Products> {
                 MyWebProjectData.phonePicture1,
                 MyWebProjectData.phonePicture2,
                 MyWebProjectData.phonePicture3,
-                MyWebProjectData.noMovementPicturePhone),
+                MyWebProjectData.noMovementPicturePhone,
+                maxSize),
             const SizedBox(
               height: 200,
             ),
@@ -80,7 +84,8 @@ class _ProductsState extends State<Products> {
                 MyWebProjectData.windowPicture1,
                 MyWebProjectData.windowPicture2,
                 MyWebProjectData.windowPicture3,
-                MyWebProjectData.noMovementPictureWindow),
+                MyWebProjectData.noMovementPictureWindow,
+                maxSize),
             const SizedBox(
               height: 200,
             ),
@@ -93,7 +98,8 @@ class _ProductsState extends State<Products> {
                 MyWebProjectData.softPicture1,
                 MyWebProjectData.softPicture2,
                 MyWebProjectData.softPicture3,
-                MyWebProjectData.noMovementPictureSoft),
+                MyWebProjectData.noMovementPictureSoft,
+                maxSize),
             const SizedBox(
               height: 250,
             ),
@@ -113,6 +119,7 @@ class _ProductsState extends State<Products> {
     String picture2,
     String picture3,
     String noMovement,
+    Size maxSize,
   ) {
     return MouseRegion(
       onEnter: (event) {
@@ -208,7 +215,7 @@ class _ProductsState extends State<Products> {
                           height: 30,
                         ),
                         SizedBox(
-                          width: 500,
+                          width: 400,
                           child: Text(
                             description,
                             style: const TextStyle(

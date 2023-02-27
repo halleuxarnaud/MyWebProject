@@ -18,7 +18,6 @@ class ShowLogo extends StatefulWidget {
 
 class _ShowLogoState extends State<ShowLogo> {
   double opacity = 0;
-  //String filePath = 'assets/video/song.mp3';
 
   @override
   void initState() {

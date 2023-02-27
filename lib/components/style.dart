@@ -10,10 +10,14 @@ abstract class MyWebProjectStyle {
   );
 
   static const descAboutMeStyle = TextStyle(
-    
+      fontFamily: 'SpaceMono',
+      color: MyWebProjectUI.secondaryColor,
+      fontWeight: FontWeight.w400,
+      fontSize: 20);
+
+  static const descAboutMeStyleApp = TextStyle(
       fontFamily: 'SpaceMono',
       color: MyWebProjectUI.secondaryColor,
       fontWeight: FontWeight.w400,
       fontSize: 20);
 }
-

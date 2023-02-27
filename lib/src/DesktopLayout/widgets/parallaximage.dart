@@ -24,7 +24,7 @@ class _ParallaxEffectWidgetState extends State<ParallaxEffectWidget> {
         ParallaxLayer(
           xOffset: -offset,
           yOffset: -offset,
-          offset: const Offset(300, -30),
+          offset: const Offset(175, 0),
           child: OverflowBox(
             child: Container(
               height: widget.screenSize.height / 2.5,
@@ -41,7 +41,7 @@ class _ParallaxEffectWidgetState extends State<ParallaxEffectWidget> {
         ParallaxLayer(
           xOffset: -offset,
           yOffset: -offset,
-          offset: const Offset(200, -0),
+          offset: const Offset(100, 30),
           child: OverflowBox(
             child: Container(
               height: widget.screenSize.height / 2.5,
@@ -58,7 +58,7 @@ class _ParallaxEffectWidgetState extends State<ParallaxEffectWidget> {
         ParallaxLayer(
           xOffset: -offset,
           yOffset: -offset,
-          offset: const Offset(100, 30),
+          offset: const Offset(25, 60),
           child: OverflowBox(
             child: Container(
               height: widget.screenSize.height / 2.5,

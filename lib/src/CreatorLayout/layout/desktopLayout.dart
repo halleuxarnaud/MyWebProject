@@ -8,6 +8,7 @@ import 'package:mywebproject/src/CreatorLayout/widgets/buttonbackpdf.dart';
 import 'package:mywebproject/src/CreatorLayout/widgets/comp%C3%A9tenceviuw.dart';
 import 'package:mywebproject/src/CreatorLayout/widgets/contactviuw.dart';
 import 'package:mywebproject/src/CreatorLayout/widgets/formationviuw.dart';
+import 'package:mywebproject/src/CreatorLayout/widgets/langueButton.dart';
 import 'package:mywebproject/src/CreatorLayout/widgets/softskillviuw.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 
@@ -22,24 +23,29 @@ class CreatorPageDesktop extends StatelessWidget {
         height: screenSize.height,
         width: screenSize.width,
         color: MyWebProjectUI.kDefaultcolor,
-        child: Stack(
-          children: [
-            SvgPicture.asset(
-              'assets/image/reliefBack.svg',
-              width: screenSize.width,
-              color: Colors.white.withOpacity(0.04),
-              fit: BoxFit.fill,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                const SizedBox(
-                  width: 1,
+        child: SingleChildScrollView(
+          child: Stack(
+            children: [
+              Container(
+                height: 1700,
+                width: 900,
+                child: SvgPicture.asset(
+                  'assets/image/reliefBack.svg',
+                  width: screenSize.width,
+                  color: Colors.white.withOpacity(0.04),
+                  fit: BoxFit.fill,
                 ),
-                SizedBox(
-                  height: 1200,
-                  width: 900,
-                  child: SingleChildScrollView(
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const SizedBox(
+                    width: 1,
+                  ),
+                  SizedBox(
+                    height: 1700,
+                    width: 900,
                     child: Column(
                       children: [
                         const Padding(
@@ -52,9 +58,9 @@ class CreatorPageDesktop extends StatelessWidget {
                             ),
                           ),
                         ),
-                        const Padding(
+                        Padding(
                           padding: EdgeInsets.only(bottom: 25),
-                          child: SizedBox(
+                          child: const SizedBox(
                             height: 40,
                             width: 900,
                             child: ButtonBack(
@@ -62,6 +68,16 @@ class CreatorPageDesktop extends StatelessWidget {
                             ),
                           ),
                         ),
+                        // const Padding(
+                        //   padding: EdgeInsets.only(bottom: 25, top: 9),
+                        //   child: SizedBox(
+                        //     height: 40,
+                        //     width: 900,
+                        //     child: LangueButton(
+                        //       buttonText: "Back",
+                        //     ),
+                        //   ),
+                        // ),
                         Container(
                           height: 1450,
                           width: 900,
@@ -77,15 +93,15 @@ class CreatorPageDesktop extends StatelessWidget {
                                 child: Column(
                                   children: [
                                     Container(
-                                      decoration: BoxDecoration(
-                                        border: Border.all(
-                                            width: 3,
-                                            color: const Color(0XFF41238a)),
-                                      ),
-                                      height: 340,
-                                      child: const Center(child: Text('Photo')),
-                                    ),
-                                    Padding(
+                                        decoration: BoxDecoration(
+                                          border: Border.all(
+                                              width: 3,
+                                              color: const Color(0XFF41238a)),
+                                        ),
+                                        height: 338,
+                                        child: Image.asset(
+                                            'assets/image/photodeprofil.png')),
+                                    const Padding(
                                       padding: EdgeInsets.all(20.0),
                                       child: Column(
                                         crossAxisAlignment:
@@ -192,7 +208,7 @@ class CreatorPageDesktop extends StatelessWidget {
                                               255, 108, 108, 108),
                                         ),
                                       ),
-                                      Column(
+                                      const Column(
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         children: [
@@ -281,7 +297,16 @@ class CreatorPageDesktop extends StatelessWidget {
                                             child: const SingleChildScrollView(
                                               child: BuildExperience(),
                                             )),
-                                      )
+                                      ),
+                                      Padding(
+                                        padding: EdgeInsets.only(left: 15),
+                                        child: Container(
+                                          height: 100,
+                                          width: screenSize.width,
+                                          color: Colors.grey.withOpacity(0.7),
+                                          child: Text('Langue'),
+                                        ),
+                                      ),
                                     ],
                                   ),
                                 ),
@@ -289,19 +314,16 @@ class CreatorPageDesktop extends StatelessWidget {
                             ],
                           ),
                         ),
-                        SizedBox(
-                          height: 25,
-                        )
                       ],
                     ),
                   ),
-                ),
-                const SizedBox(
-                  width: 1,
-                ),
-              ],
-            ),
-          ],
+                  const SizedBox(
+                    width: 1,
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );

@@ -1,24 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:mywebproject/src/DesktopLayout/view/Home/Curriculumvitae.dart';
-import 'package:mywebproject/src/DesktopLayout/view/Home/aboutme.dart';
-import 'package:mywebproject/src/DesktopLayout/view/Home/product.dart';
-import 'package:mywebproject/src/DesktopLayout/view/Home/showlogo.dart';
-import 'package:mywebproject/src/DesktopLayout/view/Home/contactform.dart';
-import 'package:mywebproject/src/DesktopLayout/view/Home/warningMessage.dart';
-import 'package:mywebproject/src/DesktopLayout/widgets/displayparallax.dart';
-import 'package:mywebproject/src/DesktopLayout/widgets/spacer.dart';
+import 'package:mywebproject/src/MobileLayout/view/Home/aboutme.dart';
+import 'package:mywebproject/src/MobileLayout/view/Home/animatedfooter.dart';
+import 'package:mywebproject/src/MobileLayout/view/Home/contactform.dart';
+import 'package:mywebproject/src/MobileLayout/view/Home/product.dart';
+import 'package:mywebproject/src/MobileLayout/view/Home/showlogo.dart';
+import 'package:mywebproject/src/MobileLayout/view/Home/warningMessage.dart';
 
-import '../../../../components/color.dart';
-import 'animatedfooter.dart';
+import '../DesktopLayout/widgets/spacer.dart';
 
-class DesktopResponsive extends StatefulWidget {
-  const DesktopResponsive({super.key});
+class MobileResponsive extends StatefulWidget {
+  const MobileResponsive({super.key});
 
   @override
-  State<DesktopResponsive> createState() => _DesktopResponsiveState();
+  State<MobileResponsive> createState() => _MobileResponsiveState();
 }
 
-class _DesktopResponsiveState extends State<DesktopResponsive> {
+class _MobileResponsiveState extends State<MobileResponsive> {
   late ScrollController _scrollController;
   double _opacityAdaptive = 1.0;
   bool _positionShowAnimation = true;
@@ -81,7 +78,7 @@ class _DesktopResponsiveState extends State<DesktopResponsive> {
                   AboutMe(screenSize, _currentscrollOffset),
                   Products(screenSize),
                   ContactForm(screenSize),
-                  //SpacerScreenSize(screenSize),
+                  // //SpacerScreenSize(screenSize),
                   AnimatedFooter(
                       screenSize, _maxScrollOffset, _currentscrollOffset),
                 ],

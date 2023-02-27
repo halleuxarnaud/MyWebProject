@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 import 'package:mywebproject/src/CreatorLayout/creatorResponsive.dart';
 import 'package:mywebproject/src/DesktopLayout/view/Home/DesktopResponsive.dart';
 import 'package:mywebproject/src/DesktopLayout/widgets/mouseTrackAnimation.dart';
 import 'package:mywebproject/src/MinWindowsLayout/MinimumWebResp.dart';
-import 'package:mywebproject/src/MobilLayout/MobilResponsive.dart';
+import 'package:mywebproject/src/MobileLayout/MobilResponsive.dart';
 import 'package:mywebproject/src/TabletteLayout/TabletteResponsive.dart';
 
 //todo Hiver saison
@@ -22,6 +23,8 @@ import 'package:mywebproject/src/TabletteLayout/TabletteResponsive.dart';
 //*Ajouter le bouton retour sur la page creator
 
 void main() async {
+  //Function pour supprimer le # dans l'url grade a flutter_web_plugins.dart
+  setUrlStrategy(PathUrlStrategy());
   runApp(const MyApp());
 }
 
@@ -48,7 +51,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: ResponsiveLayout(
-            mobileResp: const MobilResponsive(),
+            mobileResp: const MobileResponsive(),
             minWebResp: const MinimumWebResp(),
             tabletteResp: const TabletteResponsive(),
             desktopResp: const AnimatedCursor(

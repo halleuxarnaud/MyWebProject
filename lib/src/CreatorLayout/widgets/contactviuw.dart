@@ -1,9 +1,28 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ContactViuw extends StatelessWidget {
   const ContactViuw({super.key});
+
+  _LaunchUrlLinkedin() async {
+    const url = 'https://www.linkedin.com/in/arnaud-halleux-64a061258';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
+  _LaunchUrlGithub() async {
+    const url = 'https://github.com/halleuxarnaud';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -113,14 +132,18 @@ class ContactViuw extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      _LaunchUrlLinkedin();
+                    },
                     icon: Image.asset('assets/image/linkedin.png'),
                   ),
                   SizedBox(
                     width: 60,
                   ),
                   IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      _LaunchUrlGithub();
+                    },
                     icon: Image.asset('assets/image/github.png'),
                   ),
                 ],
