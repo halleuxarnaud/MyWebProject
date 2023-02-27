@@ -4,6 +4,5 @@ build
 .DS_Store
 .firebase
 .github
-firebase.json
 .firebaserc
 web/index.html

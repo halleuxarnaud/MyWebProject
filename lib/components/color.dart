@@ -27,10 +27,10 @@ abstract class MyWebProjectUI {
   static const secondColorTitleGradient = Color(0XFF739cca);
 
 //Color of the container containing the title of the card
-  static const containerTitleCardColor = Color(0XFF41238a);
+  static const containerTitleCardColor = Color(0XFFe3a165);
 
   //Text color of the card title
-  static const titleColorCard = Color(0XFF47e98d);
+  static const titleColorCard = Color(0XFF739cca);
 }
 
 /// Defines the gradients for the MyWebProject.

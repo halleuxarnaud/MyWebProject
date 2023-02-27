@@ -81,6 +81,7 @@ flutter:
    - assets/image/phone2.png
    - assets/image/phone3.png
    - assets/image/logo.png
+   - assets/image/logoapp.png
    - assets/image/window1.png
    - assets/image/window2.png
    - assets/image/window3.png
@@ -107,6 +108,9 @@ flutter:
    - assets/image/github.png
    - assets/image/photodeprofil.png
    - assets/image/fleche.json
+   - assets/image/email.png
+   - assets/image/localisateur.png
+   - assets/image/telephone.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

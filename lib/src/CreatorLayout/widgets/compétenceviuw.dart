@@ -53,8 +53,8 @@ class CompetenceViuw extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 const Text(
-                  'Flutter',
-                  style: TextStyle(fontFamily: 'Helvetica', fontSize: 15),
+                  'FLUTTER',
+                  style: TextStyle(fontFamily: 'Helvetica', fontSize: 12),
                 ),
                 SizedBox(
                   width: 100,
@@ -108,8 +108,8 @@ class CompetenceViuw extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 const Text(
-                  'Dart',
-                  style: TextStyle(fontFamily: 'Helvetica', fontSize: 15),
+                  'DART',
+                  style: TextStyle(fontFamily: 'Helvetica', fontSize: 12),
                 ),
                 SizedBox(
                   width: 100,
@@ -163,8 +163,8 @@ class CompetenceViuw extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 const Text(
-                  'Firebase',
-                  style: TextStyle(fontFamily: 'Helvetica', fontSize: 15),
+                  'FIREBASE',
+                  style: TextStyle(fontFamily: 'Helvetica', fontSize: 12),
                 ),
                 SizedBox(
                   width: 100,
@@ -219,7 +219,7 @@ class CompetenceViuw extends StatelessWidget {
               children: [
                 const Text(
                   'GIT',
-                  style: TextStyle(fontFamily: 'Helvetica', fontSize: 15),
+                  style: TextStyle(fontFamily: 'Helvetica', fontSize: 12),
                 ),
                 SizedBox(
                   width: 100,
@@ -274,7 +274,7 @@ class CompetenceViuw extends StatelessWidget {
               children: [
                 const Text(
                   'C',
-                  style: TextStyle(fontFamily: 'Helvetica', fontSize: 15),
+                  style: TextStyle(fontFamily: 'Helvetica', fontSize: 12),
                 ),
                 SizedBox(
                   width: 100,

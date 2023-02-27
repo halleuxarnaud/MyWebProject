@@ -17,7 +17,7 @@ class _AnimatedFooterState extends State<AnimatedFooter> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: widget.size.height,
+      height: 100,
       width: widget.size.width,
       color: MyWebProjectUI.kDefaultcolor,
       child: Stack(

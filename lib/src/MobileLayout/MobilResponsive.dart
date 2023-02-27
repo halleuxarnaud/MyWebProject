@@ -67,8 +67,8 @@ class _MobileResponsiveState extends State<MobileResponsive> {
             children: [
               Column(
                 children: <Widget>[
-                  ShowLogo(
-                      _positionShowAnimation, screenSize, _opacityAdaptive),
+                  //ShowLogo(
+                  //_positionShowAnimation, screenSize, _opacityAdaptive),
                   Stack(
                     children: [
                       SpacerScreenSize(screenSize),
@@ -78,20 +78,10 @@ class _MobileResponsiveState extends State<MobileResponsive> {
                   AboutMe(screenSize, _currentscrollOffset),
                   Products(screenSize),
                   ContactForm(screenSize),
-                  // //SpacerScreenSize(screenSize),
                   AnimatedFooter(
                       screenSize, _maxScrollOffset, _currentscrollOffset),
                 ],
               ),
-              // Positioned(
-              //   top: _position + screenSize.height / 2.5,
-              //   width: screenSize.width,
-              //   child: DisplayParallax(
-              //     _currentscrollOffset,
-              //     _maxScrollOffset,
-              //     screenSize,
-              //   ),
-              // ),
             ],
           )),
     );

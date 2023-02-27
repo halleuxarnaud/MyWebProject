@@ -17,130 +17,50 @@ class AboutMe extends StatefulWidget {
 }
 
 class _AboutMeState extends State<AboutMe> {
-  bool showMoreInformation = false;
-  bool showButtonCreator = false;
-  bool isButtonSelected = false;
-
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    if (widget._currentOffset <= (size.height * 2) * 0.60) {
-      showMoreInformation = false;
-    } else {
-      showMoreInformation = true;
-    }
-    if (widget._currentOffset <= (size.height * 2) * 0.60) {
-      showButtonCreator = false;
-    } else {
-      showButtonCreator = true;
-    }
+
     return Column(
       children: [
         Container(
-            height: widget.size.height - 200,
-            width: widget.size.width,
-            color: MyWebProjectUI.kDefaultcolor,
-            padding: EdgeInsets.fromLTRB(15, 0, 15, 0),
-            child: showMoreInformation
-                ? Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          FittedBox(
-                            fit: BoxFit.contain,
-                            child: GradientText(
-                              MyWebProjectData.titleAboutMe,
-                              style: MyWebProjectStyle.titleAboutMeStyle,
-                              colors: const [
-                                Color(0XFF9465F6),
-                                Color(0XFF739cca),
-                              ],
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 30,
-                          ),
-                          AnimatedContainer(
-                            duration: const Duration(milliseconds: 1500),
-                            height: widget._currentOffset >=
-                                    (size.height * 2.1) * 0.70
-                                ? 300
-                                : 0,
-                            curve: Curves.easeOut,
-                            child: Text(
-                              MyWebProjectData.descAboutMe,
-                              style: MyWebProjectStyle.descAboutMeStyleApp,
-                            ),
-                            // showButtonCreator
-                            //     ? AnimatedContainer(
-                            //         duration: const Duration(seconds: 2),
-                            //         width: widget._currentOffset >=
-                            //                 (size.height * 2.1) * 0.70
-                            //             ? 500
-                            //             : 0,
-                            //         curve: Curves.easeOut,
-                            //         child: AnimatedButton(
-                            //           animatedOn: AnimatedOn.onHover,
-                            //           height: 55,
-                            //           width: 500,
-                            //           text: 'Creator',
-                            //           textStyle: TextStyle(
-                            //               color:
-                            //                   MyWebProjectUI.secondaryColor,
-                            //               fontFamily: 'SpaceMono',
-                            //               fontWeight: FontWeight.bold,
-                            //               letterSpacing: 3,
-                            //               fontSize: 20),
-                            //           gradient: const LinearGradient(
-                            //               colors: [
-                            //                 MyWebProjectUI
-                            //                     .firstColorTitleGradient,
-                            //                 MyWebProjectUI
-                            //                     .secondColorTitleGradient
-                            //               ]),
-                            //           selectedGradientColor:
-                            //               const LinearGradient(colors: [
-                            //             Colors.red,
-                            //             Colors.orange
-                            //           ]),
-                            //           isReverse: true,
-                            //           selectedTextColor: Colors.white,
-                            //           transitionType: TransitionType
-                            //               .LEFT_CENTER_ROUNDER,
-                            //           borderColor: Colors.white,
-                            //           borderRadius: 15,
-                            //           borderWidth: 1,
-                            //           onPress: () {
-                            //             Navigator.pushNamed(
-                            //                 context, '/creator');
-                            //           },
-                            //         ),
-                            //       )
-                            //     : const SizedBox(
-                            //         height: 1,
-                            //       )
-                          ),
-                        ],
-                      ),
-                    ],
-                  )
-                : Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      GradientText(
-                        MyWebProjectData.titleAboutMe,
-                        style: MyWebProjectStyle.titleAboutMeStyle,
-                        colors: const [
-                          Color(0XFF9465F6),
-                          Color(0XFF739cca),
-                        ],
-                      ),
-                    ],
-                  )),
+          height: widget.size.height - 200,
+          width: widget.size.width,
+          color: MyWebProjectUI.kDefaultcolor,
+          padding: EdgeInsets.fromLTRB(15, 0, 15, 0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  FittedBox(
+                    fit: BoxFit.contain,
+                    child: GradientText(
+                      MyWebProjectData.titleAboutMe,
+                      style: MyWebProjectStyle.titleAboutMeStyle,
+                      colors: const [
+                        Color(0XFF9465F6),
+                        Color(0XFF739cca),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  Container(
+                    height: 300,
+                    child: Text(
+                      MyWebProjectData.descAboutMe,
+                      style: MyWebProjectStyle.descAboutMeStyleApp,
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
         Container(
           color: MyWebProjectUI.kDefaultcolor,
           height: 150,

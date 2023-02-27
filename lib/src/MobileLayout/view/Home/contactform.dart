@@ -76,11 +76,11 @@ class _ContactFormState extends State<ContactForm> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: widget.size.height,
+      height: 960,
       width: widget.size.width,
       color: MyWebProjectUI.kDefaultcolor,
       child: Padding(
-        padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+        padding: EdgeInsets.only(left: 20, right: 20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

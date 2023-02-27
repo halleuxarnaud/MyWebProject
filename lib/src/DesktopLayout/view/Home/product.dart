@@ -141,7 +141,7 @@ class _ProductsState extends State<Products> {
       child: AnimatedCursorMouseRegion(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15),
-          color: const Color.fromRGBO(65, 35, 138, 0.1),
+          color: const Color.fromRGBO(227, 161, 101, 0.1),
         ),
         child: AnimatedContainer(
           height: 550,
@@ -156,7 +156,7 @@ class _ProductsState extends State<Products> {
             boxShadow: isHovered
                 ? [
                     BoxShadow(
-                      color: const Color(0xFF41238a).withOpacity(0.5),
+                      color: const Color(0XFFd8c2af).withOpacity(0.5),
                       spreadRadius: 15,
                       blurRadius: 60,
                       offset: const Offset(0, 3),

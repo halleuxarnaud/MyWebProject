@@ -32,7 +32,7 @@ class BuildExperience extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Padding(
+                      Padding(
                         padding: EdgeInsets.only(left: 10),
                         child: Column(
                           children: [
@@ -66,7 +66,7 @@ class BuildExperience extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           const Text(
-                            'Developpement Application Mobile',
+                            'Développement Application Mobile',
                             style: TextStyle(
                                 fontFamily: 'SweetSans',
                                 fontWeight: FontWeight.bold,
@@ -100,7 +100,7 @@ class BuildExperience extends StatelessWidget {
                               const SizedBox(
                                 width: 400,
                                 child: Text(
-                                  'Au cours de ce projet j\'ai pu m\'anipuler plusieurs technologies t\'elque la génération de PDF et la gestion de stockage en mémoire local',
+                                  'Au cours de ce projet, j\'ai pu m\'anipuler plusieurs technologies t\'elles que la génération de PDF et la gestion de stockage en mémoire locale',
                                   style: TextStyle(
                                       fontFamily: 'SweetSans', fontSize: 12),
                                 ),
@@ -127,7 +127,7 @@ class BuildExperience extends StatelessWidget {
                               const SizedBox(
                                 width: 400,
                                 child: Text(
-                                  'le vrai défi était de gèrer des list model en local et pouvoir les éditer j\'ai dû trouver une solution pour ce problème vu que toutes les solutions qui existaient ne prennais pas en chargent cette fonctionnalité',
+                                  'Le vrai défi était de gèrer des lists model en local et de pouvoir les éditer. J\'ai dû trouver une solution pour ce problème étant donné que toutes les solutions qui existaient ne prennaient pas en charge cette fonctionnalité',
                                   style: TextStyle(
                                       fontFamily: 'SweetSans', fontSize: 12),
                                 ),
@@ -144,7 +144,7 @@ class BuildExperience extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Padding(
+                      Padding(
                         padding: EdgeInsets.only(left: 10),
                         child: Column(
                           children: [
@@ -188,7 +188,7 @@ class BuildExperience extends StatelessWidget {
                             height: 7,
                           ),
                           const Text(
-                            'École 19 (42 Netork) | Bruxelles',
+                            'École 19 (42 Network) | Bruxelles',
                             style: TextStyle(
                                 fontFamily: 'SweetSans', fontSize: 12),
                           ),
@@ -212,7 +212,7 @@ class BuildExperience extends StatelessWidget {
                               const SizedBox(
                                 width: 400,
                                 child: Text(
-                                  'J\'ai tellement appris à cette école que sa soit sur la façon de communiqué ou d\'expliquer des problèmes / solutions',
+                                  'Cette école m\'a beaucoup appris sur la manière de communiquer et d\'expliquer les problèmes et les solutions.',
                                   style: TextStyle(
                                       fontFamily: 'SweetSans', fontSize: 12),
                                 ),
@@ -239,7 +239,7 @@ class BuildExperience extends StatelessWidget {
                               const SizedBox(
                                 width: 400,
                                 child: Text(
-                                  'Grace a 19 je me suis vachement amélioré dans différentes technologies comme le C ou même la Shell qui sont omniprésents dans chaqune de nos applications',
+                                  'Grâce à l\'école 19, j\'ai beaucoup progressé dans différentes technologies comme le C ou encore le Shell qui sont des languages de programmation omniprésents dans chacune de nos applications.',
                                   style: TextStyle(
                                       fontFamily: 'SweetSans', fontSize: 12),
                                 ),
@@ -266,7 +266,7 @@ class BuildExperience extends StatelessWidget {
                               const SizedBox(
                                 width: 400,
                                 child: Text(
-                                  'J\'ai eu lopportunité de faire plusieurs travaux en équipe ce qui ma beaucoup stimule-j\'aime le faite de partager ces connaissances et de les metre en commun avec d\'autre développeurs',
+                                  'J\'ai eu la possibilité de faire beaucoup de travail d\'équipe, ce qui a été très stimulant et enrichissant. En effet, j\'aime le fait de partager des connaissances et de les mettre en commun avec d\'autres développeurs.',
                                   style: TextStyle(
                                       fontFamily: 'SweetSans', fontSize: 12),
                                 ),
@@ -283,7 +283,7 @@ class BuildExperience extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Padding(
+                      Padding(
                         padding: EdgeInsets.only(left: 10),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -352,7 +352,7 @@ class BuildExperience extends StatelessWidget {
                               const SizedBox(
                                 width: 400,
                                 child: Text(
-                                  'Au Magasin  j\'avais la tache de faire rentrer les marchandise et de controller l\'état de chaque pièces pour les conformités',
+                                  'Au magasin, j\'avais pour tâche d\'apporter la marchandise et de vérifier l\'état de chaque pièce pour en assurer la conformité.',
                                   style: TextStyle(
                                       fontFamily: 'SweetSans', fontSize: 12),
                                 ),
@@ -379,7 +379,7 @@ class BuildExperience extends StatelessWidget {
                               const SizedBox(
                                 width: 400,
                                 child: Text(
-                                  'Étant principalement sur la réception de coli j\'avais souvent des  "Mission" avec de grosses responsabilités telque la réception de coli extrêmement chère et fragile je devais donc manipuler ce genre de pièce avec précaution et concentration',
+                                  'Ayant pour mission principale la réception de colis, j\'ai souvent eu des "missions" avec de grandes responsabilités telles que la réception de colis extrêmement coûteux et fragiles, ce qui m\'a amené à gérer ce type de tâche avec soin et concentration.',
                                   style: TextStyle(
                                       fontFamily: 'SweetSans', fontSize: 12),
                                 ),
@@ -396,7 +396,7 @@ class BuildExperience extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Padding(
+                      Padding(
                         padding: EdgeInsets.only(left: 10),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -441,7 +441,7 @@ class BuildExperience extends StatelessWidget {
                             height: 7,
                           ),
                           const Text(
-                            'Magasinier | Lambermont - Verviers / 4800',
+                            'Électromécanicien | Lambermont - Verviers / 4800',
                             style: TextStyle(
                                 fontFamily: 'SweetSans', fontSize: 12),
                           ),
@@ -465,7 +465,7 @@ class BuildExperience extends StatelessWidget {
                               const SizedBox(
                                 width: 400,
                                 child: Text(
-                                  'En travaillant chez automation et robotics j\'ai eu l\'occasion d\'améliorer ma communication et d\'apprendre comment une entreprise fonctionne',
+                                  'Travailler chez Automation and Robotics m\'a donné l\'occasion d\'améliorer mes compétences en communication et d\'apprendre le fonctionnement d\'une entreprise.',
                                   style: TextStyle(
                                       fontFamily: 'SweetSans', fontSize: 12),
                                 ),
@@ -492,7 +492,7 @@ class BuildExperience extends StatelessWidget {
                               const SizedBox(
                                 width: 400,
                                 child: Text(
-                                  'Mon rôle pricipale étais de monter les pièce mécanique sur les machine et de les cablier j\'ai donc développer plusieur compétence t\'elle que l\'électriciter la robotique et la pneumatique ',
+                                  'Mon rôle principal était d\'assembler les pièces mécaniques sur les machines et de les câbler. J\'ai donc développé plusieurs compétences telles que l\'électricité, la robotique et la pneumatique.',
                                   style: TextStyle(
                                       fontFamily: 'SweetSans', fontSize: 12),
                                 ),

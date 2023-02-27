@@ -101,17 +101,17 @@ class CreatorPageDesktop extends StatelessWidget {
                                         height: 338,
                                         child: Image.asset(
                                             'assets/image/photodeprofil.png')),
-                                    const Padding(
+                                    Padding(
                                       padding: EdgeInsets.all(20.0),
                                       child: Column(
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         children: [
-                                          CompetenceViuw(),
+                                          ContactViuw(),
                                           SizedBox(
                                             height: 50,
                                           ),
-                                          ContactViuw(),
+                                          CompetenceViuw(),
                                           SizedBox(
                                             height: 50,
                                           ),
@@ -208,7 +208,7 @@ class CreatorPageDesktop extends StatelessWidget {
                                               255, 108, 108, 108),
                                         ),
                                       ),
-                                      const Column(
+                                      Column(
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         children: [
@@ -223,7 +223,7 @@ class CreatorPageDesktop extends StatelessWidget {
                                             height: 20,
                                           ),
                                           Text(
-                                            'Je suis un développeur Flutter junior, et je suis convaincu que je suis né avec un clavier entre les mains. J\'aime les défis techniques, et les projets créatifs. Si vous cherchez un développeur qui peut vous aider à créer des applications mobiles aussi cool que les gadgets de James Bond, alors vous êtes au bon endroit.',
+                                            'Je suis un développeur Flutter junior et je suis convaincu que je suis né avec un clavier entre les mains. J\'aime les défis techniques et les projets créatifs. Si vous cherchez un développeur qui peut vous aider à créer des applications mobiles aussi cool que les gadgets de James Bond, alors vous êtes au bon endroit.',
                                             style: TextStyle(
                                                 fontFamily: 'SweetSans',
                                                 fontSize: 13),
@@ -301,11 +301,127 @@ class CreatorPageDesktop extends StatelessWidget {
                                       Padding(
                                         padding: EdgeInsets.only(left: 15),
                                         child: Container(
-                                          height: 100,
-                                          width: screenSize.width,
-                                          color: Colors.grey.withOpacity(0.7),
-                                          child: Text('Langue'),
-                                        ),
+                                            height: 40,
+                                            width: screenSize.width,
+                                            color: Colors.grey.withOpacity(0.7),
+                                            child: Center(
+                                                child: Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: [
+                                                Row(
+                                                  children: [
+                                                    Text(
+                                                      'Français',
+                                                      style: TextStyle(
+                                                          fontFamily:
+                                                              'Helvetica',
+                                                          fontSize: 12),
+                                                    ),
+                                                    SizedBox(
+                                                      width: 15,
+                                                    ),
+                                                    SizedBox(
+                                                        height: 15,
+                                                        width: 15,
+                                                        child: Image.asset(
+                                                            'assets/image/full.png')),
+                                                    const SizedBox(
+                                                      width: 5,
+                                                    ),
+                                                    SizedBox(
+                                                        height: 15,
+                                                        width: 15,
+                                                        child: Image.asset(
+                                                            'assets/image/full.png')),
+                                                    const SizedBox(
+                                                      width: 5,
+                                                    ),
+                                                    SizedBox(
+                                                        height: 15,
+                                                        width: 15,
+                                                        child: Image.asset(
+                                                            'assets/image/full.png')),
+                                                    const SizedBox(
+                                                      width: 5,
+                                                    ),
+                                                    SizedBox(
+                                                        height: 15,
+                                                        width: 15,
+                                                        child: Image.asset(
+                                                            'assets/image/full.png')),
+                                                    const SizedBox(
+                                                      width: 5,
+                                                    ),
+                                                    SizedBox(
+                                                        height: 15,
+                                                        width: 15,
+                                                        child: Image.asset(
+                                                            'assets/image/full.png')),
+                                                    const SizedBox(
+                                                      width: 5,
+                                                    ),
+                                                  ],
+                                                ),
+                                                SizedBox(
+                                                  width: 50,
+                                                ),
+                                                Row(
+                                                  children: [
+                                                    Text(
+                                                      'Anglais',
+                                                      style: TextStyle(
+                                                          fontFamily:
+                                                              'Helvetica',
+                                                          fontSize: 12),
+                                                    ),
+                                                    SizedBox(
+                                                      width: 15,
+                                                    ),
+                                                    SizedBox(
+                                                        height: 15,
+                                                        width: 15,
+                                                        child: Image.asset(
+                                                            'assets/image/full.png')),
+                                                    const SizedBox(
+                                                      width: 5,
+                                                    ),
+                                                    SizedBox(
+                                                        height: 15,
+                                                        width: 15,
+                                                        child: Image.asset(
+                                                            'assets/image/full.png')),
+                                                    const SizedBox(
+                                                      width: 5,
+                                                    ),
+                                                    SizedBox(
+                                                        height: 15,
+                                                        width: 15,
+                                                        child: Image.asset(
+                                                            'assets/image/Umpty.png')),
+                                                    const SizedBox(
+                                                      width: 5,
+                                                    ),
+                                                    SizedBox(
+                                                        height: 15,
+                                                        width: 15,
+                                                        child: Image.asset(
+                                                            'assets/image/Umpty.png')),
+                                                    const SizedBox(
+                                                      width: 5,
+                                                    ),
+                                                    SizedBox(
+                                                        height: 15,
+                                                        width: 15,
+                                                        child: Image.asset(
+                                                            'assets/image/Umpty.png')),
+                                                    const SizedBox(
+                                                      width: 5,
+                                                    ),
+                                                  ],
+                                                ),
+                                              ],
+                                            ))),
                                       ),
                                     ],
                                   ),

@@ -77,7 +77,7 @@ class ContactViuw extends StatelessWidget {
                   SizedBox(
                       height: 15,
                       width: 15,
-                      child: Image.asset('assets/image/search.png')),
+                      child: Image.asset('assets/image/telephone.png')),
                   const SizedBox(
                     width: 4,
                   ),
@@ -96,7 +96,7 @@ class ContactViuw extends StatelessWidget {
                   SizedBox(
                       height: 15,
                       width: 15,
-                      child: Image.asset('assets/image/user.png')),
+                      child: Image.asset('assets/image/email.png')),
                   const SizedBox(
                     width: 4,
                   ),
@@ -115,7 +115,7 @@ class ContactViuw extends StatelessWidget {
                   SizedBox(
                       height: 15,
                       width: 15,
-                      child: Image.asset('assets/image/search.png')),
+                      child: Image.asset('assets/image/localisateur.png')),
                   const SizedBox(
                     width: 4,
                   ),

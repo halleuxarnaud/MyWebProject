@@ -82,6 +82,7 @@ class _DesktopResponsiveState extends State<DesktopResponsive> {
                   Products(screenSize),
                   ContactForm(screenSize),
                   //SpacerScreenSize(screenSize),
+                  CurriculumSection(_currentscrollOffset),
                   AnimatedFooter(
                       screenSize, _maxScrollOffset, _currentscrollOffset),
                 ],

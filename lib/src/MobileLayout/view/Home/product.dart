@@ -5,7 +5,7 @@ import 'package:mywebproject/components/color.dart';
 import 'package:mywebproject/components/data.dart';
 import 'package:mywebproject/src/MobileLayout/view/Project/AppProject/appProject.dart';
 import 'package:mywebproject/src/MobileLayout/view/Project/SoftProject/softProject.dart';
-import 'package:mywebproject/src/MobileLayout/view/Project/WebProject/webProject.dart';
+import 'package:mywebproject/src/MobileLayout/view/Project/WebProject/webproject.dart';
 import 'package:page_transition/page_transition.dart';
 
 class Products extends StatefulWidget {

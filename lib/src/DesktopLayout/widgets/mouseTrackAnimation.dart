@@ -11,7 +11,7 @@ class AnimatedCursorState {
   static const Size kDefaultSize = Size(15, 15);
   static const BoxDecoration kDefaultDecoration = BoxDecoration(
     borderRadius: BorderRadius.all(Radius.circular(90)),
-    color: Color.fromRGBO(148, 101, 246, 0.3),
+    color: Color.fromRGBO(227, 161, 101, 0.5),
   );
 
   final BoxDecoration decoration;

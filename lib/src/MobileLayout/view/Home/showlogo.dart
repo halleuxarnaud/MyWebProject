@@ -46,7 +46,7 @@ class _ShowLogoState extends State<ShowLogo> {
                       opacity: opacity,
                       duration: const Duration(seconds: 3),
                       child: Image.asset(
-                        'assets/image/logo.png',
+                        'assets/image/logoapp.png',
                       ),
                     ),
                   ),
@@ -69,7 +69,7 @@ class _ShowLogoState extends State<ShowLogo> {
                   child: Opacity(
                     opacity: widget._opacityAdaptive,
                     child: Image.asset(
-                      'assets/image/logo.png',
+                      'assets/image/logoapp.png',
                     ),
                   ),
                 ),
