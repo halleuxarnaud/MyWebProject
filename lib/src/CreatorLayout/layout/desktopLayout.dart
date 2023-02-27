@@ -28,7 +28,7 @@ class CreatorPageDesktop extends StatelessWidget {
             children: [
               Container(
                 height: 1700,
-                width: 900,
+                width: screenSize.width,
                 child: SvgPicture.asset(
                   'assets/image/reliefBack.svg',
                   width: screenSize.width,

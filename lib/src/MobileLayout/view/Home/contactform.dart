@@ -76,7 +76,6 @@ class _ContactFormState extends State<ContactForm> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 960,
       width: widget.size.width,
       color: MyWebProjectUI.kDefaultcolor,
       child: Padding(
@@ -444,8 +443,8 @@ class _ContactFormState extends State<ContactForm> {
                         ),
                         Lottie.network(
                             'https://assets2.lottiefiles.com/private_files/lf30_nsqfzxxx.json',
-                            width: 300,
-                            height: 300)
+                            width: 200,
+                            height: 200)
                       ],
                     ),
                   ),

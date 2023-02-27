@@ -67,8 +67,7 @@ class _MobileResponsiveState extends State<MobileResponsive> {
             children: [
               Column(
                 children: <Widget>[
-                  //ShowLogo(
-                  //_positionShowAnimation, screenSize, _opacityAdaptive),
+                  ShowLogo(),
                   Stack(
                     children: [
                       SpacerScreenSize(screenSize),

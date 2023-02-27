@@ -24,7 +24,6 @@ class _AboutMeState extends State<AboutMe> {
     return Column(
       children: [
         Container(
-          height: widget.size.height - 200,
           width: widget.size.width,
           color: MyWebProjectUI.kDefaultcolor,
           padding: EdgeInsets.fromLTRB(15, 0, 15, 0),
@@ -49,12 +48,9 @@ class _AboutMeState extends State<AboutMe> {
                   const SizedBox(
                     height: 30,
                   ),
-                  Container(
-                    height: 300,
-                    child: Text(
-                      MyWebProjectData.descAboutMe,
-                      style: MyWebProjectStyle.descAboutMeStyleApp,
-                    ),
+                  Text(
+                    MyWebProjectData.descAboutMe,
+                    style: MyWebProjectStyle.descAboutMeStyleApp,
                   ),
                 ],
               ),
