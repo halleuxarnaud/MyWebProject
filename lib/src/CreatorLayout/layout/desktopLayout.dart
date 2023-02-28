@@ -17,21 +17,21 @@ class CreatorPageDesktop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size screenSize = MediaQuery.of(context).size;
+    Size maxSize = MediaQuery.of(context).size;
     return Scaffold(
       body: Container(
-        height: screenSize.height,
-        width: screenSize.width,
+        height: maxSize.height,
+        width: maxSize.width,
         color: MyWebProjectUI.kDefaultcolor,
         child: SingleChildScrollView(
           child: Stack(
             children: [
               Container(
                 height: 1700,
-                width: screenSize.width,
+                width: maxSize.width,
                 child: SvgPicture.asset(
                   'assets/image/reliefBack.svg',
-                  width: screenSize.width,
+                  width: maxSize.width,
                   color: Colors.white.withOpacity(0.04),
                   fit: BoxFit.fill,
                 ),
@@ -293,7 +293,7 @@ class CreatorPageDesktop extends StatelessWidget {
                                       ),
                                       Expanded(
                                         child: SizedBox(
-                                            width: screenSize.width,
+                                            width: maxSize.width,
                                             child: const SingleChildScrollView(
                                               child: BuildExperience(),
                                             )),
@@ -302,7 +302,7 @@ class CreatorPageDesktop extends StatelessWidget {
                                         padding: EdgeInsets.only(left: 15),
                                         child: Container(
                                             height: 40,
-                                            width: screenSize.width,
+                                            width: maxSize.width,
                                             color: Colors.grey.withOpacity(0.7),
                                             child: Center(
                                                 child: Row(

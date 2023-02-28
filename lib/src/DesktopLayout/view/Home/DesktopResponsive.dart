@@ -51,7 +51,7 @@ class _DesktopResponsiveState extends State<DesktopResponsive> {
 
   @override
   NotificationListener<ScrollNotification> build(BuildContext context) {
-    Size screenSize = MediaQuery.of(context).size;
+    Size maxSize = MediaQuery.of(context).size;
     return NotificationListener<ScrollNotification>(
       onNotification: (scrollNotification) {
         if (scrollNotification is ScrollUpdateNotification) {
@@ -70,30 +70,26 @@ class _DesktopResponsiveState extends State<DesktopResponsive> {
             children: [
               Column(
                 children: <Widget>[
-                  ShowLogo(
-                      _positionShowAnimation, screenSize, _opacityAdaptive),
+                  ShowLogo(_positionShowAnimation, maxSize, _opacityAdaptive),
                   Stack(
-                    children: [
-                      SpacerScreenSize(screenSize),
-                      BetaVersionNotComplet()
-                    ],
+                    children: [SpacermaxSize(maxSize), BetaVersionNotComplet()],
                   ),
-                  AboutMe(screenSize, _currentscrollOffset),
-                  Products(screenSize),
-                  ContactForm(screenSize),
-                  //SpacerScreenSize(screenSize),
+                  AboutMe(maxSize, _currentscrollOffset),
+                  Products(maxSize),
+                  ContactForm(maxSize),
+                  //SpacermaxSize(maxSize),
                   CurriculumSection(_currentscrollOffset),
                   AnimatedFooter(
-                      screenSize, _maxScrollOffset, _currentscrollOffset),
+                      maxSize, _maxScrollOffset, _currentscrollOffset),
                 ],
               ),
               // Positioned(
-              //   top: _position + screenSize.height / 2.5,
-              //   width: screenSize.width,
+              //   top: _position + maxSize.height / 2.5,
+              //   width: maxSize.width,
               //   child: DisplayParallax(
               //     _currentscrollOffset,
               //     _maxScrollOffset,
-              //     screenSize,
+              //     maxSize,
               //   ),
               // ),
             ],

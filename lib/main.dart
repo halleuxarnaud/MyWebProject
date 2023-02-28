@@ -20,7 +20,6 @@ import 'package:mywebproject/src/TabletteLayout/TabletteResponsive.dart';
 //* Ajouter les nouvelle donner budget + TimeLine a la génération de mail
 //* Corriger l'animation parallax generale
 //* Ajouter le bouton pour enregister en pdf le CV
-//*Ajouter le bouton retour sur la page creator
 
 void main() async {
   //Function pour supprimer le # dans l'url grade a flutter_web_plugins.dart

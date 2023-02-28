@@ -8,10 +8,10 @@ class BetaVersionNotComplet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size screenSize = MediaQuery.of(context).size;
+    Size maxSize = MediaQuery.of(context).size;
     return Container(
       height: 100,
-      width: screenSize.width,
+      width: maxSize.width,
       child: Padding(
         padding: EdgeInsets.fromLTRB(15, 0, 15, 0),
         child: Center(

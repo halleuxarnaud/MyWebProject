@@ -1,16 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_animated_button/flutter_animated_button.dart';
 import 'package:mywebproject/components/color.dart';
 import 'package:mywebproject/components/data.dart';
 import 'package:mywebproject/components/style.dart';
-
-import 'package:page_transition/page_transition.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 
 class AboutMe extends StatefulWidget {
-  final Size size;
-  final double _currentOffset;
-  const AboutMe(this.size, this._currentOffset, {super.key});
+  const AboutMe({super.key});
 
   @override
   State<AboutMe> createState() => _AboutMeState();
@@ -19,12 +14,12 @@ class AboutMe extends StatefulWidget {
 class _AboutMeState extends State<AboutMe> {
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
+    Size maxSize = MediaQuery.of(context).size;
 
     return Column(
       children: [
         Container(
-          width: widget.size.width,
+          width: maxSize.width,
           color: MyWebProjectUI.kDefaultcolor,
           padding: EdgeInsets.fromLTRB(15, 0, 15, 0),
           child: Column(
@@ -52,14 +47,13 @@ class _AboutMeState extends State<AboutMe> {
                     MyWebProjectData.descAboutMe,
                     style: MyWebProjectStyle.descAboutMeStyleApp,
                   ),
+                  SizedBox(
+                    height: 150,
+                  )
                 ],
               ),
             ],
           ),
-        ),
-        Container(
-          color: MyWebProjectUI.kDefaultcolor,
-          height: 150,
         ),
       ],
     );

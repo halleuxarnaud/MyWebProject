@@ -6,7 +6,7 @@ class BuildExperience extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size screenSize = MediaQuery.of(context).size;
+    Size maxSize = MediaQuery.of(context).size;
     return Stack(
       children: [
         Row(
@@ -18,7 +18,7 @@ class BuildExperience extends StatelessWidget {
             Container(
               color: Colors.black.withOpacity(0.5),
               width: 2,
-              height: screenSize.height + 45,
+              height: maxSize.height + 45,
             ),
           ],
         ),

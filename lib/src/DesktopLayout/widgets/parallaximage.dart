@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:mouse_parallax/mouse_parallax.dart';
 
 class ParallaxEffectWidget extends StatefulWidget {
-  final Size screenSize;
+  final Size maxSize;
   final String picture1;
   final String picture2;
   final String srcimage13;
 
   const ParallaxEffectWidget(
-      this.screenSize, this.picture1, this.picture2, this.srcimage13,
+      this.maxSize, this.picture1, this.picture2, this.srcimage13,
       {Key? key});
 
   @override
@@ -27,8 +27,8 @@ class _ParallaxEffectWidgetState extends State<ParallaxEffectWidget> {
           offset: const Offset(175, 0),
           child: OverflowBox(
             child: Container(
-              height: widget.screenSize.height / 2.5,
-              width: widget.screenSize.width / 4,
+              height: widget.maxSize.height / 2.5,
+              width: widget.maxSize.width / 4,
               decoration: BoxDecoration(
                 image: DecorationImage(
                   fit: BoxFit.contain,
@@ -44,8 +44,8 @@ class _ParallaxEffectWidgetState extends State<ParallaxEffectWidget> {
           offset: const Offset(100, 30),
           child: OverflowBox(
             child: Container(
-              height: widget.screenSize.height / 2.5,
-              width: widget.screenSize.width / 4,
+              height: widget.maxSize.height / 2.5,
+              width: widget.maxSize.width / 4,
               decoration: BoxDecoration(
                 image: DecorationImage(
                   fit: BoxFit.contain,
@@ -61,8 +61,8 @@ class _ParallaxEffectWidgetState extends State<ParallaxEffectWidget> {
           offset: const Offset(25, 60),
           child: OverflowBox(
             child: Container(
-              height: widget.screenSize.height / 2.5,
-              width: widget.screenSize.width / 4,
+              height: widget.maxSize.height / 2.5,
+              width: widget.maxSize.width / 4,
               decoration: BoxDecoration(
                 image: DecorationImage(
                   fit: BoxFit.contain,

@@ -8,13 +8,13 @@ class BetaVersionNotComplet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size screenSize = MediaQuery.of(context).size;
+    Size maxSize = MediaQuery.of(context).size;
     return Container(
-      height: screenSize.height,
-      width: screenSize.width,
+      height: maxSize.height,
+      width: maxSize.width,
       child: Padding(
         padding: EdgeInsets.fromLTRB(
-            screenSize.width * 0.25, 0, screenSize.width * 0.25, 0),
+            maxSize.width * 0.25, 0, maxSize.width * 0.25, 0),
         child: Center(
           child: Text(
             'Before scrolling further, I would like to point out that the site is under development so if there is any bug or other disturbing thing, it will be corrected. it is also possible that some functionality is not yet available',

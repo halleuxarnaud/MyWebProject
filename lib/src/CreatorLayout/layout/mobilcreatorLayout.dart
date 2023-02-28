@@ -6,12 +6,12 @@ class CreatorPageMobile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size screenSize = MediaQuery.of(context).size;
+    Size maxSize = MediaQuery.of(context).size;
     return Stack(
       children: [
         Container(
-          height: screenSize.height,
-          width: screenSize.width,
+          height: maxSize.height,
+          width: maxSize.width,
           color: MyWebProjectUI.kDefaultcolor,
         ),
         Padding(

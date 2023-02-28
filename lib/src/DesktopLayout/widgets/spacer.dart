@@ -3,9 +3,9 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:mywebproject/components/color.dart';
 
-class SpacerScreenSize extends StatelessWidget {
+class SpacermaxSize extends StatelessWidget {
   final Size sizeScreen;
-  const SpacerScreenSize(this.sizeScreen, {super.key});
+  const SpacermaxSize(this.sizeScreen, {super.key});
 
   @override
   Widget build(BuildContext context) {

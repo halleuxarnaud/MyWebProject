@@ -48,7 +48,7 @@ class _MobileResponsiveState extends State<MobileResponsive> {
 
   @override
   NotificationListener<ScrollNotification> build(BuildContext context) {
-    Size screenSize = MediaQuery.of(context).size;
+    Size maxSize = MediaQuery.of(context).size;
     return NotificationListener<ScrollNotification>(
       onNotification: (scrollNotification) {
         if (scrollNotification is ScrollUpdateNotification) {
@@ -67,18 +67,17 @@ class _MobileResponsiveState extends State<MobileResponsive> {
             children: [
               Column(
                 children: <Widget>[
-                  ShowLogo(),
-                  Stack(
-                    children: [
-                      SpacerScreenSize(screenSize),
-                      BetaVersionNotComplet()
-                    ],
+                  ShowLogo(
+                    _positionShowAnimation,
                   ),
-                  AboutMe(screenSize, _currentscrollOffset),
-                  Products(screenSize),
-                  ContactForm(screenSize),
+                  Stack(
+                    children: [SpacermaxSize(maxSize), BetaVersionNotComplet()],
+                  ),
+                  AboutMe(),
+                  Products(),
+                  ContactForm(maxSize),
                   AnimatedFooter(
-                      screenSize, _maxScrollOffset, _currentscrollOffset),
+                      maxSize, _maxScrollOffset, _currentscrollOffset),
                 ],
               ),
             ],

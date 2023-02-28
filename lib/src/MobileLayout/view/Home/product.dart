@@ -9,8 +9,7 @@ import 'package:mywebproject/src/MobileLayout/view/Project/WebProject/webproject
 import 'package:page_transition/page_transition.dart';
 
 class Products extends StatefulWidget {
-  final Size screenSize;
-  const Products(this.screenSize, {Key? key});
+  const Products({Key? key});
 
   @override
   State<Products> createState() => _ProductsState();
@@ -24,21 +23,11 @@ class _ProductsState extends State<Products> {
   static const int card2 = 2;
   static const int card3 = 3;
 
-  void updateIsHovered(bool value, int card) {
-    if (card == 1) {
-      isHoveredApp = value;
-    } else if (card == 2) {
-      isHoveredWeb = value;
-    } else if (card == 3) {
-      isHoveredSoft = value;
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     Size maxSize = MediaQuery.of(context).size;
     return Container(
-      width: widget.screenSize.width,
+      width: maxSize.width,
       color: MyWebProjectUI.kDefaultcolor,
       child: Padding(
         padding: EdgeInsets.fromLTRB(15, 0, 15, 0),
@@ -94,7 +83,7 @@ class _ProductsState extends State<Products> {
     );
   }
 
-  MouseRegion showCardProject(
+  Container showCardProject(
     String minTitleCard,
     String titleCard,
     String description,
@@ -102,141 +91,122 @@ class _ProductsState extends State<Products> {
     int cardCounter,
     Size maxSize,
   ) {
-    return MouseRegion(
-      onEnter: (event) {
-        setState(() {
-          updateIsHovered(
-            true,
-            cardCounter,
-          );
-        });
-      },
-      onExit: (event) {
-        setState(() {
-          updateIsHovered(
-            false,
-            cardCounter,
-          );
-        });
-      },
-      child: Container(
-        height: 800,
-        width: widget.screenSize.width,
-        decoration: BoxDecoration(
-          border: Border.all(
-            width: 2,
-            color: MyWebProjectUI.colorFontField,
-          ),
-          borderRadius: const BorderRadius.all(Radius.circular(15)),
+    return Container(
+      width: maxSize.width,
+      decoration: BoxDecoration(
+        border: Border.all(
+          width: 2,
+          color: MyWebProjectUI.colorFontField,
         ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Center(
-                child: Container(
-                    padding: EdgeInsets.only(top: 20),
-                    height: 200,
-                    width: 200,
-                    child: Image.asset(picture))),
-            Padding(
-              padding: const EdgeInsets.all(20),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    minTitleCard,
-                    style: TextStyle(
-                        color: MyWebProjectUI.primaryColor,
+        borderRadius: const BorderRadius.all(Radius.circular(15)),
+      ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Center(
+              child: Container(
+                  padding: EdgeInsets.only(top: 20),
+                  height: 200,
+                  width: 200,
+                  child: Image.asset(picture))),
+          Padding(
+            padding: const EdgeInsets.all(20),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  minTitleCard,
+                  style: TextStyle(
+                      color: MyWebProjectUI.primaryColor,
+                      fontFamily: 'SpaceMono',
+                      fontSize: 20,
+                      fontWeight: FontWeight.w600,
+                      letterSpacing: 3),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                Container(
+                  color: MyWebProjectUI.containerTitleCardColor,
+                  child: Text(
+                    titleCard,
+                    style: const TextStyle(
+                        color: MyWebProjectUI.titleColorCard,
+                        fontFamily: 'SpaceMono',
+                        fontSize: 40,
+                        fontWeight: FontWeight.w700),
+                  ),
+                ),
+                const SizedBox(
+                  height: 30,
+                ),
+                SizedBox(
+                  width: 400,
+                  child: Text(
+                    description,
+                    style: const TextStyle(
+                        color: MyWebProjectUI.colorFontField,
                         fontFamily: 'SpaceMono',
                         fontSize: 20,
-                        fontWeight: FontWeight.w600,
-                        letterSpacing: 3),
+                        fontWeight: FontWeight.w400),
                   ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  Container(
-                    color: MyWebProjectUI.containerTitleCardColor,
-                    child: Text(
-                      titleCard,
-                      style: const TextStyle(
-                          color: MyWebProjectUI.titleColorCard,
-                          fontFamily: 'SpaceMono',
-                          fontSize: 40,
-                          fontWeight: FontWeight.w700),
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 30,
-                  ),
-                  SizedBox(
-                    width: 400,
-                    child: Text(
-                      description,
-                      style: const TextStyle(
-                          color: MyWebProjectUI.colorFontField,
-                          fontFamily: 'SpaceMono',
-                          fontSize: 20,
-                          fontWeight: FontWeight.w400),
-                    ),
-                  )
-                ],
-              ),
+                )
+              ],
             ),
-            Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: SizedBox(
-                width: widget.screenSize.width,
-                child: OutlinedButton(
-                    style: OutlinedButton.styleFrom(
-                        foregroundColor: Colors.red,
-                        backgroundColor: MyWebProjectUI.kDefaultcolor,
-                        side: const BorderSide(width: 2, color: Colors.white),
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(8))),
-                    child: const Padding(
-                      padding: EdgeInsets.all(15.0),
-                      child: Text(
-                        MyWebProjectData.buttonText,
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.w400,
-                            fontFamily: 'SpaceMono',
-                            fontSize: 19),
-                      ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: SizedBox(
+              width: maxSize.width,
+              child: OutlinedButton(
+                  style: OutlinedButton.styleFrom(
+                      foregroundColor: Colors.red,
+                      backgroundColor: MyWebProjectUI.kDefaultcolor,
+                      side: const BorderSide(width: 2, color: Colors.white),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8))),
+                  child: const Padding(
+                    padding: EdgeInsets.all(15.0),
+                    child: Text(
+                      MyWebProjectData.buttonText,
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w400,
+                          fontFamily: 'SpaceMono',
+                          fontSize: 19),
                     ),
-                    onPressed: () {
-                      if (cardCounter == 1) {
-                        Navigator.push(
-                          context,
-                          PageTransition(
-                              type: PageTransitionType.fade,
-                              child: AppProjectDisplayApp()),
-                        );
-                      }
-                      if (cardCounter == 2) {
-                        Navigator.push(
-                          context,
-                          PageTransition(
-                              type: PageTransitionType.fade,
-                              child: WebProjectDisplayApp()),
-                        );
-                      }
-                      if (cardCounter == 3) {
-                        Navigator.push(
-                          context,
-                          PageTransition(
-                              type: PageTransitionType.fade,
-                              child: SoftProjectDisplayApp()),
-                        );
-                      }
-                    }),
-              ),
+                  ),
+                  onPressed: () {
+                    if (cardCounter == 1) {
+                      Navigator.push(
+                        context,
+                        PageTransition(
+                            type: PageTransitionType.fade,
+                            child: AppProjectDisplayApp()),
+                      );
+                    }
+                    if (cardCounter == 2) {
+                      Navigator.push(
+                        context,
+                        PageTransition(
+                            type: PageTransitionType.fade,
+                            child: WebProjectDisplayApp()),
+                      );
+                    }
+                    if (cardCounter == 3) {
+                      Navigator.push(
+                        context,
+                        PageTransition(
+                            type: PageTransitionType.fade,
+                            child: SoftProjectDisplayApp()),
+                      );
+                    }
+                  }),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
