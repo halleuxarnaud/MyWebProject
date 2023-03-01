@@ -20,13 +20,15 @@ class CreatorPageMobile extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
-                  'Mobil Responsive Soon',
-                  style: TextStyle(
-                    color: MyWebProjectUI.secondaryColor,
-                    fontFamily: 'SpaceMono',
-                    fontWeight: FontWeight.w400,
-                    fontSize: 20,
+                Center(
+                  child: Text(
+                    'Responsive mobile coming soon',
+                    style: TextStyle(
+                      color: MyWebProjectUI.secondaryColor,
+                      fontFamily: 'SpaceMono',
+                      fontWeight: FontWeight.w400,
+                      fontSize: 20,
+                    ),
                   ),
                 ),
                 Text(

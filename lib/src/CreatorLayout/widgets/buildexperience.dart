@@ -100,7 +100,7 @@ class BuildExperience extends StatelessWidget {
                               const SizedBox(
                                 width: 400,
                                 child: Text(
-                                  'Au cours de ce projet, j\'ai pu m\'anipuler plusieurs technologies t\'elles que la génération de PDF et la gestion de stockage en mémoire locale',
+                                  'Au cours de ce projet, j\'ai pu manipuler plusieurs technologies telles que la génération de PDF et la gestion de stockage en mémoire locale.',
                                   style: TextStyle(
                                       fontFamily: 'SweetSans', fontSize: 12),
                                 ),
@@ -127,7 +127,7 @@ class BuildExperience extends StatelessWidget {
                               const SizedBox(
                                 width: 400,
                                 child: Text(
-                                  'Le vrai défi était de gèrer des lists model en local et de pouvoir les éditer. J\'ai dû trouver une solution pour ce problème étant donné que toutes les solutions qui existaient ne prennaient pas en charge cette fonctionnalité',
+                                  'Le vrai défi était de gèrer des lists model en local et de pouvoir les éditer. J\'ai dû trouver une solution pour ce problème étant donné que toutes les solutions qui existaient ne prennaient pas en charge cette fonctionnalité.',
                                   style: TextStyle(
                                       fontFamily: 'SweetSans', fontSize: 12),
                                 ),
@@ -266,7 +266,7 @@ class BuildExperience extends StatelessWidget {
                               const SizedBox(
                                 width: 400,
                                 child: Text(
-                                  'J\'ai eu la possibilité de faire beaucoup de travail d\'équipe, ce qui a été très stimulant et enrichissant. En effet, j\'aime le fait de partager des connaissances et de les mettre en commun avec d\'autres développeurs.',
+                                  'J\'ai eu la possibilité de faire beaucoup de travail d\'équipe, ce qui a été très stimulant et enrichissant.',
                                   style: TextStyle(
                                       fontFamily: 'SweetSans', fontSize: 12),
                                 ),
@@ -289,7 +289,7 @@ class BuildExperience extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              '2014',
+                              '2020',
                               style: TextStyle(
                                   fontFamily: 'Helvetica', fontSize: 12),
                             ),
@@ -407,7 +407,7 @@ class BuildExperience extends StatelessWidget {
                                   fontFamily: 'Helvetica', fontSize: 12),
                             ),
                             Text(
-                              '2022',
+                              '2020',
                               style: TextStyle(
                                   fontFamily: 'Helvetica', fontSize: 12),
                             ),

@@ -263,7 +263,7 @@ class CreatorPageDesktop extends StatelessWidget {
                                                     width: 15,
                                                   ),
                                                   const Text(
-                                                    'EXPÉRIENCES PROFESSIONELLES',
+                                                    'EXPÉRIENCES PROFESSIONNELLES',
                                                     style: TextStyle(
                                                         fontFamily: 'SweetSans',
                                                         fontWeight:

@@ -9,6 +9,7 @@ import 'package:mywebproject/src/DesktopLayout/view/Project/WebProject/webProjec
 import 'package:mywebproject/src/DesktopLayout/widgets/mouseTrackAnimation.dart';
 import 'package:mywebproject/src/DesktopLayout/widgets/parallaximage.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:simple_gradient_text/simple_gradient_text.dart';
 
 class Products extends StatefulWidget {
   final Size maxSize;
@@ -48,9 +49,13 @@ class _ProductsState extends State<Products> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
+            GradientText(
               MyWebProjectData.titleProject,
               maxLines: 1,
+              colors: const [
+                Color(0XFFe3a165),
+                Color(0XFF739cca),
+              ],
               style: TextStyle(
                 fontFamily: 'SpaceMono',
                 color: MyWebProjectUI.colorFontField,

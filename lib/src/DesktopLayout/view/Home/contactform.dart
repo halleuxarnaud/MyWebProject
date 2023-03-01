@@ -7,6 +7,7 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 import 'package:lottie/lottie.dart';
+import 'package:simple_gradient_text/simple_gradient_text.dart';
 
 class ContactForm extends StatefulWidget {
   final Size size;
@@ -86,7 +87,11 @@ class _ContactFormState extends State<ContactForm> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text(
+              GradientText(
+                colors: const [
+                  Color(0XFFe3a165),
+                  Color(0XFF739cca),
+                ],
                 'Contact',
                 maxLines: 1,
                 style: TextStyle(
