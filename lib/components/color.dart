@@ -21,7 +21,7 @@ abstract class MyWebProjectUI {
   static const colorFontField = Color(0xFF999999);
 
   ///First color of the title gradient
-  static const firstColorTitleGradient = Color(0XFF9465F6);
+  static const firstColorTitleGradient = Color(0XFFe3a165);
 
   ///First color of the title gradient
   static const secondColorTitleGradient = Color(0XFF739cca);
@@ -36,10 +36,27 @@ abstract class MyWebProjectUI {
 /// Defines the gradients for the MyWebProject.
 class MyWebProjectGradient {
   /// titleAboutMeGradient
-  static const Gradient titleAboutMeGradient = LinearGradient(
+  static Gradient mainGradient = LinearGradient(
     colors: <Color>[
       MyWebProjectUI.firstColorTitleGradient,
       MyWebProjectUI.secondColorTitleGradient
     ],
+  );
+
+  static BoxDecoration kInnerDecoration = BoxDecoration(
+    color: MyWebProjectUI.kDefaultcolor,
+    border: Border.all(color: Colors.white),
+    borderRadius: BorderRadius.circular(15),
+  );
+
+  static BoxDecoration kGradientBoxDecoration = BoxDecoration(
+    gradient: LinearGradient(colors: [
+      MyWebProjectUI.firstColorTitleGradient,
+      MyWebProjectUI.secondColorTitleGradient
+    ]),
+    border: Border.all(
+      color: Colors.white,
+    ),
+    borderRadius: BorderRadius.circular(15),
   );
 }

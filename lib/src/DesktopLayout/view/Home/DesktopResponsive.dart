@@ -74,11 +74,14 @@ class _DesktopResponsiveState extends State<DesktopResponsive> {
                   Stack(
                     children: [SpacermaxSize(maxSize), BetaVersionNotComplet()],
                   ),
-                  AboutMe(maxSize, _currentscrollOffset),
+                  AboutMe(_currentscrollOffset),
+                  CurriculumSection(
+                    _currentscrollOffset,
+                    _maxScrollOffset,
+                  ),
                   Products(maxSize),
                   ContactForm(maxSize),
                   //SpacermaxSize(maxSize),
-                  CurriculumSection(_currentscrollOffset),
                   AnimatedFooter(
                       maxSize, _maxScrollOffset, _currentscrollOffset),
                 ],

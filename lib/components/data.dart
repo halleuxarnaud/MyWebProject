@@ -5,6 +5,18 @@ abstract class MyWebProjectData {
   static const String descAboutMe =
       "I am Arnaud Halleux, a 25 years old self-taught full stack developer specialized in web, mobile and software development. With my expertise in technologies such as Flutter, Firebase, I can create powerful and elegant web and mobile applications. As a self-taught developer, I am able to solve complex problems quickly. My portfolio is entirely developed with Flutter";
 
+//Config Curriculum vitae EN
+  static const String titleCVen = "Curriculum Vitae";
+
+  static const String descCVen =
+      "I have gathered all my skills, experiences and professional achievements in this document. To learn more about my background, click on the button below to access my complete Curriculum Vitae.";
+
+//Config Curriculum vitae FR
+  static const String titleCVfr = "Curriculum Vitae";
+
+  static const String descCVfr =
+      "J'ai rassemblé toutes mes compétences, expériences et réalisations professionnelles dans ce document. Pour en savoir plus sur mon parcours, cliquez sur le bouton ci-dessous pour accéder à mon Curriculum Vitae complet.";
+
   //Config Project Card
   static const String titleProject = "Projects";
 
@@ -55,6 +67,8 @@ abstract class MyWebProjectData {
       "assets/image/NoMovementSoftware.png";
 
   static const String buttonText = "See More";
+
+  static const String openSourceText = "Github";
 
   //Config Contact Form
 

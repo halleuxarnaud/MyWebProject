@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
@@ -16,12 +17,12 @@ class SoftProject extends StatelessWidget {
         color: MyWebProjectUI.kDefaultcolor,
         child: Center(
           child: Text(
-            'Soft Project',
+            'No project realized for the moment',
             style: TextStyle(
               color: MyWebProjectUI.secondaryColor,
               fontFamily: 'SpaceMono',
               fontWeight: FontWeight.w400,
-              fontSize: 80,
+              fontSize: 50,
             ),
           ),
         ),

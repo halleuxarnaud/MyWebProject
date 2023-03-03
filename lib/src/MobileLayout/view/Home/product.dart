@@ -180,28 +180,13 @@ class _ProductsState extends State<Products> {
                   ),
                   onPressed: () {
                     if (cardCounter == 1) {
-                      Navigator.push(
-                        context,
-                        PageTransition(
-                            type: PageTransitionType.fade,
-                            child: AppProjectDisplayApp()),
-                      );
+                      Navigator.pushNamed(context, '/app-projectmobile');
                     }
                     if (cardCounter == 2) {
-                      Navigator.push(
-                        context,
-                        PageTransition(
-                            type: PageTransitionType.fade,
-                            child: WebProjectDisplayApp()),
-                      );
+                      Navigator.pushNamed(context, '/web-projectmobile');
                     }
                     if (cardCounter == 3) {
-                      Navigator.push(
-                        context,
-                        PageTransition(
-                            type: PageTransitionType.fade,
-                            child: SoftProjectDisplayApp()),
-                      );
+                      Navigator.pushNamed(context, '/soft-projectmobile');
                     }
                   }),
             ),

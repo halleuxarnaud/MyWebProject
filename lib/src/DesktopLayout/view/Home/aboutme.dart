@@ -8,9 +8,8 @@ import 'package:page_transition/page_transition.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 
 class AboutMe extends StatefulWidget {
-  final Size size;
   final double _currentOffset;
-  const AboutMe(this.size, this._currentOffset, {super.key});
+  const AboutMe(this._currentOffset, {super.key});
 
   @override
   State<AboutMe> createState() => _AboutMeState();
@@ -23,13 +22,13 @@ class _AboutMeState extends State<AboutMe> {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-    if (widget._currentOffset <= (size.height * 2) * 0.60) {
+    Size maxSize = MediaQuery.of(context).size;
+    if (widget._currentOffset <= (maxSize.height * 2) * 0.60) {
       showMoreInformation = false;
     } else {
       showMoreInformation = true;
     }
-    if (widget._currentOffset <= (size.height * 2) * 0.60) {
+    if (widget._currentOffset <= (maxSize.height * 2) * 0.60) {
       showButtonCreator = false;
     } else {
       showButtonCreator = true;
@@ -37,11 +36,11 @@ class _AboutMeState extends State<AboutMe> {
     return Column(
       children: [
         Container(
-            height: widget.size.height - 200,
-            width: widget.size.width,
+            height: maxSize.height - 200,
+            width: maxSize.width,
             color: MyWebProjectUI.kDefaultcolor,
             padding: EdgeInsets.fromLTRB(
-                widget.size.width * 0.25, 0, widget.size.width * 0.25, 0),
+                maxSize.width * 0.25, 0, maxSize.width * 0.25, 0),
             child: showMoreInformation
                 ? Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -67,7 +66,7 @@ class _AboutMeState extends State<AboutMe> {
                           AnimatedContainer(
                             duration: const Duration(milliseconds: 1500),
                             height: widget._currentOffset >=
-                                    (size.height * 2.1) * 0.70
+                                    (maxSize.height * 2.1) * 0.70
                                 ? 300
                                 : 0,
                             curve: Curves.easeOut,

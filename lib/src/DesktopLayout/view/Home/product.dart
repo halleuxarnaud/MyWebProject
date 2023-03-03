@@ -253,28 +253,13 @@ class _ProductsState extends State<Products> {
                         ),
                         onPressed: () {
                           if (cardCounter == 1) {
-                            Navigator.push(
-                              context,
-                              PageTransition(
-                                  type: PageTransitionType.fade,
-                                  child: AppProject()),
-                            );
+                            Navigator.pushNamed(context, '/app-project');
                           }
                           if (cardCounter == 2) {
-                            Navigator.push(
-                              context,
-                              PageTransition(
-                                  type: PageTransitionType.fade,
-                                  child: WebProject()),
-                            );
+                            Navigator.pushNamed(context, '/web-project');
                           }
                           if (cardCounter == 3) {
-                            Navigator.push(
-                              context,
-                              PageTransition(
-                                  type: PageTransitionType.fade,
-                                  child: SoftProject()),
-                            );
+                            Navigator.pushNamed(context, '/soft-project');
                           }
                         }),
                   ],
