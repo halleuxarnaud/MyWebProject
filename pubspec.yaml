@@ -115,6 +115,7 @@ flutter:
    - assets/image/github-svgrepo-com.svg
    - assets/image/Opensource.png
    - assets/image/medicalnotelogo.png
+   - assets/image/mywebprojectlogo.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

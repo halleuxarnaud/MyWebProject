@@ -35,7 +35,7 @@ class _AboutMeState extends State<AboutMe> {
                       MyWebProjectData.titleAboutMe,
                       style: MyWebProjectStyle.titleAboutMeStyle,
                       colors: const [
-                        Color(0XFF9465F6),
+                        Color(0XFFe3a165),
                         Color(0XFF739cca),
                       ],
                     ),
