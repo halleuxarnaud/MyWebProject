@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pdf/pdf.dart';
 
 /// Defines the color palette for MyWebProject.
 abstract class MyWebProjectUI {
@@ -59,4 +60,13 @@ class MyWebProjectGradient {
     ),
     borderRadius: BorderRadius.circular(15),
   );
+}
+
+class MyWebProjectColorPdf {
+  static const PdfColor backline = PdfColor.fromInt(0xffadadad);
+
+  static const PdfColor purpulColor = PdfColor.fromInt(0xff41238a);
+  static const PdfColor classicBlack = PdfColor.fromInt(0xFF000000);
+
+  static const PdfColor colorLineDiviser = PdfColor.fromInt(0xff6c6c6c);
 }

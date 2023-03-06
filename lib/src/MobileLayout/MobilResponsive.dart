@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mywebproject/src/MobileLayout/view/Home/aboutme.dart';
 import 'package:mywebproject/src/MobileLayout/view/Home/animatedfooter.dart';
+import 'package:mywebproject/src/MobileLayout/view/Home/buildcv.dart';
 import 'package:mywebproject/src/MobileLayout/view/Home/contactform.dart';
 import 'package:mywebproject/src/MobileLayout/view/Home/product.dart';
 import 'package:mywebproject/src/MobileLayout/view/Home/showlogo.dart';
@@ -74,6 +75,7 @@ class _MobileResponsiveState extends State<MobileResponsive> {
                     children: [SpacermaxSize(maxSize), BetaVersionNotComplet()],
                   ),
                   AboutMe(),
+                  DownloadCV(),
                   Products(),
                   ContactForm(maxSize),
                   AnimatedFooter(

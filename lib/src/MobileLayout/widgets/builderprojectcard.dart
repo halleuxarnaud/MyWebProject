@@ -21,8 +21,6 @@ class BuilderProjectCard extends StatefulWidget {
 }
 
 class _BuilderProjectCardState extends State<BuilderProjectCard> {
-  bool isHovered = false;
-
   void launchUrl() async {
     final Uri uri = Uri.parse(widget.urlOpenSource);
     if (await canLaunch(uri.toString())) {
@@ -53,16 +51,6 @@ class _BuilderProjectCardState extends State<BuilderProjectCard> {
                 color: MyWebProjectUI.colorFontField,
               ),
               borderRadius: const BorderRadius.all(Radius.circular(15)),
-              boxShadow: isHovered
-                  ? [
-                      BoxShadow(
-                        color: Colors.white.withOpacity(0.1),
-                        spreadRadius: 15,
-                        blurRadius: 60,
-                        offset: const Offset(0, 3),
-                      ),
-                    ]
-                  : [],
             ),
             child: Padding(
               padding: const EdgeInsets.only(
@@ -123,9 +111,6 @@ class _BuilderProjectCardState extends State<BuilderProjectCard> {
                           children: [
                             OutlinedButton(
                                 style: OutlinedButton.styleFrom(
-                                    foregroundColor: Colors.red,
-                                    backgroundColor:
-                                        MyWebProjectUI.kDefaultcolor,
                                     side: const BorderSide(
                                         width: 2, color: Colors.white),
                                     shape: RoundedRectangleBorder(
@@ -147,27 +132,24 @@ class _BuilderProjectCardState extends State<BuilderProjectCard> {
                                       const SizedBox(
                                         width: 10,
                                       ),
-                                      Container(
-                                          height: 20,
-                                          width: 20,
-                                          child: SvgPicture.asset(
-                                            'assets/image/github-svgrepo-com.svg',
-                                            color: Colors.white,
-                                          ))
+                                      // Container(
+                                      //     height: 20,
+                                      //     width: 20,
+                                      //     child: SvgPicture.asset(
+                                      //       'assets/image/github-svgrepo-com.svg',
+                                      //       color: Colors.white,
+                                      //     ))
                                     ],
                                   ),
                                 ),
                                 onPressed: () {
-                                  launchUrl();
+                                  //launchUrl();
                                 }),
                             const SizedBox(
                               height: 20,
                             ),
                             OutlinedButton(
                                 style: OutlinedButton.styleFrom(
-                                    foregroundColor: Colors.red,
-                                    backgroundColor:
-                                        MyWebProjectUI.kDefaultcolor,
                                     side: const BorderSide(
                                         width: 2, color: Colors.white),
                                     shape: RoundedRectangleBorder(

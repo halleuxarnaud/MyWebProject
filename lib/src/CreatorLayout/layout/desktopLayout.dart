@@ -1,3 +1,4 @@
+import 'package:barcode_widget/barcode_widget.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -10,7 +11,7 @@ import 'package:mywebproject/src/CreatorLayout/widgets/contactviuw.dart';
 import 'package:mywebproject/src/CreatorLayout/widgets/formationviuw.dart';
 import 'package:mywebproject/src/CreatorLayout/widgets/langueButton.dart';
 import 'package:mywebproject/src/CreatorLayout/widgets/softskillviuw.dart';
-import 'package:qr_flutter/qr_flutter.dart';
+//import 'package:qr_flutter/qr_flutter.dart';
 
 class CreatorPageDesktop extends StatelessWidget {
   const CreatorPageDesktop({super.key});
@@ -190,10 +191,17 @@ class CreatorPageDesktop extends StatelessWidget {
                                                     width: 3,
                                                     color: const Color(
                                                         0XFF41238a))),
-                                            child: QrImage(
-                                              data: 'www.mywebproject.be',
-                                              version: QrVersions.auto,
-                                              gapless: false,
+                                            child: Padding(
+                                              padding:
+                                                  const EdgeInsets.all(4.0),
+                                              child: BarcodeWidget(
+                                                barcode: Barcode
+                                                    .qrCode(), // Barcode type and settings
+                                                data:
+                                                    'mywebproject.be', // Content
+                                                width: 10,
+                                                height: 10,
+                                              ),
                                             ),
                                           )
                                         ],

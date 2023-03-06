@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mywebproject/src/CreatorLayout/widgets/generateurpdf.dart';
 
 class ButtonSavePdf extends StatefulWidget {
   final String buttonText;
@@ -26,9 +27,11 @@ class _ButtonSavePdfState extends State<ButtonSavePdf> {
         });
       },
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          GeneratePDF().createPDF();
+        },
         style: ElevatedButton.styleFrom(
-          primary: Colors.grey,
+          primary: Colors.green,
           elevation: _isHovered
               ? 8
               : 10, // Change the elevation when the button is hovered

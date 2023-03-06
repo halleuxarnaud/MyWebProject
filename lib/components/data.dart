@@ -1,3 +1,5 @@
+import 'package:flutter/services.dart';
+
 abstract class MyWebProjectData {
   //Config About Me
   static const String titleAboutMe = "Flutter Déveloper";
@@ -96,4 +98,5 @@ abstract class MyWebProjectData {
   static const String footer1 = "© 2023 MyWebProject";
 
   static const String footer2 = "HelloWorld";
+
 }

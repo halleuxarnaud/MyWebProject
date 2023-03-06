@@ -45,9 +45,11 @@ dependencies:
   flutter_animated_button: ^2.0.3
   page_transition: ^2.0.9
   flutter_svg: ^2.0.2
-  qr_flutter: ^4.0.0
+  # qr_flutter: ^4.0.0
   url_launcher: ^6.1.10
   auto_size_text: ^3.0.0
+  pdf: ^3.9.0
+  barcode_widget: ^2.0.3
   
 dev_dependencies:
   flutter_test:
@@ -116,6 +118,10 @@ flutter:
    - assets/image/Opensource.png
    - assets/image/medicalnotelogo.png
    - assets/image/mywebprojectlogo.png
+   - assets/image/code.png
+   - assets/image/graduation-cap.png
+   - assets/image/userr.png
+   - assets/image/briefcase2.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
