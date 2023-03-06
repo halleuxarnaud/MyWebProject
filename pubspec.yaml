@@ -114,7 +114,6 @@ flutter:
    - assets/image/email.png
    - assets/image/localisateur.png
    - assets/image/telephone.png
-   - assets/image/github-svgrepo-com.svg
    - assets/image/Opensource.png
    - assets/image/medicalnotelogo.png
    - assets/image/mywebprojectlogo.png
@@ -122,6 +121,7 @@ flutter:
    - assets/image/graduation-cap.png
    - assets/image/userr.png
    - assets/image/briefcase2.png
+   - assets/icons/githubiconbutton.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -130,20 +130,18 @@ class _BuilderProjectCardState extends State<BuilderProjectCard> {
                                             fontSize: 19),
                                       ),
                                       const SizedBox(
-                                        width: 10,
+                                        width: 5,
                                       ),
-                                      // Container(
-                                      //     height: 20,
-                                      //     width: 20,
-                                      //     child: SvgPicture.asset(
-                                      //       'assets/image/github-svgrepo-com.svg',
-                                      //       color: Colors.white,
-                                      //     ))
+                                      Image.asset(
+                                        'assets/icons/githubiconbutton.png',
+                                        height: 20,
+                                        width: 20,
+                                      ),
                                     ],
                                   ),
                                 ),
                                 onPressed: () {
-                                  //launchUrl();
+                                  launchUrl();
                                 }),
                             const SizedBox(
                               height: 20,
