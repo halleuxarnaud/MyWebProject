@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mywebproject/components/color.dart';
 import 'package:mywebproject/components/data.dart';
 import 'package:mywebproject/components/style.dart';
-import 'package:mywebproject/src/CreatorLayout/widgets/generateurpdf.dart';
+import 'package:mywebproject/src/CreatorLayout/widgets/generateurpdfFR.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 
 class DownloadCV extends StatefulWidget {
@@ -57,7 +57,7 @@ class _DownloadCVState extends State<DownloadCV> {
                       child: Container(
                         child: OutlinedButton(
                           onPressed: () {
-                            GeneratePDF().createPDF();
+                            GeneratePDFFR().createPDF();
                           },
                           child: Text(
                             MyWebProjectData.buttonText,

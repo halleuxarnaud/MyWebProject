@@ -72,7 +72,7 @@ class _DesktopResponsiveState extends State<DesktopResponsive> {
                 children: <Widget>[
                   ShowLogo(_positionShowAnimation, maxSize, _opacityAdaptive),
                   Stack(
-                    children: [SpacermaxSize(maxSize), BetaVersionNotComplet()],
+                    children: [SpacermaxSize(), BetaVersionNotComplet()],
                   ),
                   AboutMe(_currentscrollOffset),
                   CurriculumSection(

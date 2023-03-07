@@ -1,10 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:mywebproject/src/CreatorLayout/widgets/generateurpdf.dart';
+import 'package:mywebproject/src/CreatorLayout/widgets/generateurpdfEN.dart';
+import 'package:mywebproject/src/CreatorLayout/widgets/generateurpdfFR.dart';
 
 class ButtonSavePdf extends StatefulWidget {
   final String buttonText;
+  final Color couleur;
+  final bool langue;
 
-  const ButtonSavePdf({super.key, required this.buttonText});
+  const ButtonSavePdf(
+      {super.key,
+      required this.buttonText,
+      required this.couleur,
+      required this.langue});
 
   @override
   _ButtonSavePdfState createState() => _ButtonSavePdfState();
@@ -28,10 +35,12 @@ class _ButtonSavePdfState extends State<ButtonSavePdf> {
       },
       child: ElevatedButton(
         onPressed: () {
-          GeneratePDF().createPDF();
+          widget.langue
+              ? GeneratePDFFR().createPDF()
+              : GeneratePDFEN().createPDF();
         },
         style: ElevatedButton.styleFrom(
-          primary: Colors.green,
+          primary: widget.couleur,
           elevation: _isHovered
               ? 8
               : 10, // Change the elevation when the button is hovered

@@ -8,7 +8,7 @@ import 'package:pdf/widgets.dart' as pw;
 import 'dart:typed_data';
 import 'dart:html' as html;
 
-class GeneratePDF {
+class GeneratePDFFR {
   final pdf = pw.Document();
   var anchor;
 
@@ -679,7 +679,7 @@ class GeneratePDF {
                           crossAxisAlignment: pw.CrossAxisAlignment.start,
                           children: [
                             pw.Text(
-                              'APPRENTISAGE INFORMATIQUE',
+                              'APPRENTISSAGE INFORMATIQUE',
                               style: pw.TextStyle(
                                   //fontFamily: 'Helvetica',
                                   fontWeight: pw.FontWeight.bold,

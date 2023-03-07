@@ -19,5 +19,5 @@ abstract class MyWebProjectStyle {
       fontFamily: 'SpaceMono',
       color: MyWebProjectUI.secondaryColor,
       fontWeight: FontWeight.w400,
-      fontSize: 20);
+      fontSize: 13);
 }

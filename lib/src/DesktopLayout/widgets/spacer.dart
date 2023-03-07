@@ -4,15 +4,15 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:mywebproject/components/color.dart';
 
 class SpacermaxSize extends StatelessWidget {
-  final Size sizeScreen;
-  const SpacermaxSize(this.sizeScreen, {super.key});
+  const SpacermaxSize({super.key});
 
   @override
   Widget build(BuildContext context) {
+    Size maxSize = MediaQuery.of(context).size;
     return Container(
       color: MyWebProjectUI.kDefaultcolor,
-      height: sizeScreen.height + 300,
-      width: sizeScreen.width,
+      height: maxSize.height + 300,
+      width: maxSize.width,
     );
   }
 }

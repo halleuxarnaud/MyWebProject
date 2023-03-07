@@ -51,12 +51,31 @@ class CreatorPageDesktop extends StatelessWidget {
                       children: [
                         const Padding(
                           padding: EdgeInsets.only(top: 20, bottom: 10),
-                          child: SizedBox(
-                            height: 40,
-                            width: 900,
-                            child: ButtonSavePdf(
-                              buttonText: "Sauvegarder le CV en PDF",
-                            ),
+                          child: Row(
+                            children: [
+                              SizedBox(
+                                height: 40,
+                                width: 445,
+                                child: ButtonSavePdf(
+                                  buttonText:
+                                      "Sauvegarder le CV en PDF en français",
+                                  couleur: Colors.green,
+                                  langue: true,
+                                ),
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              SizedBox(
+                                height: 40,
+                                width: 445,
+                                child: ButtonSavePdf(
+                                  couleur: Colors.blue,
+                                  buttonText: "Save CV as PDF in English",
+                                  langue: false,
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                         Padding(

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mywebproject/components/color.dart';
 import 'package:mywebproject/components/data.dart';
 import 'package:mywebproject/components/style.dart';
+import 'package:mywebproject/src/CreatorLayout/widgets/generateurpdfFR.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 
 class AboutMe extends StatefulWidget {
@@ -21,7 +22,7 @@ class _AboutMeState extends State<AboutMe> {
         Container(
           width: maxSize.width,
           color: MyWebProjectUI.kDefaultcolor,
-          padding: EdgeInsets.fromLTRB(15, 0, 15, 0),
+          padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -43,13 +44,13 @@ class _AboutMeState extends State<AboutMe> {
                   const SizedBox(
                     height: 30,
                   ),
-                  Text(
+                  const Text(
                     MyWebProjectData.descAboutMe,
                     style: MyWebProjectStyle.descAboutMeStyleApp,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 150,
-                  )
+                  ),
                 ],
               ),
             ],

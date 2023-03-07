@@ -17,73 +17,24 @@ class MobileResponsive extends StatefulWidget {
 }
 
 class _MobileResponsiveState extends State<MobileResponsive> {
-  late ScrollController _scrollController;
-  double _opacityAdaptive = 1.0;
-  bool _positionShowAnimation = true;
-  double _position = 0.0;
-  double _currentscrollOffset = 0.0;
-  double _maxScrollOffset = 0.0;
-
   @override
-  void initState() {
-    _scrollController = ScrollController()
-      ..addListener(() {
-        _onscroll();
-      });
-    super.initState();
-  }
-
-  void _onscroll() {
-    setState(() {
-      _opacityAdaptive = 1 - _scrollController.offset / 100;
-      _currentscrollOffset = _scrollController.offset;
-      _maxScrollOffset = _scrollController.position.maxScrollExtent;
-      _position = _currentscrollOffset;
-      if (_currentscrollOffset == 0) {
-        _positionShowAnimation = true;
-      } else {
-        _positionShowAnimation = false;
-      }
-    });
-  }
-
-  @override
-  NotificationListener<ScrollNotification> build(BuildContext context) {
-    Size maxSize = MediaQuery.of(context).size;
-    return NotificationListener<ScrollNotification>(
-      onNotification: (scrollNotification) {
-        if (scrollNotification is ScrollUpdateNotification) {
-          setState(() {
-            _opacityAdaptive = 1 - _scrollController.offset / 1000;
-            if (_opacityAdaptive <= 0.1) {
-              _opacityAdaptive = 0;
-            }
-          });
-        }
-        return false;
-      },
-      child: SingleChildScrollView(
-          controller: _scrollController,
-          child: Stack(
-            children: [
-              Column(
-                children: <Widget>[
-                  ShowLogo(
-                    _positionShowAnimation,
-                  ),
-                  Stack(
-                    children: [SpacermaxSize(maxSize), BetaVersionNotComplet()],
-                  ),
-                  AboutMe(),
-                  DownloadCV(),
-                  Products(),
-                  ContactForm(maxSize),
-                  AnimatedFooter(
-                      maxSize, _maxScrollOffset, _currentscrollOffset),
-                ],
-              ),
-            ],
-          )),
+  SingleChildScrollView build(BuildContext context) {
+    return const SingleChildScrollView(
+      child: Column(
+        children: <Widget>[
+          ShowLogo(),
+          Stack(
+            children: [SpacermaxSize(), BetaVersionNotComplet()],
+          ),
+          AboutMe(),
+          DownloadCV(),
+          //!Bug de scroll a corriger
+          Products(),
+          //!Bug de scroll a corriger
+          //ContactForm(),
+          AnimatedFooter(),
+        ],
+      ),
     );
   }
 }

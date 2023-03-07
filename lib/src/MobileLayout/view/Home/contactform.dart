@@ -10,8 +10,7 @@ import 'package:lottie/lottie.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 
 class ContactForm extends StatefulWidget {
-  final Size size;
-  const ContactForm(this.size, {super.key});
+  const ContactForm({super.key});
 
   @override
   State<ContactForm> createState() => _ContactFormState();
@@ -76,8 +75,9 @@ class _ContactFormState extends State<ContactForm> {
 
   @override
   Widget build(BuildContext context) {
+    Size maxSize = MediaQuery.of(context).size;
     return Container(
-      width: widget.size.width,
+      width: maxSize.width,
       color: MyWebProjectUI.kDefaultcolor,
       child: Padding(
         padding: EdgeInsets.only(left: 20, right: 20),
@@ -338,7 +338,7 @@ class _ContactFormState extends State<ContactForm> {
                               Column(
                                 children: [
                                   SizedBox(
-                                    width: widget.size.width,
+                                    width: maxSize.width,
                                     child: OutlinedButton(
                                         style: OutlinedButton.styleFrom(
                                             foregroundColor: Colors.white,
@@ -393,7 +393,7 @@ class _ContactFormState extends State<ContactForm> {
                                 height: 10,
                               ),
                               SizedBox(
-                                width: widget.size.width,
+                                width: maxSize.width,
                                 child: OutlinedButton(
                                     style: OutlinedButton.styleFrom(
                                         foregroundColor: Colors.white,

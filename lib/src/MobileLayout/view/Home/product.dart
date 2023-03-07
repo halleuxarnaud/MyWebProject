@@ -17,9 +17,6 @@ class Products extends StatefulWidget {
 }
 
 class _ProductsState extends State<Products> {
-  late bool isHoveredApp = false;
-  late bool isHoveredWeb = false;
-  late bool isHoveredSoft = false;
   static const int card1 = 1;
   static const int card2 = 2;
   static const int card3 = 3;

@@ -10,13 +10,13 @@ class BetaVersionNotComplet extends StatelessWidget {
   Widget build(BuildContext context) {
     Size maxSize = MediaQuery.of(context).size;
     return Container(
-      height: 100,
+      height: 200,
       width: maxSize.width,
-      child: Padding(
+      child: const Padding(
         padding: EdgeInsets.fromLTRB(15, 0, 15, 0),
         child: Center(
           child: Text(
-            'Before scrolling further, I would like to point out that the site is under development so if there is any bug or other disturbing thing, it will be corrected. it is also possible that some functionality is not yet available',
+            'Before scrolling further, I want to specify that the site is under development so if there is any bug or other problem, . it is also possible that some features are not yet available',
             style: TextStyle(
               color: MyWebProjectUI.secondaryColor,
               fontFamily: 'SpaceMono',
