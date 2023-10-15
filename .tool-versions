@@ -1,0 +1,14 @@
+flutter 3.13.0-stable
+java adoptopenjdk-11.0.19+7
+
+# It's best to install ruby through asdf and not use the (macOS) built-in one.
+# https://stackoverflow.com/a/65279678
+# Possible issue changing this version: https://github.com/flutter/flutter/issues/118295
+ruby 3.1.2
+
+# Installing cocoapods using asdf did not work.
+# Install ruby first and then run `gem install cocoapods -v 1.11.3`
+# To install this specific version.
+# Possible issue changing this version: https://github.com/flutter/flutter/issues/118295
+# https://github.com/flutter/flutter/issues/123890
+cocoapods 1.11.3
