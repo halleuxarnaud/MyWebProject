@@ -19,7 +19,7 @@ class MobileResponsive extends StatefulWidget {
 class _MobileResponsiveState extends State<MobileResponsive> {
   @override
   SingleChildScrollView build(BuildContext context) {
-    return const SingleChildScrollView(
+    return SingleChildScrollView(
       child: Column(
         children: <Widget>[
           ShowLogo(),

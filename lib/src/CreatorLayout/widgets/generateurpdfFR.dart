@@ -689,7 +689,7 @@ class GeneratePDFFR {
                               height: 10,
                             ),
                             pw.Text(
-                              'École 19 / 42 Network | 2022 - 2023',
+                              'École 19 (42 Paris) | 2022 - 2023',
                               style: const pw.TextStyle(
                                   //fontFamily: 'SweetSans',
                                   fontSize: 8),
@@ -1057,6 +1057,207 @@ class GeneratePDFFR {
                                       child: pw.Column(
                                         children: [
                                           pw.Text(
+                                            '2023',
+                                            style: pw.TextStyle(
+                                                fontSize: 11,
+                                                fontWeight: pw.FontWeight.bold),
+                                          ),
+                                          pw.Text(
+                                            '2023',
+                                            style: pw.TextStyle(
+                                                fontSize: 11,
+                                                fontWeight: pw.FontWeight.bold),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    pw.SizedBox(
+                                      width: 13.2,
+                                    ),
+                                    pw.Container(
+                                      height: 6,
+                                      width: 6,
+                                      decoration: pw.BoxDecoration(
+                                          color:
+                                              MyWebProjectColorPdf.purpulColor,
+                                          shape: pw.BoxShape.circle),
+                                    ),
+                                    pw.SizedBox(
+                                      width: 13.2,
+                                    ),
+                                    pw.Column(
+                                      crossAxisAlignment:
+                                          pw.CrossAxisAlignment.start,
+                                      children: [
+                                        pw.Text(
+                                          'Développeur Junior Full Stack Flutter',
+                                          style: pw.TextStyle(
+                                              fontWeight: pw.FontWeight.bold,
+                                              fontSize: 12),
+                                        ),
+                                        pw.SizedBox(
+                                          height: 7,
+                                        ),
+                                        pw.Text(
+                                          'HappyHoursMarket | Bruxelles',
+                                          style: pw.TextStyle(
+                                            fontSize: 9,
+                                          ),
+                                        ),
+                                        pw.SizedBox(
+                                          height: 10,
+                                        ),
+                                        pw.Row(
+                                          mainAxisAlignment:
+                                              pw.MainAxisAlignment.start,
+                                          crossAxisAlignment:
+                                              pw.CrossAxisAlignment.start,
+                                          children: [
+                                            pw.Container(
+                                              height: 4,
+                                              width: 4,
+                                              decoration: pw.BoxDecoration(
+                                                  color: MyWebProjectColorPdf
+                                                      .classicBlack,
+                                                  shape: pw.BoxShape.circle),
+                                            ),
+                                            pw.SizedBox(
+                                              width: 8,
+                                            ),
+                                            pw.SizedBox(
+                                              width: 285,
+                                              child: pw.Text(
+                                                "Participation active au développement de l'app",
+                                                style:
+                                                    pw.TextStyle(fontSize: 9),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        pw.Row(
+                                          mainAxisAlignment:
+                                              pw.MainAxisAlignment.start,
+                                          crossAxisAlignment:
+                                              pw.CrossAxisAlignment.start,
+                                          children: [
+                                            pw.Container(
+                                              height: 4,
+                                              width: 4,
+                                              decoration: pw.BoxDecoration(
+                                                  color: MyWebProjectColorPdf
+                                                      .classicBlack,
+                                                  shape: pw.BoxShape.circle),
+                                            ),
+                                            pw.SizedBox(
+                                              width: 8,
+                                            ),
+                                            pw.SizedBox(
+                                              width: 285,
+                                              child: pw.Text(
+                                                "Design UX/UI de l'app",
+                                                style:
+                                                    pw.TextStyle(fontSize: 9),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        pw.Row(
+                                          mainAxisAlignment:
+                                              pw.MainAxisAlignment.start,
+                                          crossAxisAlignment:
+                                              pw.CrossAxisAlignment.start,
+                                          children: [
+                                            pw.Container(
+                                              height: 4,
+                                              width: 4,
+                                              decoration: pw.BoxDecoration(
+                                                  color: MyWebProjectColorPdf
+                                                      .classicBlack,
+                                                  shape: pw.BoxShape.circle),
+                                            ),
+                                            pw.SizedBox(
+                                              width: 8,
+                                            ),
+                                            pw.SizedBox(
+                                              width: 285,
+                                              child: pw.Text(
+                                                "Rédaction de procédures et de documentations",
+                                                style:
+                                                    pw.TextStyle(fontSize: 9),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        pw.Row(
+                                          mainAxisAlignment:
+                                              pw.MainAxisAlignment.start,
+                                          crossAxisAlignment:
+                                              pw.CrossAxisAlignment.start,
+                                          children: [
+                                            pw.Container(
+                                              height: 4,
+                                              width: 4,
+                                              decoration: pw.BoxDecoration(
+                                                  color: MyWebProjectColorPdf
+                                                      .classicBlack,
+                                                  shape: pw.BoxShape.circle),
+                                            ),
+                                            pw.SizedBox(
+                                              width: 8,
+                                            ),
+                                            pw.SizedBox(
+                                              width: 285,
+                                              child: pw.Text(
+                                                "Participation et organisation de réunions avec l'équipe IT / Marketing",
+                                                style:
+                                                    pw.TextStyle(fontSize: 9),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        pw.Row(
+                                          mainAxisAlignment:
+                                              pw.MainAxisAlignment.start,
+                                          crossAxisAlignment:
+                                              pw.CrossAxisAlignment.start,
+                                          children: [
+                                            pw.Container(
+                                              height: 4,
+                                              width: 4,
+                                              decoration: pw.BoxDecoration(
+                                                  color: MyWebProjectColorPdf
+                                                      .classicBlack,
+                                                  shape: pw.BoxShape.circle),
+                                            ),
+                                            pw.SizedBox(
+                                              width: 8,
+                                            ),
+                                            pw.SizedBox(
+                                              width: 285,
+                                              child: pw.Text(
+                                                "Création et maintenance de nouvelles fonctionnalités",
+                                                style:
+                                                    pw.TextStyle(fontSize: 9),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ],
+                                    )
+                                  ]),
+                            ),
+                            pw.Padding(
+                              padding: const pw.EdgeInsets.only(bottom: 20),
+                              child: pw.Row(
+                                  mainAxisAlignment: pw.MainAxisAlignment.start,
+                                  crossAxisAlignment:
+                                      pw.CrossAxisAlignment.start,
+                                  children: [
+                                    pw.Padding(
+                                      padding: pw.EdgeInsets.only(left: 10),
+                                      child: pw.Column(
+                                        children: [
+                                          pw.Text(
                                             '2022',
                                             style: pw.TextStyle(
                                                 fontSize: 11,
@@ -1127,15 +1328,12 @@ class GeneratePDFFR {
                                             pw.SizedBox(
                                               width: 285,
                                               child: pw.Text(
-                                                'Au cours de ce projet, j\'ai pu manipuler plusieurs technologies telles que la génération de PDF et la gestion de stockage en mémoire locale.',
+                                                "Création de plusieur fonctionnalités: PDF, mémoire local, etc.",
                                                 style:
                                                     pw.TextStyle(fontSize: 9),
                                               ),
                                             ),
                                           ],
-                                        ),
-                                        pw.SizedBox(
-                                          height: 10,
                                         ),
                                         pw.Row(
                                           mainAxisAlignment:
@@ -1157,7 +1355,34 @@ class GeneratePDFFR {
                                             pw.SizedBox(
                                               width: 285,
                                               child: pw.Text(
-                                                'Le vrai défi était de gèrer des lists model en local et de pouvoir les éditer. J\'ai dû trouver une solution pour ce problème étant donné que toutes les solutions qui existaient ne prennaient pas en charge cette fonctionnalité.',
+                                                "Participation et organisation de réunions avec l'equipe IT / Marketing",
+                                                style:
+                                                    pw.TextStyle(fontSize: 9),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        pw.Row(
+                                          mainAxisAlignment:
+                                              pw.MainAxisAlignment.start,
+                                          crossAxisAlignment:
+                                              pw.CrossAxisAlignment.start,
+                                          children: [
+                                            pw.Container(
+                                              height: 4,
+                                              width: 4,
+                                              decoration: pw.BoxDecoration(
+                                                  color: MyWebProjectColorPdf
+                                                      .classicBlack,
+                                                  shape: pw.BoxShape.circle),
+                                            ),
+                                            pw.SizedBox(
+                                              width: 8,
+                                            ),
+                                            pw.SizedBox(
+                                              width: 285,
+                                              child: pw.Text(
+                                                "Résolution de problème techniques",
                                                 style:
                                                     pw.TextStyle(fontSize: 9),
                                               ),
@@ -1168,7 +1393,7 @@ class GeneratePDFFR {
                                     )
                                   ]),
                             ),
-                            pw.Padding(
+                             pw.Padding(
                               padding: const pw.EdgeInsets.only(bottom: 20),
                               child: pw.Row(
                                   mainAxisAlignment: pw.MainAxisAlignment.start,
@@ -1213,7 +1438,7 @@ class GeneratePDFFR {
                                           pw.CrossAxisAlignment.start,
                                       children: [
                                         pw.Text(
-                                          'Apprentisage Développement Informatique',
+                                          'Etude en Développement Information',
                                           style: pw.TextStyle(
                                               fontWeight: pw.FontWeight.bold,
                                               fontSize: 12),
@@ -1222,7 +1447,7 @@ class GeneratePDFFR {
                                           height: 7,
                                         ),
                                         pw.Text(
-                                          'École 19 (42 Network) | Bruxelles',
+                                          'Ecole 19 (42 Paris) | Bruxelles',
                                           style: pw.TextStyle(
                                             fontSize: 9,
                                           ),
@@ -1250,15 +1475,12 @@ class GeneratePDFFR {
                                             pw.SizedBox(
                                               width: 285,
                                               child: pw.Text(
-                                                'Cette école m\'a beaucoup appris sur la manière de communiquer et d\'expliquer les problèmes et les solutions.',
+                                                "Apprentisage de différentes technologies: Flutter, Firebase, Dart, GIT, C, Shell",
                                                 style:
                                                     pw.TextStyle(fontSize: 9),
                                               ),
                                             ),
                                           ],
-                                        ),
-                                        pw.SizedBox(
-                                          height: 10,
                                         ),
                                         pw.Row(
                                           mainAxisAlignment:
@@ -1280,7 +1502,34 @@ class GeneratePDFFR {
                                             pw.SizedBox(
                                               width: 285,
                                               child: pw.Text(
-                                                'Grâce à l\'école 19, j\'ai beaucoup progressé dans différentes technologies comme le C ou encore le Shell qui sont des languages de programmation omniprésents dans chacune de nos applications.',
+                                                "",
+                                                style:
+                                                    pw.TextStyle(fontSize: 9),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        pw.Row(
+                                          mainAxisAlignment:
+                                              pw.MainAxisAlignment.start,
+                                          crossAxisAlignment:
+                                              pw.CrossAxisAlignment.start,
+                                          children: [
+                                            pw.Container(
+                                              height: 4,
+                                              width: 4,
+                                              decoration: pw.BoxDecoration(
+                                                  color: MyWebProjectColorPdf
+                                                      .classicBlack,
+                                                  shape: pw.BoxShape.circle),
+                                            ),
+                                            pw.SizedBox(
+                                              width: 8,
+                                            ),
+                                            pw.SizedBox(
+                                              width: 285,
+                                              child: pw.Text(
+                                                "Résolution de problème techniques",
                                                 style:
                                                     pw.TextStyle(fontSize: 9),
                                               ),
@@ -1291,245 +1540,6 @@ class GeneratePDFFR {
                                     )
                                   ]),
                             ),
-                            pw.Padding(
-                              padding: const pw.EdgeInsets.only(bottom: 20),
-                              child: pw.Row(
-                                  mainAxisAlignment: pw.MainAxisAlignment.start,
-                                  crossAxisAlignment:
-                                      pw.CrossAxisAlignment.start,
-                                  children: [
-                                    pw.Padding(
-                                      padding: pw.EdgeInsets.only(left: 10),
-                                      child: pw.Column(
-                                        children: [
-                                          pw.Text(
-                                            '2020',
-                                            style: pw.TextStyle(
-                                                fontSize: 11,
-                                                fontWeight: pw.FontWeight.bold),
-                                          ),
-                                          pw.Text(
-                                            '2022',
-                                            style: pw.TextStyle(
-                                                fontSize: 11,
-                                                fontWeight: pw.FontWeight.bold),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                    pw.SizedBox(
-                                      width: 13.2,
-                                    ),
-                                    pw.Container(
-                                      height: 6,
-                                      width: 6,
-                                      decoration: pw.BoxDecoration(
-                                          color:
-                                              MyWebProjectColorPdf.purpulColor,
-                                          shape: pw.BoxShape.circle),
-                                    ),
-                                    pw.SizedBox(
-                                      width: 13.2,
-                                    ),
-                                    pw.Column(
-                                      crossAxisAlignment:
-                                          pw.CrossAxisAlignment.start,
-                                      children: [
-                                        pw.Text(
-                                          'Automation & Robotics',
-                                          style: pw.TextStyle(
-                                              fontWeight: pw.FontWeight.bold,
-                                              fontSize: 12),
-                                        ),
-                                        pw.SizedBox(
-                                          height: 7,
-                                        ),
-                                        pw.Text(
-                                          'Magasinier | Lambermont - Verviers / 4800',
-                                          style: pw.TextStyle(
-                                            fontSize: 9,
-                                          ),
-                                        ),
-                                        pw.SizedBox(
-                                          height: 10,
-                                        ),
-                                        pw.Row(
-                                          mainAxisAlignment:
-                                              pw.MainAxisAlignment.start,
-                                          crossAxisAlignment:
-                                              pw.CrossAxisAlignment.start,
-                                          children: [
-                                            pw.Container(
-                                              height: 4,
-                                              width: 4,
-                                              decoration: pw.BoxDecoration(
-                                                  color: MyWebProjectColorPdf
-                                                      .classicBlack,
-                                                  shape: pw.BoxShape.circle),
-                                            ),
-                                            pw.SizedBox(
-                                              width: 8,
-                                            ),
-                                            pw.SizedBox(
-                                              width: 285,
-                                              child: pw.Text(
-                                                'Au magasin, j\'avais pour tâche d\'apporter la marchandise et de vérifier l\'état de chaque pièce pour en assurer la conformité.',
-                                                style:
-                                                    pw.TextStyle(fontSize: 9),
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                        pw.SizedBox(
-                                          height: 10,
-                                        ),
-                                        pw.Row(
-                                          mainAxisAlignment:
-                                              pw.MainAxisAlignment.start,
-                                          crossAxisAlignment:
-                                              pw.CrossAxisAlignment.start,
-                                          children: [
-                                            pw.Container(
-                                              height: 4,
-                                              width: 4,
-                                              decoration: pw.BoxDecoration(
-                                                  color: MyWebProjectColorPdf
-                                                      .classicBlack,
-                                                  shape: pw.BoxShape.circle),
-                                            ),
-                                            pw.SizedBox(
-                                              width: 8,
-                                            ),
-                                            pw.SizedBox(
-                                              width: 285,
-                                              child: pw.Text(
-                                                'Ayant pour mission principale la réception de colis, j\'ai souvent eu des "missions" avec de grandes responsabilités telles que la réception de colis extrêmement coûteux et fragiles, ce qui m\'a amené à gérer ce type de tâche avec soin et concentration.',
-                                                style:
-                                                    pw.TextStyle(fontSize: 9),
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ],
-                                    )
-                                  ]),
-                            ),
-                            pw.Row(
-                                mainAxisAlignment: pw.MainAxisAlignment.start,
-                                crossAxisAlignment: pw.CrossAxisAlignment.start,
-                                children: [
-                                  pw.Padding(
-                                    padding: pw.EdgeInsets.only(left: 10),
-                                    child: pw.Column(
-                                      children: [
-                                        pw.Text(
-                                          '2014',
-                                          style: pw.TextStyle(
-                                              fontSize: 11,
-                                              fontWeight: pw.FontWeight.bold),
-                                        ),
-                                        pw.Text(
-                                          '2020',
-                                          style: pw.TextStyle(
-                                              fontSize: 11,
-                                              fontWeight: pw.FontWeight.bold),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                  pw.SizedBox(
-                                    width: 13.2,
-                                  ),
-                                  pw.Container(
-                                    height: 6,
-                                    width: 6,
-                                    decoration: pw.BoxDecoration(
-                                        color: MyWebProjectColorPdf.purpulColor,
-                                        shape: pw.BoxShape.circle),
-                                  ),
-                                  pw.SizedBox(
-                                    width: 13.2,
-                                  ),
-                                  pw.Column(
-                                    crossAxisAlignment:
-                                        pw.CrossAxisAlignment.start,
-                                    children: [
-                                      pw.Text(
-                                        'Automation & Robotics',
-                                        style: pw.TextStyle(
-                                            fontWeight: pw.FontWeight.bold,
-                                            fontSize: 12),
-                                      ),
-                                      pw.SizedBox(
-                                        height: 7,
-                                      ),
-                                      pw.Text(
-                                        'Électromécanicien | Lambermont - Verviers / 4800',
-                                        style: pw.TextStyle(
-                                          fontSize: 9,
-                                        ),
-                                      ),
-                                      pw.SizedBox(
-                                        height: 10,
-                                      ),
-                                      pw.Row(
-                                        mainAxisAlignment:
-                                            pw.MainAxisAlignment.start,
-                                        crossAxisAlignment:
-                                            pw.CrossAxisAlignment.start,
-                                        children: [
-                                          pw.Container(
-                                            height: 4,
-                                            width: 4,
-                                            decoration: pw.BoxDecoration(
-                                                color: MyWebProjectColorPdf
-                                                    .classicBlack,
-                                                shape: pw.BoxShape.circle),
-                                          ),
-                                          pw.SizedBox(
-                                            width: 8,
-                                          ),
-                                          pw.SizedBox(
-                                            width: 285,
-                                            child: pw.Text(
-                                              'Travailler chez Automation and Robotics m\'a donné l\'occasion d\'améliorer mes compétences en communication et d\'apprendre le fonctionnement d\'une entreprise.',
-                                              style: pw.TextStyle(fontSize: 9),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      pw.SizedBox(
-                                        height: 10,
-                                      ),
-                                      pw.Row(
-                                        mainAxisAlignment:
-                                            pw.MainAxisAlignment.start,
-                                        crossAxisAlignment:
-                                            pw.CrossAxisAlignment.start,
-                                        children: [
-                                          pw.Container(
-                                            height: 4,
-                                            width: 4,
-                                            decoration: pw.BoxDecoration(
-                                                color: MyWebProjectColorPdf
-                                                    .classicBlack,
-                                                shape: pw.BoxShape.circle),
-                                          ),
-                                          pw.SizedBox(
-                                            width: 8,
-                                          ),
-                                          pw.SizedBox(
-                                            width: 285,
-                                            child: pw.Text(
-                                              'Mon rôle principal était d\'assembler les pièces mécaniques sur les machines et de les câbler. J\'ai donc développé plusieurs compétences telles que l\'électricité, la robotique et la pneumatique.',
-                                              style: pw.TextStyle(fontSize: 9),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ],
-                                  )
-                                ]),
                           ],
                         ),
                       ],
@@ -1652,7 +1662,7 @@ class GeneratePDFFR {
                                   child: pw.SizedBox(
                                       height: 8,
                                       width: 8,
-                                      child: pw.Image(emptyImage)),
+                                      child: pw.Image(fullImage)),
                                 ),
                                 pw.SizedBox(
                                   width: 5,

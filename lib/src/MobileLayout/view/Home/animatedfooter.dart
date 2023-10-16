@@ -17,7 +17,7 @@ class _AnimatedFooterState extends State<AnimatedFooter> {
       height: 100,
       width: maxSize.width,
       color: MyWebProjectUI.kDefaultcolor,
-      child: const Row(
+      child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           SizedBox(

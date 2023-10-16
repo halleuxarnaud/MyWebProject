@@ -31,7 +31,7 @@ class AppProject extends StatelessWidget {
                 fit: BoxFit.fill,
               ),
             ),
-            const Padding(
+            Padding(
               padding: EdgeInsets.all(80.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,

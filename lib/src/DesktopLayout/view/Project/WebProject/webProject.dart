@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -31,7 +29,7 @@ class WebProject extends StatelessWidget {
                 fit: BoxFit.fill,
               ),
             ),
-            const Padding(
+            Padding(
               padding: EdgeInsets.all(80.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,

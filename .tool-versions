@@ -1,4 +1,4 @@
-flutter 3.13.0-stable
+flutter 3.7.1-stable
 java adoptopenjdk-11.0.19+7
 
 # It's best to install ruby through asdf and not use the (macOS) built-in one.

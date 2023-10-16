@@ -49,7 +49,7 @@ class CreatorPageDesktop extends StatelessWidget {
                     width: 900,
                     child: Column(
                       children: [
-                        const Padding(
+                        Padding(
                           padding: EdgeInsets.only(top: 20, bottom: 10),
                           child: Row(
                             children: [
