@@ -37,6 +37,199 @@ class BuildExperience extends StatelessWidget {
                         child: Column(
                           children: [
                             Text(
+                              '2023',
+                              style: TextStyle(
+                                  fontFamily: 'Helvetica', fontSize: 12),
+                            ),
+                            Text(
+                              '2023',
+                              style: TextStyle(
+                                  fontFamily: 'Helvetica', fontSize: 12),
+                            ),
+                          ],
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 20,
+                      ),
+                      Container(
+                        height: 8,
+                        width: 8,
+                        decoration: BoxDecoration(
+                            color: const Color(0XFF41238a),
+                            borderRadius: BorderRadius.circular(50)),
+                      ),
+                      const SizedBox(
+                        width: 20,
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text(
+                            'Développeur Junior Full Stack Flutter',
+                            style: TextStyle(
+                                fontFamily: 'SweetSans',
+                                fontWeight: FontWeight.bold,
+                                fontSize: 14),
+                          ),
+                          const SizedBox(
+                            height: 7,
+                          ),
+                          const Text(
+                            'HappyHoursMarket | Bruxelles',
+                            style: TextStyle(
+                                fontFamily: 'SweetSans', fontSize: 12),
+                          ),
+                          const SizedBox(
+                            height: 15,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Container(
+                                height: 5,
+                                width: 5,
+                                decoration: BoxDecoration(
+                                    color: Colors.black.withOpacity(0.8),
+                                    borderRadius: BorderRadius.circular(50)),
+                              ),
+                              const SizedBox(
+                                width: 10,
+                              ),
+                              const SizedBox(
+                                width: 400,
+                                child: Text(
+                                  "Participation active au développement de l'app",
+                                  style: TextStyle(
+                                      fontFamily: 'SweetSans', fontSize: 12),
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Container(
+                                height: 5,
+                                width: 5,
+                                decoration: BoxDecoration(
+                                    color: Colors.black.withOpacity(0.8),
+                                    borderRadius: BorderRadius.circular(50)),
+                              ),
+                              const SizedBox(
+                                width: 10,
+                              ),
+                              const SizedBox(
+                                width: 400,
+                                child: Text(
+                                  "Design UX/UI de l'app",
+                                  style: TextStyle(
+                                      fontFamily: 'SweetSans', fontSize: 12),
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Container(
+                                height: 5,
+                                width: 5,
+                                decoration: BoxDecoration(
+                                    color: Colors.black.withOpacity(0.8),
+                                    borderRadius: BorderRadius.circular(50)),
+                              ),
+                              const SizedBox(
+                                width: 10,
+                              ),
+                              const SizedBox(
+                                width: 400,
+                                child: Text(
+                                  "Rédaction de procédures et de documentations",
+                                  style: TextStyle(
+                                      fontFamily: 'SweetSans', fontSize: 12),
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Container(
+                                height: 5,
+                                width: 5,
+                                decoration: BoxDecoration(
+                                    color: Colors.black.withOpacity(0.8),
+                                    borderRadius: BorderRadius.circular(50)),
+                              ),
+                              const SizedBox(
+                                width: 10,
+                              ),
+                              const SizedBox(
+                                width: 400,
+                                child: Text(
+                                  "Participation et organisation de réunions avec l'équipe IT / Marketing",
+                                  style: TextStyle(
+                                      fontFamily: 'SweetSans', fontSize: 12),
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Container(
+                                height: 5,
+                                width: 5,
+                                decoration: BoxDecoration(
+                                    color: Colors.black.withOpacity(0.8),
+                                    borderRadius: BorderRadius.circular(50)),
+                              ),
+                              const SizedBox(
+                                width: 10,
+                              ),
+                              const SizedBox(
+                                width: 400,
+                                child: Text(
+                                  "Création et maintenance de nouvelles fonctionnalités",
+                                  style: TextStyle(
+                                      fontFamily: 'SweetSans', fontSize: 12),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      )
+                    ]),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(bottom: 60),
+                child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(left: 10),
+                        child: Column(
+                          children: [
+                            Text(
                               '2022',
                               style: TextStyle(
                                   fontFamily: 'Helvetica', fontSize: 12),
@@ -100,7 +293,7 @@ class BuildExperience extends StatelessWidget {
                               const SizedBox(
                                 width: 400,
                                 child: Text(
-                                  'Au cours de ce projet, j\'ai pu manipuler plusieurs technologies telles que la génération de PDF et la gestion de stockage en mémoire locale.',
+                                  "Création de plusieur fonctionnalités: PDF, mémoire local, etc.",
                                   style: TextStyle(
                                       fontFamily: 'SweetSans', fontSize: 12),
                                 ),
@@ -127,7 +320,34 @@ class BuildExperience extends StatelessWidget {
                               const SizedBox(
                                 width: 400,
                                 child: Text(
-                                  'Le vrai défi était de gèrer des lists model en local et de pouvoir les éditer. J\'ai dû trouver une solution pour ce problème étant donné que toutes les solutions qui existaient ne prennaient pas en charge cette fonctionnalité.',
+                                  "Participation et organisation de réunions avec l'equipe IT / Marketing",
+                                  style: TextStyle(
+                                      fontFamily: 'SweetSans', fontSize: 12),
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Container(
+                                height: 5,
+                                width: 5,
+                                decoration: BoxDecoration(
+                                    color: Colors.black.withOpacity(0.8),
+                                    borderRadius: BorderRadius.circular(50)),
+                              ),
+                              const SizedBox(
+                                width: 10,
+                              ),
+                              const SizedBox(
+                                width: 400,
+                                child: Text(
+                                  "Résolution de problèmes techniques",
                                   style: TextStyle(
                                       fontFamily: 'SweetSans', fontSize: 12),
                                 ),
@@ -147,6 +367,7 @@ class BuildExperience extends StatelessWidget {
                       Padding(
                         padding: EdgeInsets.only(left: 10),
                         child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
                               '2022',
@@ -178,7 +399,7 @@ class BuildExperience extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           const Text(
-                            'Apprentisage Développement Informatique',
+                            'Etude en Développement Informatique',
                             style: TextStyle(
                                 fontFamily: 'SweetSans',
                                 fontWeight: FontWeight.bold,
@@ -188,7 +409,7 @@ class BuildExperience extends StatelessWidget {
                             height: 7,
                           ),
                           const Text(
-                            'École 19 (42 Network) | Bruxelles',
+                            "Ecole 19 (42 Paris) | Bruxelles",
                             style: TextStyle(
                                 fontFamily: 'SweetSans', fontSize: 12),
                           ),
@@ -212,7 +433,7 @@ class BuildExperience extends StatelessWidget {
                               const SizedBox(
                                 width: 400,
                                 child: Text(
-                                  'Cette école m\'a beaucoup appris sur la manière de communiquer et d\'expliquer les problèmes et les solutions.',
+                                  "Apprentissage de différentes technologies: Flutter, Firebase, Dart, GIT, C, Shell",
                                   style: TextStyle(
                                       fontFamily: 'SweetSans', fontSize: 12),
                                 ),
@@ -239,7 +460,7 @@ class BuildExperience extends StatelessWidget {
                               const SizedBox(
                                 width: 400,
                                 child: Text(
-                                  'Grâce à l\'école 19, j\'ai beaucoup progressé dans différentes technologies comme le C ou encore le Shell qui sont des languages de programmation omniprésents dans chacune de nos applications.',
+                                  "Travail en autodidacte et travail d'équipe",
                                   style: TextStyle(
                                       fontFamily: 'SweetSans', fontSize: 12),
                                 ),
@@ -266,7 +487,7 @@ class BuildExperience extends StatelessWidget {
                               const SizedBox(
                                 width: 400,
                                 child: Text(
-                                  'J\'ai eu la possibilité de faire beaucoup de travail d\'équipe, ce qui a été très stimulant et enrichissant.',
+                                  "Résolution de problèmes techniques",
                                   style: TextStyle(
                                       fontFamily: 'SweetSans', fontSize: 12),
                                 ),
@@ -328,7 +549,7 @@ class BuildExperience extends StatelessWidget {
                             height: 7,
                           ),
                           const Text(
-                            'Magasinier | Lambermont - Verviers / 4800',
+                            'Electromécanicien - Magasinier | Lambermont - Verviers / 4800',
                             style: TextStyle(
                                 fontFamily: 'SweetSans', fontSize: 12),
                           ),
@@ -352,7 +573,7 @@ class BuildExperience extends StatelessWidget {
                               const SizedBox(
                                 width: 400,
                                 child: Text(
-                                  'Au magasin, j\'avais pour tâche d\'apporter la marchandise et de vérifier l\'état de chaque pièce pour en assurer la conformité.',
+                                  "Gestion d'un groupe d'étudiants",
                                   style: TextStyle(
                                       fontFamily: 'SweetSans', fontSize: 12),
                                 ),
@@ -379,93 +600,7 @@ class BuildExperience extends StatelessWidget {
                               const SizedBox(
                                 width: 400,
                                 child: Text(
-                                  'Ayant pour mission principale la réception de colis, j\'ai souvent eu des "missions" avec de grandes responsabilités telles que la réception de colis extrêmement coûteux et fragiles, ce qui m\'a amené à gérer ce type de tâche avec soin et concentration.',
-                                  style: TextStyle(
-                                      fontFamily: 'SweetSans', fontSize: 12),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ],
-                      )
-                    ]),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(bottom: 60),
-                child: Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.only(left: 10),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              '2014',
-                              style: TextStyle(
-                                  fontFamily: 'Helvetica', fontSize: 12),
-                            ),
-                            Text(
-                              '2020',
-                              style: TextStyle(
-                                  fontFamily: 'Helvetica', fontSize: 12),
-                            ),
-                          ],
-                        ),
-                      ),
-                      const SizedBox(
-                        width: 20,
-                      ),
-                      Container(
-                        height: 8,
-                        width: 8,
-                        decoration: BoxDecoration(
-                            color: const Color(0XFF41238a),
-                            borderRadius: BorderRadius.circular(50)),
-                      ),
-                      const SizedBox(
-                        width: 20,
-                      ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const Text(
-                            'Automation & Robotics',
-                            style: TextStyle(
-                                fontFamily: 'SweetSans',
-                                fontWeight: FontWeight.bold,
-                                fontSize: 14),
-                          ),
-                          const SizedBox(
-                            height: 7,
-                          ),
-                          const Text(
-                            'Électromécanicien | Lambermont - Verviers / 4800',
-                            style: TextStyle(
-                                fontFamily: 'SweetSans', fontSize: 12),
-                          ),
-                          const SizedBox(
-                            height: 15,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Container(
-                                height: 5,
-                                width: 5,
-                                decoration: BoxDecoration(
-                                    color: Colors.black.withOpacity(0.8),
-                                    borderRadius: BorderRadius.circular(50)),
-                              ),
-                              const SizedBox(
-                                width: 10,
-                              ),
-                              const SizedBox(
-                                width: 400,
-                                child: Text(
-                                  'Travailler chez Automation and Robotics m\'a donné l\'occasion d\'améliorer mes compétences en communication et d\'apprendre le fonctionnement d\'une entreprise.',
+                                  "Montage mécanique et électrique de machines",
                                   style: TextStyle(
                                       fontFamily: 'SweetSans', fontSize: 12),
                                 ),
@@ -492,7 +627,7 @@ class BuildExperience extends StatelessWidget {
                               const SizedBox(
                                 width: 400,
                                 child: Text(
-                                  'Mon rôle principal était d\'assembler les pièces mécaniques sur les machines et de les câbler. J\'ai donc développé plusieurs compétences telles que l\'électricité, la robotique et la pneumatique.',
+                                  "Réception et envois de colis avec contrôle d'entrée et de sortie",
                                   style: TextStyle(
                                       fontFamily: 'SweetSans', fontSize: 12),
                                 ),

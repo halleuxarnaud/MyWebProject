@@ -54,8 +54,7 @@ class CreatorPageDesktop extends StatelessWidget {
                           child: Row(
                             children: [
                               SizedBox(
-                                height: 40,
-                                width: 445,
+                                width: 900,
                                 child: ButtonSavePdf(
                                   buttonText:
                                       "Sauvegarder le CV en PDF en français",
@@ -63,6 +62,7 @@ class CreatorPageDesktop extends StatelessWidget {
                                   langue: true,
                                 ),
                               ),
+                              /*
                               SizedBox(
                                 width: 10,
                               ),
@@ -75,6 +75,7 @@ class CreatorPageDesktop extends StatelessWidget {
                                   langue: false,
                                 ),
                               ),
+                              */
                             ],
                           ),
                         ),
@@ -425,7 +426,7 @@ class CreatorPageDesktop extends StatelessWidget {
                                                         height: 15,
                                                         width: 15,
                                                         child: Image.asset(
-                                                            'assets/image/Umpty.png')),
+                                                            'assets/image/full.png')),
                                                     const SizedBox(
                                                       width: 5,
                                                     ),

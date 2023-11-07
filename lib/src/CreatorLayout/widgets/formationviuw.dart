@@ -52,14 +52,14 @@ class FormationViuw extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'DÉVELOPPEMENT INFORMATIQUE',
+              'APPRENTISSAGE INFORMATIQUE',
               style: TextStyle(fontFamily: 'Helvetica', fontSize: 11),
             ),
             SizedBox(
               height: 15,
             ),
             Text(
-              'École 19 / 42 Network | 2022 - 2023',
+              "École 19 (42 Paris) | 2022 - 2023",
               style: TextStyle(fontFamily: 'SweetSans', fontSize: 13),
             ),
           ],

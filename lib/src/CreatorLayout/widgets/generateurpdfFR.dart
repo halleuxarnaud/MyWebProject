@@ -488,21 +488,21 @@ class GeneratePDFFR {
                                       pw.SizedBox(
                                           height: 8,
                                           width: 8,
-                                          child: pw.Image(emptyImage)),
+                                          child: pw.Image(fullImage)),
                                       pw.SizedBox(
                                         width: 5,
                                       ),
                                       pw.SizedBox(
                                           height: 8,
                                           width: 8,
-                                          child: pw.Image(emptyImage)),
+                                          child: pw.Image(fullImage)),
                                       pw.SizedBox(
                                         width: 5,
                                       ),
                                       pw.SizedBox(
                                           height: 8,
                                           width: 8,
-                                          child: pw.Image(emptyImage)),
+                                          child: pw.Image(fullImage)),
                                       pw.SizedBox(
                                         width: 5,
                                       ),
@@ -604,7 +604,7 @@ class GeneratePDFFR {
                                       pw.SizedBox(
                                           height: 8,
                                           width: 8,
-                                          child: pw.Image(emptyImage)),
+                                          child: pw.Image(fullImage)),
                                       pw.SizedBox(
                                         width: 5,
                                       ),
@@ -703,7 +703,7 @@ class GeneratePDFFR {
                           crossAxisAlignment: pw.CrossAxisAlignment.start,
                           children: [
                             pw.Text(
-                              'APPRENTISAGE INFORMATIQUE',
+                              'APPRENTISSAGE INFORMATIQUE',
                               style: pw.TextStyle(
                                   fontWeight: pw.FontWeight.bold,
                                   //fontFamily: 'Helvetica',
@@ -1382,7 +1382,7 @@ class GeneratePDFFR {
                                             pw.SizedBox(
                                               width: 285,
                                               child: pw.Text(
-                                                "Résolution de problème techniques",
+                                                "Résolution de problèmes techniques",
                                                 style:
                                                     pw.TextStyle(fontSize: 9),
                                               ),
@@ -1393,7 +1393,7 @@ class GeneratePDFFR {
                                     )
                                   ]),
                             ),
-                             pw.Padding(
+                            pw.Padding(
                               padding: const pw.EdgeInsets.only(bottom: 20),
                               child: pw.Row(
                                   mainAxisAlignment: pw.MainAxisAlignment.start,
@@ -1438,7 +1438,7 @@ class GeneratePDFFR {
                                           pw.CrossAxisAlignment.start,
                                       children: [
                                         pw.Text(
-                                          'Etude en Développement Information',
+                                          'Etude en Développement Informatique',
                                           style: pw.TextStyle(
                                               fontWeight: pw.FontWeight.bold,
                                               fontSize: 12),
@@ -1475,7 +1475,7 @@ class GeneratePDFFR {
                                             pw.SizedBox(
                                               width: 285,
                                               child: pw.Text(
-                                                "Apprentisage de différentes technologies: Flutter, Firebase, Dart, GIT, C, Shell",
+                                                "Apprentissage de différentes technologies: Flutter, Firebase, Dart, GIT, C, Shell",
                                                 style:
                                                     pw.TextStyle(fontSize: 9),
                                               ),
@@ -1502,7 +1502,7 @@ class GeneratePDFFR {
                                             pw.SizedBox(
                                               width: 285,
                                               child: pw.Text(
-                                                "",
+                                                "Travail en autodidacte et travail d'équipe",
                                                 style:
                                                     pw.TextStyle(fontSize: 9),
                                               ),
@@ -1529,7 +1529,154 @@ class GeneratePDFFR {
                                             pw.SizedBox(
                                               width: 285,
                                               child: pw.Text(
-                                                "Résolution de problème techniques",
+                                                "Résolution de problèmes techniques",
+                                                style:
+                                                    pw.TextStyle(fontSize: 9),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ],
+                                    )
+                                  ]),
+                            ),
+                            pw.Padding(
+                              padding: const pw.EdgeInsets.only(bottom: 20),
+                              child: pw.Row(
+                                  mainAxisAlignment: pw.MainAxisAlignment.start,
+                                  crossAxisAlignment:
+                                      pw.CrossAxisAlignment.start,
+                                  children: [
+                                    pw.Padding(
+                                      padding: pw.EdgeInsets.only(left: 10),
+                                      child: pw.Column(
+                                        children: [
+                                          pw.Text(
+                                            '2020',
+                                            style: pw.TextStyle(
+                                                fontSize: 11,
+                                                fontWeight: pw.FontWeight.bold),
+                                          ),
+                                          pw.Text(
+                                            '2022',
+                                            style: pw.TextStyle(
+                                                fontSize: 11,
+                                                fontWeight: pw.FontWeight.bold),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    pw.SizedBox(
+                                      width: 13.2,
+                                    ),
+                                    pw.Container(
+                                      height: 6,
+                                      width: 6,
+                                      decoration: pw.BoxDecoration(
+                                          color:
+                                              MyWebProjectColorPdf.purpulColor,
+                                          shape: pw.BoxShape.circle),
+                                    ),
+                                    pw.SizedBox(
+                                      width: 13.2,
+                                    ),
+                                    pw.Column(
+                                      crossAxisAlignment:
+                                          pw.CrossAxisAlignment.start,
+                                      children: [
+                                        pw.Text(
+                                          'Automation & Robotics',
+                                          style: pw.TextStyle(
+                                              fontWeight: pw.FontWeight.bold,
+                                              fontSize: 12),
+                                        ),
+                                        pw.SizedBox(
+                                          height: 7,
+                                        ),
+                                        pw.Text(
+                                          'Electromécanicien - Magasinier | Lambermont - Verviers / 4800',
+                                          style: pw.TextStyle(
+                                            fontSize: 9,
+                                          ),
+                                        ),
+                                        pw.SizedBox(
+                                          height: 10,
+                                        ),
+                                        pw.Row(
+                                          mainAxisAlignment:
+                                              pw.MainAxisAlignment.start,
+                                          crossAxisAlignment:
+                                              pw.CrossAxisAlignment.start,
+                                          children: [
+                                            pw.Container(
+                                              height: 4,
+                                              width: 4,
+                                              decoration: pw.BoxDecoration(
+                                                  color: MyWebProjectColorPdf
+                                                      .classicBlack,
+                                                  shape: pw.BoxShape.circle),
+                                            ),
+                                            pw.SizedBox(
+                                              width: 8,
+                                            ),
+                                            pw.SizedBox(
+                                              width: 285,
+                                              child: pw.Text(
+                                                "Gestion d'un groupe d'étudiants",
+                                                style:
+                                                    pw.TextStyle(fontSize: 9),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        pw.Row(
+                                          mainAxisAlignment:
+                                              pw.MainAxisAlignment.start,
+                                          crossAxisAlignment:
+                                              pw.CrossAxisAlignment.start,
+                                          children: [
+                                            pw.Container(
+                                              height: 4,
+                                              width: 4,
+                                              decoration: pw.BoxDecoration(
+                                                  color: MyWebProjectColorPdf
+                                                      .classicBlack,
+                                                  shape: pw.BoxShape.circle),
+                                            ),
+                                            pw.SizedBox(
+                                              width: 8,
+                                            ),
+                                            pw.SizedBox(
+                                              width: 285,
+                                              child: pw.Text(
+                                                "Montage mécanique et électrique de machines",
+                                                style:
+                                                    pw.TextStyle(fontSize: 9),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        pw.Row(
+                                          mainAxisAlignment:
+                                              pw.MainAxisAlignment.start,
+                                          crossAxisAlignment:
+                                              pw.CrossAxisAlignment.start,
+                                          children: [
+                                            pw.Container(
+                                              height: 4,
+                                              width: 4,
+                                              decoration: pw.BoxDecoration(
+                                                  color: MyWebProjectColorPdf
+                                                      .classicBlack,
+                                                  shape: pw.BoxShape.circle),
+                                            ),
+                                            pw.SizedBox(
+                                              width: 8,
+                                            ),
+                                            pw.SizedBox(
+                                              width: 285,
+                                              child: pw.Text(
+                                                "Réception et envois de colis avec contrôle d'entrée et de sortie",
                                                 style:
                                                     pw.TextStyle(fontSize: 9),
                                               ),
