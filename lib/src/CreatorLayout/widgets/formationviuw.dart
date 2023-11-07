@@ -71,7 +71,7 @@ class FormationViuw extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'APPRENTISAGE INFORMATIQUE',
+              'APPRENTISSAGE INFORMATIQUE',
               style: TextStyle(fontFamily: 'Helvetica', fontSize: 11),
             ),
             SizedBox(
